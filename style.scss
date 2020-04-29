@@ -1,0 +1,375 @@
+@charset "iso-8859-1";
+@import url('https://fonts.googleapis.com/css?family=Slabo&display=swap');
+
+@import "_css/variables";
+@import "_css/typography";
+
+
+/******************************************************************************/
+/******************************* Navigation***********************/
+/******************************************************************************/
+
+
+body {
+    padding-top: 10px;
+    overflow-y: scroll;
+
+
+
+}
+
+
+body {
+    animation: fadeInAnimation ease 0.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* 
+a {
+
+    :hover {
+        opacity: 0.8;
+        transition: opacity 0.3s ease;
+    }
+
+    img {
+        opacity: 1;
+    }
+
+}
+ */
+
+/*Affichage d'une image qui couvre l'ensemble de la page voir header.php*/
+#backgroundCoverImage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    /* Preserve aspet ratio */
+    min-width: 100%;
+    min-height: 100%;
+}
+
+/*Navbar Bootstrap*/
+.navbar {
+    padding: 0px;
+    background-color: white !important;
+}
+
+
+/******************************************************************************/
+/******************************* Cartes bootstrap/
+/******************************************************************************/
+
+/*cartes Bootstrap*/
+.card {
+    margin-top: 20px;
+}
+
+/*cartes Bootstrap*/
+.card-link {
+    font-family: $mainFont;
+    color: $mainColor;
+}
+
+
+/*Cartes réversibles lors du passage de la souris par-dessus la carte.
+ Possibilité de les afficher d'un côté ou de l'autre par défaut.
+ */
+
+@mixin carte-reveal-visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+@mixin carte-reveal-invisible {
+    visibility: hidden;
+    opacity: 0.1;
+}
+
+@mixin carte-description {
+    position: absolute;
+    top: 10px;
+    left: 12px;
+}
+
+.carte-reversible {
+
+    .card-body {
+        margin: 0px;
+        padding: 8px;
+
+        .card-img-top {
+            @include carte-reveal-visible;
+        }
+
+        .card-img-back {
+            width: 100%;
+            @include carte-reveal-visible;
+            opacity: 0.2;
+        }
+    }
+
+    .card-text {
+        margin: 5px;
+    }
+
+    .card-description-top {
+        @include carte-description;
+        @include carte-reveal-invisible;
+    }
+
+    .card-description-back {
+        @include carte-description;
+        @include carte-reveal-visible;
+    }
+
+    .card-zone-bas {
+        height: 50px;
+        color: $fontLightGray;
+    }
+
+
+    :hover {
+        .card-img-top {
+            visibility: visible;
+            opacity: 0.1;
+            transition: opacity 0.5s ease;
+        }
+
+        .card-img-back {
+            @include carte-reveal-visible;
+            transition: opacity 0.5s ease;
+        }
+
+        .card-description-top {
+            @include carte-reveal-visible;
+            transition: opacity 0.5s ease;
+        }
+
+        .card-description-back {
+            @include carte-reveal-invisible;
+            transition: opacity 0.5s ease;
+        }
+    }
+
+}
+
+
+
+
+
+
+
+/******************************************************************************/
+/******************************* Bootstrap container/
+/******************************************************************************/
+
+.container {
+    width: 1000px !important;
+}
+
+.thumbnail {
+    width: 750px !important;
+}
+
+
+/*Container d'une dimension fixe*/
+@media (min-width: 200px) {
+    .container {
+        width: 200px !important;
+    }
+
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block;
+    }
+}
+
+@media (min-width: 320px) {
+    .container {
+        width: 280px !important;
+    }
+
+}
+
+/*
+@media (min-width: 575px) {
+    .container {
+        width: 575px !important;
+    }
+
+    .desktop-only {
+        display: block;
+    }
+
+    .mobile-only {
+        display: none;
+    }
+}*/
+
+@media (min-width: 768px) {
+    .container {
+        width: 760px !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 850px !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1000px !important;
+    }
+}
+
+
+
+/******************************************************************************/
+/******************************* Wordpress Gallery Blocks/
+/******************************************************************************/
+
+
+// Affichage des captions de galerie en mode mobile seulement:
+.wp-block-gallery .blocks-gallery-item figure {
+    @media only screen and (max-width: 640px) {
+
+        flex-direction: column !important;
+    }
+}
+
+// Affichage des captions de galerie en mode mobile seulement:
+.wp-block-gallery .blocks-gallery-item figcaption {
+    @media only screen and (max-width: 640px) {
+        position: relative !important;
+        bottom: auto !important;
+        max-height: 100% !important;
+        overflow: auto !important;
+        padding: 10px 0 20px 0 !important;
+        color: #333 !important;
+        text-align: center !important;
+        font-size: 13px !important;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 0%, transparent) !important;
+    }
+
+}
+
+
+/*Blocs Wordpress Gallery
+ Qui deviennent responsifs sur mobile seulement
+*/
+.wp-block-image {
+    @media only screen and (max-width: 640px) {
+
+        width: 270px !important;
+    }
+
+}
+
+li.blocks-gallery-item {
+
+    @media only screen and (max-width: 640px) {
+        figure {
+            width: 270px !important;
+        }
+
+        padding-right: 2px;
+        float: left;
+        width: 270px !important;
+        margin: 0px;
+
+    }
+}
+
+/*Sur écrans d'ordinateurs on cache le caption entièrement 
+On utilise plutôt l'encart description dans l'image et affiche dans le carousel jetpack*/
+figcaption.blocks-gallery-item__caption {
+    @media only screen and (min-width: 640px) {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+/******************************************************************************/
+/******************************* WP-Jetpack Carousel/
+/******************************************************************************/
+
+
+
+.jp-carousel-info {
+    p {
+        text-align: center !important;
+        font-family: $mainFont !important;
+        font-size: 17px !important;
+    }
+}
+
+/*
+
+/* Hide Comment Form & Link */
+#jp-carousel-comment-form-container,
+/* Form */
+div.jp-carousel-buttons a.jp-carousel-commentlink,
+/* Link */
+#jp-carousel-comments-loading {
+    display: none !important;
+}
+
+/* Remove Padding from Link Area */
+.jp-carousel-buttons {
+    padding: 0 !important;
+}
+
+
+
+/* Hide comment form header. */
+/* Center the metabox. */
+.jp-carousel-titleanddesc-title,
+.jp-carousel-comment-form-container,
+div#jp-carousel-comments-loading span,
+.jp-carousel-image-meta {
+    display: none !important;
+}
+
+.jp-carousel-titleanddesc {
+    border: none !important;
+    padding-top: 0px !important;
+    margin-top: 0px !important;
+    width: 100% !important;
+}
+
+.jp-carousel-left-column-wrapper {
+    width: 100% !important;
+}
+
+
+/* Move close icon to the right. */
+.jp-carousel-transitions .jp-carousel-close-hint {
+    position: fixed;
+    text-align: right;
+    right: 12px;
+    width: auto;
+}

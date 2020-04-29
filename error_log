@@ -1,0 +1,15 @@
+[14-Sep-2018 15:19:26 UTC] PHP Fatal error:  Call to undefined function bloginfo() in /home/biche/public_html/wp-content/themes/mimimal/header.php on line 22
+[14-Sep-2018 15:19:26 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/biche/public_html/wp-content/themes/mimimal/index.php on line 17
+[14-Sep-2018 15:19:26 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/biche/public_html/wp-content/themes/mimimal/index.php on line 17
+[31-Dec-2018 17:03:51 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/biche/public_html/wp-content/themes/mimimal/index.php on line 17
+[31-Dec-2018 17:03:51 UTC] PHP Fatal error:  Call to undefined function bloginfo() in /home/biche/public_html/wp-content/themes/mimimal/header.php on line 22
+[31-Dec-2018 17:03:52 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/biche/public_html/wp-content/themes/mimimal/index.php on line 17
+[24-Feb-2019 21:23:40 UTC] PHP Fatal error:  Call to undefined function bloginfo() in /home/biche/public_html/wp-content/themes/mimimal/header.php on line 22
+[24-Feb-2019 21:23:40 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/biche/public_html/wp-content/themes/mimimal/index.php on line 17
+[24-Feb-2019 21:23:40 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/biche/public_html/wp-content/themes/mimimal/index.php on line 17
+[09-Jul-2019 11:18:03 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/biche/public_html/wp-content/themes/mimimal/index.php on line 17
+[14-Jul-2019 07:51:20 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/biche/public_html/wp-content/themes/mimimal/index.php on line 17
+[22-Jul-2019 22:19:23 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/biche/public_html/wp-content/themes/mimimal/index.php on line 17
+[07-Sep-2019 07:48:51 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/biche/public_html/wp-content/themes/mimimal/index.php on line 17
+[29-Sep-2019 03:38:43 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/biche/public_html/wp-content/themes/mimimal/index.php on line 17
+[14-Oct-2019 00:35:05 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/biche/public_html/wp-content/themes/mimimal/index.php on line 17

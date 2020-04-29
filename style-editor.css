@@ -1,0 +1,165 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Slabo&display=swap");
+/******************************************************************************/
+/******************************* Variables Sass    ******************************/
+/******************************************************************************/
+/******************************************************************************/
+/******************************* Typographie     ******************************/
+/******************************************************************************/
+h1 {
+  /*font-family: "'Times New Roman', Times, serif'";*/
+  font-family: "Slabo";
+  color: rgba(0, 0, 0, 0.7);
+  margin-top: 20px;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.9);
+  /*  font-style: italic;*/
+}
+
+p {
+  /*font-family: "'Times New Roman', Times, serif'";*/
+  font-family: "Slabo";
+  color: rgba(0, 0, 0, 0.7);
+}
+
+a {
+  /*font-family: "'Times New Roman', Times, serif'";*/
+  font-family: "Slabo";
+  color: rgba(0, 0, 0, 0.7);
+}
+
+a:hover {
+  color: rgba(0, 0, 0, 0.9);
+  text-decoration: none;
+}
+
+figcaption {
+  /*font-family: "'Times New Roman', Times, serif'";*/
+  font-family: "Slabo";
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/*catégories du site dans navbar*/
+.current_page_item > a {
+  /*color: $colorBlack;*/
+  /*text-decoration: underline;*/
+}
+
+.sous-titre-principal {
+  font-size: 13px;
+  margin-top: 10px;
+  color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.navbar-brand {
+  /*font-family: "'Times New Roman', Times, serif'";*/
+  font-family: "Slabo";
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 23.5px;
+}
+
+.sous-titre-list-blog {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+ul {
+  padding-left: 0px;
+}
+
+li,
+.cat-item {
+  list-style-type: none;
+  /*    line-height: 48px;*/
+}
+
+.current-cat > a {
+  /*color: black;*/
+}
+
+.cat-item {
+  /* font-style: italic;*/
+}
+
+/*Plus petit sous-titre possible*/
+.text-highlight {
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+.p-date {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+hr {
+  margin-top: 0px;
+  margin-bottom: 8px;
+}
+
+.menu-item > a {
+  font-size: 16px;
+  line-height: 50px;
+  padding-left: 9px;
+  padding-right: 18px;
+}
+
+.backlink {
+  text-decoration: underline;
+  /*color: black;*/
+}
+
+.backlink:hover {
+  text-decoration: underline;
+}
+
+.soust {
+  font-style: italic;
+}
+
+.legende-image {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.nav-link {
+  /*font-family: "'Times New Roman', Times, serif'";*/
+  font-family: "Slabo";
+  color: rgba(0, 0, 0, 0.7);
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: rgba(0, 0, 0, 0.9) !important;
+}
+
+.navbar-toggler {
+  margin-bottom: 8px;
+}
+
+/* Css Document */
+/******************************************************************************/
+/******************************* Mise en page    ******************************/
+/******************************************************************************/
+/******************************************************************************/
+/******************************* Typographie  -- Titres
+/******************************************************************************/
+.editor-post-title__input {
+  /*font-family: "'Times New Roman', Times, serif'";*/
+  font-family: "Slabo" !important;
+  color: rgba(0, 0, 0, 0.9);
+  font-size: 20px;
+  line-height: 39px;
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/******************************************************************************/
+/******************************* Typographie  -- Texte
+/******************************************************************************/
+/******************************************************************************/
+/******************************* Typographie  -- Liens
+/******************************************************************************/
+/******************************************************************************/
+/******************************* WP-Jetpack Carousel/
+/******************************************************************************/
+/*# sourceMappingURL=style-editor.css.map */

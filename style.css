@@ -1,0 +1,459 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Slabo&display=swap");
+/******************************************************************************/
+/******************************* Variables Sass    ******************************/
+/******************************************************************************/
+/******************************************************************************/
+/******************************* Typographie     ******************************/
+/******************************************************************************/
+h1 {
+  /*font-family: "'Times New Roman', Times, serif'";*/
+  font-family: "Slabo";
+  color: rgba(0, 0, 0, 0.7);
+  margin-top: 20px;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.9);
+  /*  font-style: italic;*/
+}
+
+p {
+  /*font-family: "'Times New Roman', Times, serif'";*/
+  font-family: "Slabo";
+  color: rgba(0, 0, 0, 0.7);
+}
+
+a {
+  /*font-family: "'Times New Roman', Times, serif'";*/
+  font-family: "Slabo";
+  color: rgba(0, 0, 0, 0.7);
+}
+
+a:hover {
+  color: rgba(0, 0, 0, 0.9);
+  text-decoration: none;
+}
+
+figcaption {
+  /*font-family: "'Times New Roman', Times, serif'";*/
+  font-family: "Slabo";
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/*catégories du site dans navbar*/
+.current_page_item > a {
+  /*color: $colorBlack;*/
+  /*text-decoration: underline;*/
+}
+
+.sous-titre-principal {
+  font-size: 13px;
+  margin-top: 10px;
+  color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.navbar-brand {
+  /*font-family: "'Times New Roman', Times, serif'";*/
+  font-family: "Slabo";
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 23.5px;
+}
+
+.sous-titre-list-blog {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+ul {
+  padding-left: 0px;
+}
+
+li,
+.cat-item {
+  list-style-type: none;
+  /*    line-height: 48px;*/
+}
+
+.current-cat > a {
+  /*color: black;*/
+}
+
+.cat-item {
+  /* font-style: italic;*/
+}
+
+/*Plus petit sous-titre possible*/
+.text-highlight {
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+.p-date {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+hr {
+  margin-top: 0px;
+  margin-bottom: 8px;
+}
+
+.menu-item > a {
+  font-size: 16px;
+  line-height: 50px;
+  padding-left: 9px;
+  padding-right: 18px;
+}
+
+.backlink {
+  text-decoration: underline;
+  /*color: black;*/
+}
+
+.backlink:hover {
+  text-decoration: underline;
+}
+
+.soust {
+  font-style: italic;
+}
+
+.legende-image {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.nav-link {
+  /*font-family: "'Times New Roman', Times, serif'";*/
+  font-family: "Slabo";
+  color: rgba(0, 0, 0, 0.7);
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: rgba(0, 0, 0, 0.9) !important;
+}
+
+.navbar-toggler {
+  margin-bottom: 8px;
+}
+
+/******************************************************************************/
+/******************************* Navigation***********************/
+/******************************************************************************/
+body {
+  padding-top: 10px;
+  overflow-y: scroll;
+}
+
+body {
+  -webkit-animation: fadeInAnimation ease 0.2s;
+          animation: fadeInAnimation ease 0.2s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* 
+a {
+
+    :hover {
+        opacity: 0.8;
+        transition: opacity 0.3s ease;
+    }
+
+    img {
+        opacity: 1;
+    }
+
+}
+ */
+/*Affichage d'une image qui couvre l'ensemble de la page voir header.php*/
+#backgroundCoverImage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/*Navbar Bootstrap*/
+.navbar {
+  padding: 0px;
+  background-color: white !important;
+}
+
+/******************************************************************************/
+/******************************* Cartes bootstrap/
+/******************************************************************************/
+/*cartes Bootstrap*/
+.card {
+  margin-top: 20px;
+}
+
+/*cartes Bootstrap*/
+.card-link {
+  font-family: "Slabo";
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/*Cartes réversibles lors du passage de la souris par-dessus la carte.
+ Possibilité de les afficher d'un côté ou de l'autre par défaut.
+ */
+.carte-reversible .card-body {
+  margin: 0px;
+  padding: 8px;
+}
+
+.carte-reversible .card-body .card-img-top {
+  visibility: visible;
+  opacity: 1;
+}
+
+.carte-reversible .card-body .card-img-back {
+  width: 100%;
+  visibility: visible;
+  opacity: 1;
+  opacity: 0.2;
+}
+
+.carte-reversible .card-text {
+  margin: 5px;
+}
+
+.carte-reversible .card-description-top {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  visibility: hidden;
+  opacity: 0.1;
+}
+
+.carte-reversible .card-description-back {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  visibility: visible;
+  opacity: 1;
+}
+
+.carte-reversible .card-zone-bas {
+  height: 50px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.carte-reversible :hover .card-img-top {
+  visibility: visible;
+  opacity: 0.1;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+
+.carte-reversible :hover .card-img-back {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+
+.carte-reversible :hover .card-description-top {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+
+.carte-reversible :hover .card-description-back {
+  visibility: hidden;
+  opacity: 0.1;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+
+/******************************************************************************/
+/******************************* Bootstrap container/
+/******************************************************************************/
+.container {
+  width: 1000px !important;
+}
+
+.thumbnail {
+  width: 750px !important;
+}
+
+/*Container d'une dimension fixe*/
+@media (min-width: 200px) {
+  .container {
+    width: 200px !important;
+  }
+  .desktop-only {
+    display: none;
+  }
+  .mobile-only {
+    display: block;
+  }
+}
+
+@media (min-width: 320px) {
+  .container {
+    width: 280px !important;
+  }
+}
+
+/*
+@media (min-width: 575px) {
+    .container {
+        width: 575px !important;
+    }
+
+    .desktop-only {
+        display: block;
+    }
+
+    .mobile-only {
+        display: none;
+    }
+}*/
+@media (min-width: 768px) {
+  .container {
+    width: 760px !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 850px !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1000px !important;
+  }
+}
+
+/******************************************************************************/
+/******************************* Wordpress Gallery Blocks/
+/******************************************************************************/
+@media only screen and (max-width: 640px) {
+  .wp-block-gallery .blocks-gallery-item figure {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .wp-block-gallery .blocks-gallery-item figcaption {
+    position: relative !important;
+    bottom: auto !important;
+    max-height: 100% !important;
+    overflow: auto !important;
+    padding: 10px 0 20px 0 !important;
+    color: #333 !important;
+    text-align: center !important;
+    font-size: 13px !important;
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0)), color-stop(0%, rgba(0, 0, 0, 0)), to(transparent)) !important;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 0%, transparent) !important;
+  }
+}
+
+/*Blocs Wordpress Gallery
+ Qui deviennent responsifs sur mobile seulement
+*/
+@media only screen and (max-width: 640px) {
+  .wp-block-image {
+    width: 270px !important;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  li.blocks-gallery-item {
+    padding-right: 2px;
+    float: left;
+    width: 270px !important;
+    margin: 0px;
+  }
+  li.blocks-gallery-item figure {
+    width: 270px !important;
+  }
+}
+
+/*Sur écrans d'ordinateurs on cache le caption entièrement 
+On utilise plutôt l'encart description dans l'image et affiche dans le carousel jetpack*/
+@media only screen and (min-width: 640px) {
+  figcaption.blocks-gallery-item__caption {
+    display: none;
+  }
+}
+
+/******************************************************************************/
+/******************************* WP-Jetpack Carousel/
+/******************************************************************************/
+.jp-carousel-info p {
+  text-align: center !important;
+  font-family: "Slabo" !important;
+  font-size: 17px !important;
+}
+
+/*
+
+/* Hide Comment Form & Link */
+#jp-carousel-comment-form-container,
+div.jp-carousel-buttons a.jp-carousel-commentlink,
+#jp-carousel-comments-loading {
+  display: none !important;
+}
+
+/* Remove Padding from Link Area */
+.jp-carousel-buttons {
+  padding: 0 !important;
+}
+
+/* Hide comment form header. */
+/* Center the metabox. */
+.jp-carousel-titleanddesc-title,
+.jp-carousel-comment-form-container,
+div#jp-carousel-comments-loading span,
+.jp-carousel-image-meta {
+  display: none !important;
+}
+
+.jp-carousel-titleanddesc {
+  border: none !important;
+  padding-top: 0px !important;
+  margin-top: 0px !important;
+  width: 100% !important;
+}
+
+.jp-carousel-left-column-wrapper {
+  width: 100% !important;
+}
+
+/* Move close icon to the right. */
+.jp-carousel-transitions .jp-carousel-close-hint {
+  position: fixed;
+  text-align: right;
+  right: 12px;
+  width: auto;
+}
+/*# sourceMappingURL=style.css.map */

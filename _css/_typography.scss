@@ -1,0 +1,140 @@
+/******************************************************************************/
+/******************************* Typographie     ******************************/
+/******************************************************************************/
+
+@mixin mainFont {
+    /*font-family: "'Times New Roman', Times, serif'";*/
+    font-family: $mainFont;
+    color: $mainColor;
+}
+
+
+h1 {
+    @include mainFont;
+    margin-top: 20px;
+    font-size: 20px;
+    color: $colorBlack;
+    /*  font-style: italic;*/
+}
+
+p {
+    @include mainFont;
+}
+
+a {
+    @include mainFont;
+
+    &:hover {
+        color: $colorBlack;
+        text-decoration: none;
+    }
+}
+
+figcaption {
+    @include mainFont;
+}
+
+/*catégories du site dans navbar*/
+.current_page_item>a {
+    /*color: $colorBlack;*/
+    /*text-decoration: underline;*/
+}
+
+
+.sous-titre-principal {
+    font-size: 13px;
+    margin-top: 10px;
+    color: $mainColor !important;
+}
+
+.navbar-brand {
+    @include mainFont;
+    font-size: 23.5px;
+}
+
+.sous-titre-list-blog {
+    color: $colorBlack;
+}
+
+
+ul {
+    padding-left: 0px;
+}
+
+li,
+.cat-item {
+    list-style-type: none;
+    /*    line-height: 48px;*/
+}
+
+.current-cat>a {
+    /*color: black;*/
+}
+
+.cat-item {
+
+
+    /* font-style: italic;*/
+}
+
+.cat-item-all {}
+
+/*Plus petit sous-titre possible*/
+.text-highlight {
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+
+.p-date {
+    color: $mainSubColor;
+}
+
+
+
+hr {
+    margin-top: 0px;
+    margin-bottom: 8px;
+}
+
+
+.menu-item>a {
+    font-size: 16px;
+    line-height: 50px;
+    padding-left: 9px;
+    padding-right: 18px;
+}
+
+
+.backlink {
+    text-decoration: underline;
+    /*color: black;*/
+}
+
+.backlink:hover {
+    text-decoration: underline;
+}
+
+
+
+.soust {
+    font-style: italic;
+}
+
+.legende-image {
+    font-size: 18px;
+    color: $mainSubColor;
+}
+
+.nav-link {
+    @include mainFont;
+    text-decoration: none;
+
+    &:hover {
+        color: $colorBlack !important;
+    }
+}
+
+.navbar-toggler {
+    margin-bottom: 8px;
+}
