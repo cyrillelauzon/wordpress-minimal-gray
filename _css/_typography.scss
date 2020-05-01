@@ -1,31 +1,32 @@
 /******************************************************************************/
-/******************************* Typographie     ******************************/
+/******************************* Typographie principale************************/
 /******************************************************************************/
-
-@mixin mainFont {
-    /*font-family: "'Times New Roman', Times, serif'";*/
-    font-family: $mainFont;
-    color: $mainColor;
+h1 {
+    font-family: $mainTitleFont;
+    font-size: $mainTitleSize;
+    color: $mainTitleColor !important;
+    margin-top: 20px;
 }
 
+.sous-titre-principal {
+    font-size: $smallTextSize;
+    color: $mainColor !important;
+    text-align: left;
+    font-weight: bold;
 
-h1 {
-    @include mainFont;
-    margin-top: 20px;
-    font-size: 20px;
-    color: $colorBlack;
-    /*  font-style: italic;*/
 }
 
 p {
-    @include mainFont;
+    font-size: $mainTextSize;
+    color: $mainColor !important;
+    text-align: left;
+    font-weight: 400;
 }
 
 a {
-    @include mainFont;
 
     &:hover {
-        color: $colorBlack;
+        color: $siteHighlightBGColor;
         text-decoration: none;
     }
 }
@@ -34,29 +35,119 @@ figcaption {
     @include mainFont;
 }
 
+/******************************************************************************/
+/***TEMP****************** Typographie principale TEMP*****************/
+/******************************************************************************/
+/* 
+h1{
+    font-family: 'PT Sans', sans-serif;
+    font-size: 30px;  
+    text-align: justify;
+    font-weight: 200;
+    line-height: 1.4;
+    margin:  0px;
+    padding: 0px;
+    padding-top: 15px;
+    color:#C6C6C6;
+  }
+   */
+h3,
+h3 a {
+    color: #D54E21;
+    font-family: $mainTitleFont;
+    /* margin: 10px 0px 0px 0px; */
+    /* color:#C6C6C6;*/
+    font-weight: normal;
+    font-size: 20px;
+}
+
+h4 {
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    padding: 0px 0px 0px 0px;
+    margin: 25px 0px 0px 0px;
+    color: #C6C6C6;
+    display: block;
+}
+
+h6 {
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    padding: 0px 0px 0px 0px;
+    margin: 0px;
+    margin-top: 30px;
+    background: #303030;
+    color: #D54E21;
+    display: inline-block;
+    font-weight: 400;
+}
+
+.ngg-gallery-thumbnail img {
+    padding: 0px !important;
+    border-width: 0px !important;
+}
+
+/* 
+  p {
+    text-align: left;
+    font-weight: 400;
+    font-size: 14px;  
+    line-height: 23px;
+    color: #999;
+    margin:  0px;
+    margin-bottom: 5px;
+    padding: 0px;
+    padding-top: 5px;
+  } */
+
+/*Citation:*/
+blockquote {
+    text-align: left;
+    margin: 0px 5px 10px 0px;
+    padding: 0px 5px 5px 5px;
+    font-style: italic;
+    /*border-bottom: 1px solid #777;
+    border-top: 1px solid #777;*/
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #C6C6C6;
+    width: 100%;
+}
+
+blockquote p {
+    text-align: left;
+    margin: 5px 0px 5px 0px;
+    padding: 5px 0px 0px 0px;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #C6C6C6;
+    width: 90%;
+}
+
+
+
+/******************************************************************************/
+/******************************* Autres éléments typographie     **************/
+/******************************************************************************/
 /*catégories du site dans navbar*/
 .current_page_item>a {
     /*color: $colorBlack;*/
     /*text-decoration: underline;*/
 }
 
-
-.sous-titre-principal {
-    font-size: 13px;
-    margin-top: 10px;
-    color: $mainColor !important;
-}
-
-.navbar-brand {
-    @include mainFont;
-    font-size: 23.5px;
-}
-
-.sous-titre-list-blog {
-    color: $colorBlack;
+hr {
+    margin-top: 0px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 
+/******************************************************************************/
+/******************************* Listes
+/******************************************************************************/
 ul {
     padding-left: 0px;
 }
@@ -67,74 +158,82 @@ li,
     /*    line-height: 48px;*/
 }
 
-.current-cat>a {
-    /*color: black;*/
+
+
+/******************************************************************************/
+/******************************* Nav Bar
+/******************************************************************************/
+
+/*Navbar Bootstrap*/
+.navbar {
+    padding: 0px;
+    background-color: $siteBackgroundColor !important;
 }
 
-.cat-item {
-
-
-    /* font-style: italic;*/
+.navbar-brand {
+    font-family: $mainTitleFont !important;
+    color: $mainTitleColor !important;
+    font-size: $mainTitleSize;
+    line-height: 50px;
+    padding-bottom: 0px !important;
 }
 
-.cat-item-all {}
-
-/*Plus petit sous-titre possible*/
-.text-highlight {
-    font-weight: bold;
-    margin-bottom: 0px;
+.navbar-subtitle {
+    font-family: $mainTitleFont !important;
+    color: $mainTitleColor !important;
+    font-size: 20px;
+    line-height: 50px;
+    padding-bottom: 0px !important;
 }
 
+.nav-link {
+    font-family: $mainTitleFont !important;
+    color: $mainTitleColor !important;
+    line-height: 20px !important;
+    text-decoration: none;
+    padding-left: 0px !important;
+    padding-right: 16px !important;
+    padding-top: 0px !important;
 
-.p-date {
-    color: $mainSubColor;
+    &:hover {
+        color: $siteHighlightBGColor !important;
+        animation: fadeInAnimation ease 0.3s;
+    }
 }
 
+.dropdown-toggle::focus {
+    color: $mainTitleSubColor !important;
+}
 
+.dropdown-menu {
+    top: 30px;
+    background-color: $siteBackgroundColor !important;
+    /* border-radius: 0px !important; */
+    /*    border-width: 0.4px !important;
+    border-color: $siteHighlightBGColor !important; */
+    animation: fadeInAnimation ease 0.3s;
 
-hr {
-    margin-top: 0px;
+    a {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        line-height: 35px !important;
+        color: $mainTitleColor !important;
+        font-family: $mainTitleFont !important;
+
+        &:hover {
+            background-color: $siteHighlightBGColor !important;
+            animation: fadeInAnimation ease 0.2s;
+        }
+    }
+}
+
+.navbar-toggler {
     margin-bottom: 8px;
 }
-
 
 .menu-item>a {
     font-size: 16px;
     line-height: 50px;
     padding-left: 9px;
     padding-right: 18px;
-}
-
-
-.backlink {
-    text-decoration: underline;
-    /*color: black;*/
-}
-
-.backlink:hover {
-    text-decoration: underline;
-}
-
-
-
-.soust {
-    font-style: italic;
-}
-
-.legende-image {
-    font-size: 18px;
-    color: $mainSubColor;
-}
-
-.nav-link {
-    @include mainFont;
-    text-decoration: none;
-
-    &:hover {
-        color: $colorBlack !important;
-    }
-}
-
-.navbar-toggler {
-    margin-bottom: 8px;
 }

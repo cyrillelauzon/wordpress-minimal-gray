@@ -25,6 +25,15 @@
  * @since Twenty Fourteen 1.0
  */
 
+ //Enregistrement de l'utilitaire boostrap qui permet de générer le menu principal
+ //  https://wp-bootstrap.github.io/wp-bootstrap-navwalker/
+ require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+
+ register_nav_menus( array(
+	'primary' => __( 'Primary Menu', 'mimimal' ),
+) );
+
+
 
 //Shortcode pour retour facile vers cyrillelauzon.blog à partir d'un article
 //Si jamais le site migre vers une nouvelle adresse, aucun changement ne sera nessaire
@@ -39,13 +48,13 @@ function register_shortcodes(){
 register_shortcodes();
 
 //Enregistrement du menu principal
-function register_my_menu() {
+/* function register_my_menu() {
    register_nav_menu( 'primary', 'Primary Menu' );
   update_option('image_default_link_type','none');
 }
 
 #add_action( 'init', 'register_my_menu' );
-add_action('after_setup_theme', 'register_my_menu');
+add_action('after_setup_theme', 'register_my_menu'); */
 
 add_theme_support('post-thumbnails');
 set_post_thumbnail_size(190, 150);

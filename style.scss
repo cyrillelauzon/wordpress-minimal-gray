@@ -1,5 +1,8 @@
 @charset "iso-8859-1";
-@import url('https://fonts.googleapis.com/css?family=Slabo&display=swap');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Droid+Sans&display=swap');
 
 @import "_css/variables";
 @import "_css/typography";
@@ -9,17 +12,11 @@
 /******************************* Navigation***********************/
 /******************************************************************************/
 
-
 body {
     padding-top: 10px;
     overflow-y: scroll;
-
-
-
-}
-
-
-body {
+    background-color: $siteBackgroundColor !important;
+    background-color: red($color: #000000);
     animation: fadeInAnimation ease 0.2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -35,6 +32,26 @@ body {
     }
 }
 
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-style: none;
+    /* border-bottom-width: 1px;
+    border-bottom-color: rgb(235,235,235);
+    border-bottom-style: solid;*/
+}
+
+.card-img {
+    max-width: $indexGaleryBlockSize;
+    max-height: $indexGaleryBlockSize;
+    height: auto;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    padding-left: 8px;
+}
+
+/*Effet de transparence sur hover*/
 /* 
 a {
 
@@ -50,125 +67,6 @@ a {
 }
  */
 
-/*Affichage d'une image qui couvre l'ensemble de la page voir header.php*/
-#backgroundCoverImage {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
-
-    /* Preserve aspet ratio */
-    min-width: 100%;
-    min-height: 100%;
-}
-
-/*Navbar Bootstrap*/
-.navbar {
-    padding: 0px;
-    background-color: white !important;
-}
-
-
-/******************************************************************************/
-/******************************* Cartes bootstrap/
-/******************************************************************************/
-
-/*cartes Bootstrap*/
-.card {
-    margin-top: 20px;
-}
-
-/*cartes Bootstrap*/
-.card-link {
-    font-family: $mainFont;
-    color: $mainColor;
-}
-
-
-/*Cartes réversibles lors du passage de la souris par-dessus la carte.
- Possibilité de les afficher d'un côté ou de l'autre par défaut.
- */
-
-@mixin carte-reveal-visible {
-    visibility: visible;
-    opacity: 1;
-}
-
-@mixin carte-reveal-invisible {
-    visibility: hidden;
-    opacity: 0.1;
-}
-
-@mixin carte-description {
-    position: absolute;
-    top: 10px;
-    left: 12px;
-}
-
-.carte-reversible {
-
-    .card-body {
-        margin: 0px;
-        padding: 8px;
-
-        .card-img-top {
-            @include carte-reveal-visible;
-        }
-
-        .card-img-back {
-            width: 100%;
-            @include carte-reveal-visible;
-            opacity: 0.2;
-        }
-    }
-
-    .card-text {
-        margin: 5px;
-    }
-
-    .card-description-top {
-        @include carte-description;
-        @include carte-reveal-invisible;
-    }
-
-    .card-description-back {
-        @include carte-description;
-        @include carte-reveal-visible;
-    }
-
-    .card-zone-bas {
-        height: 50px;
-        color: $fontLightGray;
-    }
-
-
-    :hover {
-        .card-img-top {
-            visibility: visible;
-            opacity: 0.1;
-            transition: opacity 0.5s ease;
-        }
-
-        .card-img-back {
-            @include carte-reveal-visible;
-            transition: opacity 0.5s ease;
-        }
-
-        .card-description-top {
-            @include carte-reveal-visible;
-            transition: opacity 0.5s ease;
-        }
-
-        .card-description-back {
-            @include carte-reveal-invisible;
-            transition: opacity 0.5s ease;
-        }
-    }
-
-}
-
-
-
 
 
 
@@ -178,7 +76,7 @@ a {
 /******************************************************************************/
 
 .container {
-    width: 1000px !important;
+    width: 900px !important;
 }
 
 .thumbnail {
@@ -208,36 +106,33 @@ a {
 
 }
 
-/*
+
 @media (min-width: 575px) {
     .container {
-        width: 575px !important;
+        width: 280px !important;
     }
 
-    .desktop-only {
-        display: block;
-    }
-
-    .mobile-only {
-        display: none;
-    }
-}*/
+}
 
 @media (min-width: 768px) {
     .container {
-        width: 760px !important;
+        width: 768px !important;
+    }
+
+    .mobile-only {
+        display: block;
     }
 }
 
 @media (min-width: 992px) {
     .container {
-        width: 850px !important;
+        width: $mainContainerWidth !important;
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: $mainContainerWidth) {
     .container {
-        width: 1000px !important;
+        width: $mainContainerWidth !important;
     }
 }
 

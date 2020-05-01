@@ -56,24 +56,34 @@
         
 
         <!-- Barre Navigation -->
-        <?php 
-          $page_id = get_queried_object_id();
-          $hide_navigation = get_post_custom_values( "hide_navigation", $page_id );
-          if($hide_navigation[0] != "1") :
-        ?>
-                   
+
+
+           <!--  <span class="navbar-subtitle"><?php bloginfo('description');?></span> -->
+           <a class="navbar-brand align-baseline" href="<?php echo home_url(); ?>"><?php bloginfo('name');?></a>               
+            
             <nav class="navbar navbar-expand-sm navbar-light" data-toggle="affix">
-                               
+              
+
               <div class="d-sm-flex d-block flex-sm-nowrap">
                       <!-- Titre du blogue -->
-                      <a class="navbar-brand align-baseline" href="<?php echo home_url(); ?>"><?php bloginfo('name');?></a>   
+                                   <a class="nav-link align-baseline" href="<?php echo home_url(); ?>"><?php bloginfo('description');?></a>
                       
                       <!-- Menu de Navigation -->
                       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
                           <span class="navbar-toggler-icon"></span>
                       </button>
-              
-                      <?php $defaults = array(
+                      <?php 
+                      wp_nav_menu( array(
+                            'theme_location'	=> 'primary',
+                            'depth'				=> 2, 
+                          'container'			=> 'div',
+                          'container_class'	=> 'collapse navbar-collapse',
+                          'container_id'		=> 'mainNav',
+                          'menu_class'		=> 'navbar-nav mr-auto',
+                            'fallback_cb'		=> 'WP_Bootstrap_Navwalker::fallback',
+                            'walker'			=> new WP_Bootstrap_Navwalker()
+                        ) );?> 
+                     <!--  <?php $defaults = array(
                           'theme_location'  => '',
                           'menu'            => '',
                           'container'       => 'div',
@@ -92,12 +102,11 @@
                         );
                         
                         wp_nav_menu( $defaults ); 
-                      ?>
+                      ?> -->
               </div>
             </nav><!-- Barre Navigation -->
-            <hr/>
+           <br/>
 
-        <?php endif ?>
 
 
             

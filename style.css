@@ -1,67 +1,157 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Slabo&display=swap");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Droid+Sans&display=swap");
 /******************************************************************************/
 /******************************* Variables Sass    ******************************/
 /******************************************************************************/
+/*Typography*/
+/*Body Elements*/
+/*Animations*/
 /******************************************************************************/
-/******************************* Typographie     ******************************/
+/******************************* Typographie principale************************/
 /******************************************************************************/
 h1 {
-  /*font-family: "'Times New Roman', Times, serif'";*/
-  font-family: "Slabo";
-  color: rgba(0, 0, 0, 0.7);
+  font-family: "Roboto Condensed";
+  font-size: 25px;
+  color: #C6C6C6 !important;
   margin-top: 20px;
-  font-size: 20px;
-  color: rgba(0, 0, 0, 0.9);
-  /*  font-style: italic;*/
+}
+
+.sous-titre-principal {
+  font-size: 12px;
+  color: #999 !important;
+  text-align: left;
+  font-weight: bold;
 }
 
 p {
-  /*font-family: "'Times New Roman', Times, serif'";*/
-  font-family: "Slabo";
-  color: rgba(0, 0, 0, 0.7);
-}
-
-a {
-  /*font-family: "'Times New Roman', Times, serif'";*/
-  font-family: "Slabo";
-  color: rgba(0, 0, 0, 0.7);
+  font-size: 14px;
+  color: #999 !important;
+  text-align: left;
+  font-weight: 400;
 }
 
 a:hover {
-  color: rgba(0, 0, 0, 0.9);
+  color: #505050;
   text-decoration: none;
 }
 
 figcaption {
-  /*font-family: "'Times New Roman', Times, serif'";*/
-  font-family: "Slabo";
-  color: rgba(0, 0, 0, 0.7);
+  font-family: "'Helvetica Neue',Arial,Helvetica,sans-serif" !important;
+  color: #999 !important;
 }
 
+/******************************************************************************/
+/***TEMP****************** Typographie principale TEMP*****************/
+/******************************************************************************/
+/* 
+h1{
+    font-family: 'PT Sans', sans-serif;
+    font-size: 30px;  
+    text-align: justify;
+    font-weight: 200;
+    line-height: 1.4;
+    margin:  0px;
+    padding: 0px;
+    padding-top: 15px;
+    color:#C6C6C6;
+  }
+   */
+h3,
+h3 a {
+  color: #D54E21;
+  font-family: "Roboto Condensed";
+  /* margin: 10px 0px 0px 0px; */
+  /* color:#C6C6C6;*/
+  font-weight: normal;
+  font-size: 20px;
+}
+
+h4 {
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  padding: 0px 0px 0px 0px;
+  margin: 25px 0px 0px 0px;
+  color: #C6C6C6;
+  display: block;
+}
+
+h6 {
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  padding: 0px 0px 0px 0px;
+  margin: 0px;
+  margin-top: 30px;
+  background: #303030;
+  color: #D54E21;
+  display: inline-block;
+  font-weight: 400;
+}
+
+.ngg-gallery-thumbnail img {
+  padding: 0px !important;
+  border-width: 0px !important;
+}
+
+/* 
+  p {
+    text-align: left;
+    font-weight: 400;
+    font-size: 14px;  
+    line-height: 23px;
+    color: #999;
+    margin:  0px;
+    margin-bottom: 5px;
+    padding: 0px;
+    padding-top: 5px;
+  } */
+/*Citation:*/
+blockquote {
+  text-align: left;
+  margin: 0px 5px 10px 0px;
+  padding: 0px 5px 5px 5px;
+  font-style: italic;
+  /*border-bottom: 1px solid #777;
+    border-top: 1px solid #777;*/
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #C6C6C6;
+  width: 100%;
+}
+
+blockquote p {
+  text-align: left;
+  margin: 5px 0px 5px 0px;
+  padding: 5px 0px 0px 0px;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #C6C6C6;
+  width: 90%;
+}
+
+/******************************************************************************/
+/******************************* Autres éléments typographie     **************/
+/******************************************************************************/
 /*catégories du site dans navbar*/
 .current_page_item > a {
   /*color: $colorBlack;*/
   /*text-decoration: underline;*/
 }
 
-.sous-titre-principal {
-  font-size: 13px;
-  margin-top: 10px;
-  color: rgba(0, 0, 0, 0.7) !important;
+hr {
+  margin-top: 0px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.navbar-brand {
-  /*font-family: "'Times New Roman', Times, serif'";*/
-  font-family: "Slabo";
-  color: rgba(0, 0, 0, 0.7);
-  font-size: 23.5px;
-}
-
-.sous-titre-list-blog {
-  color: rgba(0, 0, 0, 0.9);
-}
-
+/******************************************************************************/
+/******************************* Listes
+/******************************************************************************/
 ul {
   padding-left: 0px;
 }
@@ -72,26 +162,76 @@ li,
   /*    line-height: 48px;*/
 }
 
-.current-cat > a {
-  /*color: black;*/
+/******************************************************************************/
+/******************************* Nav Bar
+/******************************************************************************/
+/*Navbar Bootstrap*/
+.navbar {
+  padding: 0px;
+  background-color: #303030 !important;
 }
 
-.cat-item {
-  /* font-style: italic;*/
+.navbar-brand {
+  font-family: "Roboto Condensed" !important;
+  color: #C6C6C6 !important;
+  font-size: 25px;
+  line-height: 50px;
+  padding-bottom: 0px !important;
 }
 
-/*Plus petit sous-titre possible*/
-.text-highlight {
-  font-weight: bold;
-  margin-bottom: 0px;
+.navbar-subtitle {
+  font-family: "Roboto Condensed" !important;
+  color: #C6C6C6 !important;
+  font-size: 20px;
+  line-height: 50px;
+  padding-bottom: 0px !important;
 }
 
-.p-date {
-  color: rgba(0, 0, 0, 0.5);
+.nav-link {
+  font-family: "Roboto Condensed" !important;
+  color: #C6C6C6 !important;
+  line-height: 20px !important;
+  text-decoration: none;
+  padding-left: 0px !important;
+  padding-right: 16px !important;
+  padding-top: 0px !important;
 }
 
-hr {
-  margin-top: 0px;
+.nav-link:hover {
+  color: #505050 !important;
+  -webkit-animation: fadeInAnimation ease 0.3s;
+          animation: fadeInAnimation ease 0.3s;
+}
+
+.dropdown-toggle::focus {
+  color: #D54E21 !important;
+}
+
+.dropdown-menu {
+  top: 30px;
+  background-color: #303030 !important;
+  /* border-radius: 0px !important; */
+  /*    border-width: 0.4px !important;
+    border-color: $siteHighlightBGColor !important; */
+  -webkit-animation: fadeInAnimation ease 0.3s;
+          animation: fadeInAnimation ease 0.3s;
+}
+
+.dropdown-menu a {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  line-height: 35px !important;
+  color: #C6C6C6 !important;
+  font-family: "Roboto Condensed" !important;
+}
+
+.dropdown-menu a:hover {
+  background-color: #505050 !important;
+  -webkit-animation: fadeInAnimation ease 0.2s;
+          animation: fadeInAnimation ease 0.2s;
+}
+
+.navbar-toggler {
   margin-bottom: 8px;
 }
 
@@ -102,48 +242,14 @@ hr {
   padding-right: 18px;
 }
 
-.backlink {
-  text-decoration: underline;
-  /*color: black;*/
-}
-
-.backlink:hover {
-  text-decoration: underline;
-}
-
-.soust {
-  font-style: italic;
-}
-
-.legende-image {
-  font-size: 18px;
-  color: rgba(0, 0, 0, 0.5);
-}
-
-.nav-link {
-  /*font-family: "'Times New Roman', Times, serif'";*/
-  font-family: "Slabo";
-  color: rgba(0, 0, 0, 0.7);
-  text-decoration: none;
-}
-
-.nav-link:hover {
-  color: rgba(0, 0, 0, 0.9) !important;
-}
-
-.navbar-toggler {
-  margin-bottom: 8px;
-}
-
 /******************************************************************************/
 /******************************* Navigation***********************/
 /******************************************************************************/
 body {
   padding-top: 10px;
   overflow-y: scroll;
-}
-
-body {
+  background-color: #303030 !important;
+  background-color: 0;
   -webkit-animation: fadeInAnimation ease 0.2s;
           animation: fadeInAnimation ease 0.2s;
   -webkit-animation-iteration-count: 1;
@@ -170,6 +276,25 @@ body {
   }
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  border-style: none;
+  /* border-bottom-width: 1px;
+    border-bottom-color: rgb(235,235,235);
+    border-bottom-style: solid;*/
+}
+
+.card-img {
+  max-width: 200px;
+  max-height: 200px;
+  height: auto;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  padding-left: 8px;
+}
+
+/*Effet de transparence sur hover*/
 /* 
 a {
 
@@ -184,115 +309,11 @@ a {
 
 }
  */
-/*Affichage d'une image qui couvre l'ensemble de la page voir header.php*/
-#backgroundCoverImage {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  /* Preserve aspet ratio */
-  min-width: 100%;
-  min-height: 100%;
-}
-
-/*Navbar Bootstrap*/
-.navbar {
-  padding: 0px;
-  background-color: white !important;
-}
-
-/******************************************************************************/
-/******************************* Cartes bootstrap/
-/******************************************************************************/
-/*cartes Bootstrap*/
-.card {
-  margin-top: 20px;
-}
-
-/*cartes Bootstrap*/
-.card-link {
-  font-family: "Slabo";
-  color: rgba(0, 0, 0, 0.7);
-}
-
-/*Cartes réversibles lors du passage de la souris par-dessus la carte.
- Possibilité de les afficher d'un côté ou de l'autre par défaut.
- */
-.carte-reversible .card-body {
-  margin: 0px;
-  padding: 8px;
-}
-
-.carte-reversible .card-body .card-img-top {
-  visibility: visible;
-  opacity: 1;
-}
-
-.carte-reversible .card-body .card-img-back {
-  width: 100%;
-  visibility: visible;
-  opacity: 1;
-  opacity: 0.2;
-}
-
-.carte-reversible .card-text {
-  margin: 5px;
-}
-
-.carte-reversible .card-description-top {
-  position: absolute;
-  top: 10px;
-  left: 12px;
-  visibility: hidden;
-  opacity: 0.1;
-}
-
-.carte-reversible .card-description-back {
-  position: absolute;
-  top: 10px;
-  left: 12px;
-  visibility: visible;
-  opacity: 1;
-}
-
-.carte-reversible .card-zone-bas {
-  height: 50px;
-  color: rgba(0, 0, 0, 0.4);
-}
-
-.carte-reversible :hover .card-img-top {
-  visibility: visible;
-  opacity: 0.1;
-  -webkit-transition: opacity 0.5s ease;
-  transition: opacity 0.5s ease;
-}
-
-.carte-reversible :hover .card-img-back {
-  visibility: visible;
-  opacity: 1;
-  -webkit-transition: opacity 0.5s ease;
-  transition: opacity 0.5s ease;
-}
-
-.carte-reversible :hover .card-description-top {
-  visibility: visible;
-  opacity: 1;
-  -webkit-transition: opacity 0.5s ease;
-  transition: opacity 0.5s ease;
-}
-
-.carte-reversible :hover .card-description-back {
-  visibility: hidden;
-  opacity: 0.1;
-  -webkit-transition: opacity 0.5s ease;
-  transition: opacity 0.5s ease;
-}
-
 /******************************************************************************/
 /******************************* Bootstrap container/
 /******************************************************************************/
 .container {
-  width: 1000px !important;
+  width: 900px !important;
 }
 
 .thumbnail {
@@ -318,35 +339,30 @@ a {
   }
 }
 
-/*
 @media (min-width: 575px) {
-    .container {
-        width: 575px !important;
-    }
+  .container {
+    width: 280px !important;
+  }
+}
 
-    .desktop-only {
-        display: block;
-    }
-
-    .mobile-only {
-        display: none;
-    }
-}*/
 @media (min-width: 768px) {
   .container {
-    width: 760px !important;
+    width: 768px !important;
+  }
+  .mobile-only {
+    display: block;
   }
 }
 
 @media (min-width: 992px) {
   .container {
-    width: 850px !important;
+    width: 1250px !important;
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1250px) {
   .container {
-    width: 1000px !important;
+    width: 1250px !important;
   }
 }
 
@@ -411,7 +427,7 @@ On utilise plutôt l'encart description dans l'image et affiche dans le carousel
 /******************************************************************************/
 .jp-carousel-info p {
   text-align: center !important;
-  font-family: "Slabo" !important;
+  font-family: "'Helvetica Neue',Arial,Helvetica,sans-serif" !important;
   font-size: 17px !important;
 }
 

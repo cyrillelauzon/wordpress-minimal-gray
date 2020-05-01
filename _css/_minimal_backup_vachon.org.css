@@ -1,0 +1,587 @@
+/*
+Theme Name: Mimimal
+Theme URI: Your Theme's URI
+Description: Un theme minimal pour ma main au feu
+Version: 1.0
+Author: Cyrille Lauzon
+Author URI: mamainaufeu.com
+@package WordPress
+@subpackage Mimimal
+*/
+
+/*@import url('/css/bootstrap.min.css')*/
+
+/*=======================================================================
+ * * Typographie
+ ========================================================================*/
+
+body, html {
+  width: 100%;
+  font-family: "Helvetica Neue",Arial,Helvetica,sans-serif;
+  font-size: 16px;
+  color: #666;
+  background-color: #303030;
+}
+
+body{
+    overflow-y:scroll;
+    overflow-x:hidden;
+}
+
+.blocks-gallery-item{
+	max-height: 200px;
+	max-width: 200px;
+	padding:2px;
+	
+
+}
+
+@media (max-width: 600px) {
+	.blocks-gallery-item{
+		max-height: 400px;
+		max-width: 400px;
+	}
+}
+
+.jp-carousel-image-download{
+	visibility:hidden;
+}
+
+.sl-caption{
+	visibility:hidden;
+}
+
+.sl-overlay{
+	background-color: #303030 !important;
+}
+
+
+h1{
+  font-family: 'PT Sans', sans-serif;
+  font-size: 30px;  
+  text-align: justify;
+  font-weight: 200;
+  line-height: 1.4;
+  margin:  0px;
+  padding: 0px;
+  padding-top: 15px;
+  color:#C6C6C6;
+}
+
+h3, h3 a {
+  color: #D54E21;
+   font-family: 'PT Sans', sans-serif;
+  margin: 10px 0px 0px 0px;
+ /* color:#C6C6C6;*/
+  font-weight: normal;
+  font-size:20px;
+}
+
+h4 {
+  font-family: "Helvetica Neue",Arial,Helvetica,sans-serif;
+  font-size: 14px;
+  padding: 0px 0px 0px 0px;
+  margin: 25px 0px 0px 0px;
+  color:#C6C6C6;
+  display: block;
+}
+
+h6 {
+  font-family: "Helvetica Neue",Arial,Helvetica,sans-serif;
+  font-size: 14px;
+  padding: 0px 0px 0px 0px;
+  margin: 0px;
+  margin-top: 30px;
+  background: #303030;
+  color:#D54E21;
+  display: inline-block;
+  font-weight: 400;
+}
+.ngg-gallery-thumbnail img {
+padding: 0px !important;
+border-width: 0px !important;
+}
+
+p {
+  text-align: left;
+  font-weight: 400;
+  font-size: 14px;  
+  line-height: 23px;
+  color: #999;
+  margin:  0px;
+  margin-bottom: 5px;
+  padding: 0px;
+  padding-top: 5px;
+}
+
+/*Citation:*/
+blockquote {
+  text-align: left;
+  margin: 0px 5px 10px 0px;
+  padding: 0px 5px 5px 5px;
+  font-style: italic;
+  /*border-bottom: 1px solid #777;
+  border-top: 1px solid #777;*/
+  font-weight: 400;
+  font-size: 16px;  
+  line-height: 1.5;
+  color: #C6C6C6;
+  width:100%;
+}
+
+blockquote p {
+  text-align: left;
+  margin: 5px 0px 5px 0px;
+  padding: 5px 0px 0px 0px;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;  
+  line-height: 1.5;
+  color: #C6C6C6;
+  width:90%;  
+}
+
+/*Renvoi en bas de texte*/
+.cite, .cite p{
+  text-align: left;
+  font-style: normal;
+  /*margin: 5px 30px 0px 15px;
+  padding: 0px 30px 10px 10px;*/
+/*  border-left: 1px solid #444;*/
+  font-size:12px;
+  font-weight: 400;
+  color: #999;
+  margin: 5px 5px 5px 0px;
+  padding: 0px;
+}
+
+
+li { 
+  font-weight: 400;
+  font-size: 14px;  
+  color: #999;
+  margin:  0px;
+  margin-bottom: 0px;
+  padding: 0px;
+  padding-top: 7px;
+  line-height: 23px;
+}
+
+ol, ul { 
+    margin-left: 0px;
+    padding-left: 25px;
+     padding-top: 5px;
+     margin: 0px;
+     margin-bottom: 10px;
+}
+
+
+
+
+/*
+ * Hyperliens
+ */
+a{
+    font-size: 13px;
+    color:#C6C6C6;
+    text-decoration: none;
+    outline: 0;
+}
+
+a:link {
+    color: #999;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #999;
+    text-decoration: none;
+}
+
+a:hover {
+    color:white;
+    text-decoration: none;
+}
+
+a:active {
+    color:#999;
+    text-decoration: none;
+}
+
+img {
+  max-width:100%; 
+  height: auto;
+  border-style:none;
+ /* border-bottom-width: 1px;
+  border-bottom-color: rgb(235,235,235);
+  border-bottom-style: solid;*/
+}
+
+hr {
+    border: 0; 
+    height: 0; 
+    border-top: 1px solid rgba(0, 0, 33, 0.1); 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    clear:both;
+}
+
+
+
+
+/*=======================================================================
+ * Grille du document, conteneurs de navigation
+ ========================================================================*/
+
+/*Conteneur Principal du layout, s'occupe de centrer les elements*/
+ .container {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px;
+ }
+
+
+/*Elements entrants dans la colonne principale*/
+/*.colMain {
+  width: 900px;  
+  margin: auto;
+}
+*/
+
+.sliderTop{
+	margin-top:0px;
+padding-top:0px;
+}
+
+
+/* Media Queries, No man land de 480 a 900 */
+@media (min-width: 480px) and (max-width: 900px) { 
+    
+  .container {
+    width: 480px;
+    margin-left: auto ;
+    margin-right: auto ;
+    padding: 0px;
+  }
+
+
+ /* .colMain {
+    width: 360px;  
+    margin: 0px;
+    padding: 0px;
+  }*/  
+}
+
+
+/* Media Queries, Cellulaires */
+@media screen and (max-width: 480px)  { 
+    body    {
+        padding: 5px;
+        margin: 0px;
+    }
+    
+  .container {
+    width: 360px;
+    margin-left: 0px ;
+    margin-right: 0px ;
+    padding: 0px;
+  }
+
+  img {
+    width:240px; 
+    height:100%;
+    border-style:none;
+   /* border-bottom-width: 1px;
+    border-bottom-color: rgb(235,235,235);
+    border-bottom-style: solid;*/
+  }
+
+ /* .colMain {
+    width: 360px;  
+    margin: 0px;
+    padding: 0px;
+  }*/  
+}
+
+/*
+ * Titre du blogue et description
+ */
+.blog-header {
+  padding-top: 20px;
+  padding-bottom: 6 0px;
+  text-align: center;  
+}
+
+
+/*Encadré de blog post:*/
+.blogPostTitle{
+  margin-bottom:15px;
+  padding:5px;
+  padding-left: 0px;
+  /*background-color: #222;*/
+  width: 100%;
+  border-bottom-color:#999;
+  border-bottom-width: 1px;
+  border-bottom-style: double;
+/*  background-bottom-color: #333;*/
+}
+
+/*
+ * Contenu d'un post:
+ */
+.blog-post {
+  margin-top:35px;
+  width: 80%;
+  margin-bottom:15px;
+}
+
+.blog-post img{
+  border-width: 0px;
+ 
+}
+
+
+
+
+
+
+
+/*
+ * Footer
+ */
+
+.blog-footer {
+  color: #999;
+  border-top: 0px solid #e5e5e5;
+}
+.blog-footer p:last-child {
+  margin-bottom: 0;
+}
+
+
+
+/*
+ * Main column and sidebar layout
+ */
+.sidebar-module {
+  padding: 15px;
+  margin: 0 -15px 15px;
+}
+.sidebar-module-inset {
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+.sidebar-module-inset p:last-child,
+.sidebar-module-inset ul:last-child,
+.sidebar-module-inset ol:last-child {
+  margin-bottom: 0;
+}
+
+
+
+
+
+/*=======================================================================
+ * utilitaires:
+ ========================================================================*/
+
+/*Utilitaire pour centrer un élément*/
+.center-block {
+  display: inline-block;
+  margin: auto;
+}
+
+.align-left{
+  float:left;
+  clear:none;
+  margin:0px;
+  padding:0px;
+}
+
+.align-right{
+  float:right;
+  clear:none;
+  margin:0px;
+  padding:0px;
+}
+
+/*Pour mettre fin a une serie dimages flottantes*/
+.clearFloat{
+  display: inline-block;
+  vertical-align: top;
+  margin:10px;
+  width:200px;
+  height:150px;
+  clear:both;
+}
+
+
+
+/*Une serie de 'thumb' affichees une a la suite de lautre*/
+.boxThumb {
+  position: relative;
+  margin:30px 0 0 0px;
+  padding:5px 10px 5px 20px;
+  background-color: #222;
+  width:150px;
+  height:210px;
+  display: inline-block;
+  clear:none;
+  float:left;
+  /*background-color: #333;*/
+}
+
+
+.boxThumb a {
+  width:150px;
+  height:150px;
+  top: 0px;
+  left: 0px;
+  display:inline-block;
+}
+
+.boxThumb > img{
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  width:150px;
+  height:150px;
+  top: 0px;
+  left: 0px;
+  display:inline-block;
+}
+
+
+.boxThumb p {
+    top:0px;
+    left:0px;
+    font-size: 13px;
+    color:#999;
+    height:40px;
+    width:130px;
+    display: inline-block;
+
+  /*  border-bottom-color:#999;
+  border-bottom-width: 1px;
+  border-bottom-style:dotted;*/
+}
+
+
+/*=======================================================================
+ * Menu de navigation en haut
+ ========================================================================*/
+
+
+#globalnav {
+  margin: 0px 0px 1px auto;
+  /*vertical-align: right;*/
+  text-align: left;
+  width: 100%;
+}
+
+/*La barre au complet de menu*/
+#globalnav #menu {
+  float: left;
+  padding:0px;
+  padding-top: 5px;
+  margin: 0px;
+  list-style: none;
+}
+
+#globalnav #menu li {
+  float: left;
+}
+
+/*Élements de titres de la barre de navigation:*/
+#globalnav #menu li a {
+  font-size: 16px;
+  padding: 0px 7px 5px 2px;
+  background: #303030;
+  color: #C4C4C4;
+  display: block;
+/*  vertical-align: left;*/
+}
+
+/*Titre de la barre de navigation Hover:*/
+#globalnav #menu li a:hover,
+#globalnav #menu li .current_page_item,
+#globalnav #menu li .current-menu-item,
+#globalnav #menu li .current-menu-ancestor {
+  background: #303030;
+  text-decoration: none;
+}
+
+#container {
+  margin-top: 0;
+  padding-top: 55px;
+}
+
+#globalnav li {
+  padding-top: 0px;
+  position: relative;
+}
+
+/*Un sous menu*/
+#globalnav #menu ul {
+  background: #303030;
+/*  -moz-box-shadow: 0px 3px 3px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 0px 3px 3px rgba(0,0,0,0.5);
+  box-shadow: 0px 3px 3px rgba(0,0,0,0.5);*/
+  display: none;
+  float: right;
+  list-style-type: none;
+  position: absolute;
+  top: 25px;
+  /*right: -100%;*/
+  text-align: left;
+  width: 170px;
+  z-index: 99999; 
+  margin: 0px;
+  padding:5px;
+}
+
+#globalnav #menu ul li {
+  margin: 0px;
+  padding: 0px;
+  width: 160px;
+}
+
+/*Un item A de la barre de menus*/
+#globalnav #menu ul a {
+  font-size:13px;
+  background: #303030;
+  padding:5px;
+  color: #C4C4C4;
+  margin: 0px;
+  width: 150px;
+  border-top: 1px solid #777;
+
+}
+
+#globalnav #menu ul li:hover > a {
+  text-decoration: none;
+  /*color:#D54E21;*/
+  color:white;
+}
+
+#globalnav #menu ul li:first-child a {
+    border-style: none;
+}
+
+#globalnav #menu ul a:hover {
+  /*border-top: 1px solid #303030;*/
+  /*border-style: none;*/
+}
+
+#globalnav #menu li:hover > ul {
+  display: block;
+}
+
+#globalnav #menu ul ul {
+  top: 0px;
+/*left:-100%;*/
+}
+
+
+
+

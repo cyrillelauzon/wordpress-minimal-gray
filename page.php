@@ -18,7 +18,7 @@ get_header(); ?>
 
 
 
-    <h1><?php the_title(); ?></h1>
+    <h3><?php the_title(); ?></h3> <br/>
    
    
    

@@ -3,13 +3,35 @@
 /******************************************************************************/
 
 
-$mainColor : rgba(0, 0, 0, 0.7);
-$mainSubColor : rgba(0, 0, 0, 0.5);
+/*Typography*/
+$mainTitleColor : #C6C6C6;
+$mainTitleSubColor : #D54E21;
+$mainColor : #999;
 $colorBlack : rgba(0, 0, 0, 0.9);
-$fontLightGray : rgba(0, 0, 0, 0.4);
+
+//$mainTitleFont : "'PT Sans', sans-serif";
+$mainTitleFont : "Roboto Condensed";
+$mainFont : "'Helvetica Neue',Arial,Helvetica,sans-serif";
+
+$mainTitleSize : 25px;
+$subTitleSize : 20px;
+$mainTextSize: 14px;
+$smallTextSize: 12px;
+
+@mixin mainFont {
+    font-family: $mainFont !important;
+    color: $mainColor !important;
+}
+
+/*Body Elements*/
+$siteBackgroundColor : #303030;
+$siteHighlightBGColor : #505050;
 
 
-
-$mainFont : 'Slabo';
-
+$mainContainerWidth : 1250px;
 $galeryBlockSize : 315px;
+$indexGaleryBlockSize : 200px;
+
+
+/*Animations*/
+$shortSpeed : '0.9s';
