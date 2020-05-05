@@ -6,6 +6,7 @@
 
 @import "_css/variables";
 @import "_css/typography";
+@import "_css/wordpress";
 
 
 /******************************************************************************/
@@ -16,21 +17,12 @@ body {
     padding-top: 10px;
     overflow-y: scroll;
     background-color: $siteBackgroundColor !important;
-    background-color: red($color: #000000);
-    animation: fadeInAnimation ease 0.2s;
+
+    @include fasterEaseIn;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
 
-@keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
 
 
 img {
@@ -42,14 +34,15 @@ img {
     border-bottom-style: solid;*/
 }
 
-.card-img {
+//Bootstrap cards
+/* .card-img {
     max-width: $indexGaleryBlockSize;
     max-height: $indexGaleryBlockSize;
     height: auto;
     margin-bottom: 5px;
     margin-right: 5px;
     padding-left: 8px;
-}
+} */
 
 /*Effet de transparence sur hover*/
 /* 
@@ -70,7 +63,6 @@ a {
 
 
 
-
 /******************************************************************************/
 /******************************* Bootstrap container/
 /******************************************************************************/
@@ -87,7 +79,7 @@ a {
 /*Container d'une dimension fixe*/
 @media (min-width: 200px) {
     .container {
-        width: 200px !important;
+        width: 250px !important;
     }
 
     .desktop-only {
@@ -99,20 +91,19 @@ a {
     }
 }
 
-@media (min-width: 320px) {
+@media (min-width: 576px) {
+
+    .container {
+        width: 576px !important;
+    }
+}
+
+/* @media (min-width: 575px) {
     .container {
         width: 280px !important;
     }
 
-}
-
-
-@media (min-width: 575px) {
-    .container {
-        width: 280px !important;
-    }
-
-}
+} */
 
 @media (min-width: 768px) {
     .container {
@@ -139,132 +130,55 @@ a {
 
 
 /******************************************************************************/
-/******************************* Wordpress Gallery Blocks/
+/******************************* Navbar Bootstrap
 /******************************************************************************/
 
+.navbar-brand {
+    @include mainTitleFont;
+    padding-bottom: 0px !important;
+    text-decoration: none !important;
+}
 
-// Affichage des captions de galerie en mode mobile seulement:
-.wp-block-gallery .blocks-gallery-item figure {
-    @media only screen and (max-width: 640px) {
+.nav-link {
+    @include mainTitleFont;
+    font-size: $menuTextSize !important;
+    line-height: 38px !important;
 
-        flex-direction: column !important;
+    text-decoration: none !important;
+    padding: 0px, 0px, 10px, 16px !important;
+
+    &:hover {
+        color: $siteHighlightBGColor !important;
+        @include fastEaseIn;
     }
 }
 
-// Affichage des captions de galerie en mode mobile seulement:
-.wp-block-gallery .blocks-gallery-item figcaption {
-    @media only screen and (max-width: 640px) {
-        position: relative !important;
-        bottom: auto !important;
-        max-height: 100% !important;
-        overflow: auto !important;
-        padding: 10px 0 20px 0 !important;
-        color: #333 !important;
-        text-align: center !important;
-        font-size: 13px !important;
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 0%, transparent) !important;
-    }
-
+/*Navbar Bootstrap*/
+.navbar {
+    padding: 0px;
+    background-color: $siteBackgroundColor !important;
 }
 
+.dropdown-menu {
+    top: 45px;
+    background-color: $siteBackgroundColor !important;
+    @include fastEaseIn;
 
-/*Blocs Wordpress Gallery
- Qui deviennent responsifs sur mobile seulement
-*/
-.wp-block-image {
-    @media only screen and (max-width: 640px) {
+    a {
+        @include mainTitleFont;
+        font-size: $menuTextSize !important;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        line-height: 38px !important;
+        text-decoration: none !important;
 
-        width: 270px !important;
-    }
-
-}
-
-li.blocks-gallery-item {
-
-    @media only screen and (max-width: 640px) {
-        figure {
-            width: 270px !important;
+        &:hover {
+            background-color: $siteHighlightBGColor !important;
+            @include fastEaseIn;
         }
-
-        padding-right: 2px;
-        float: left;
-        width: 270px !important;
-        margin: 0px;
-
     }
 }
 
-/*Sur écrans d'ordinateurs on cache le caption entièrement 
-On utilise plutôt l'encart description dans l'image et affiche dans le carousel jetpack*/
-figcaption.blocks-gallery-item__caption {
-    @media only screen and (min-width: 640px) {
-        display: none;
-    }
-}
-
-
-
-
-
-
-
-/******************************************************************************/
-/******************************* WP-Jetpack Carousel/
-/******************************************************************************/
-
-
-
-.jp-carousel-info {
-    p {
-        text-align: center !important;
-        font-family: $mainFont !important;
-        font-size: 17px !important;
-    }
-}
-
-/*
-
-/* Hide Comment Form & Link */
-#jp-carousel-comment-form-container,
-/* Form */
-div.jp-carousel-buttons a.jp-carousel-commentlink,
-/* Link */
-#jp-carousel-comments-loading {
-    display: none !important;
-}
-
-/* Remove Padding from Link Area */
-.jp-carousel-buttons {
-    padding: 0 !important;
-}
-
-
-
-/* Hide comment form header. */
-/* Center the metabox. */
-.jp-carousel-titleanddesc-title,
-.jp-carousel-comment-form-container,
-div#jp-carousel-comments-loading span,
-.jp-carousel-image-meta {
-    display: none !important;
-}
-
-.jp-carousel-titleanddesc {
-    border: none !important;
-    padding-top: 0px !important;
-    margin-top: 0px !important;
-    width: 100% !important;
-}
-
-.jp-carousel-left-column-wrapper {
-    width: 100% !important;
-}
-
-
-/* Move close icon to the right. */
-.jp-carousel-transitions .jp-carousel-close-hint {
-    position: fixed;
-    text-align: right;
-    right: 12px;
-    width: auto;
+.navbar-toggler {
+    margin-bottom: 8px;
 }

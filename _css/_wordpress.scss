@@ -1,0 +1,158 @@
+
+
+/******************************************************************************/
+/******************************* Misc Wordpress
+/******************************************************************************/
+
+
+/*Lien de téléchargement pour bloc fichier wordpress*/
+.wp-block-file__button {
+    display: none;
+}
+
+/******************************************************************************/
+/******************************* Wordpress Gallery Blocks/
+/******************************************************************************/
+
+
+//Affichage des blocks d'images de galeries wordpress
+.blocks-gallery-item {
+    box-sizing: content-box !important;
+    width: $wpBlockGalleryWidth !important;
+    height: $wpBlockGalleryHeight !important;
+    padding-right: 10px !important;
+    flex-grow: 0 !important;
+
+    figure,
+    img {
+        width: $wpBlockGalleryWidth !important;
+        height: $wpBlockGalleryHeight !important;
+
+        @media (max-width: 640px) {
+            flex-direction: column !important;
+            width: 200px !important;
+            height: 200px !important;
+        }
+    }
+
+    @media (max-width: 640px) {
+        flex-direction: column !important;
+        width: 200px !important;
+        height: 200px !important;
+    }
+
+}
+
+// Affichage des captions de galerie en mode mobile seulement:
+.wp-block-gallery .blocks-gallery-item figcaption {
+    @media only screen and (max-width: 640px) {
+        position: relative !important;
+        bottom: auto !important;
+        max-height: 100% !important;
+        overflow: auto !important;
+        padding: 10px 0 20px 0 !important;
+        color: #333 !important;
+        text-align: center !important;
+        font-size: 13px !important;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 0%, transparent) !important;
+    }
+
+}
+
+
+
+
+/*Sur écrans d'ordinateurs on cache le caption entièrement 
+On utilise plutôt l'encart description dans l'image et affiche dans le carousel jetpack*/
+figcaption.blocks-gallery-item__caption {
+    @media only screen and (min-width: 640px) {
+        display: none;
+    }
+}
+
+
+
+/******************************************************************************/
+/******************************* Wordpress embed Blocks/
+/******************************************************************************/
+
+//Embed video-width to 100% width fix as per this thread (towards end of page:)
+//https://github.com/WordPress/gutenberg/issues/8383
+figure.wp-block-embed.is-type-video {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    /*16:9*/
+}
+
+figure.wp-block-embed.is-type-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+/******************************************************************************/
+/******************************* WP-Jetpack Carousel/
+/******************************************************************************/
+
+
+
+.jp-carousel-info {
+    p {
+        text-align: center !important;
+        @include mainTextFont;
+    }
+}
+
+/*
+
+/* Hide Comment Form & Link */
+#jp-carousel-comment-form-container,
+/* Form */
+div.jp-carousel-buttons a.jp-carousel-commentlink,
+/* Link */
+#jp-carousel-comments-loading {
+    display: none !important;
+}
+
+/* Remove Padding from Link Area */
+.jp-carousel-buttons {
+    padding: 0 !important;
+}
+
+
+
+/* Hide comment form header. */
+/* Center the metabox. */
+.jp-carousel-titleanddesc-title,
+.jp-carousel-comment-form-container,
+div#jp-carousel-comments-loading span,
+.jp-carousel-image-meta {
+    display: none !important;
+}
+
+.jp-carousel-titleanddesc {
+    border: none !important;
+    padding-top: 0px !important;
+    margin-top: 0px !important;
+    width: 100% !important;
+}
+
+.jp-carousel-left-column-wrapper {
+    width: 100% !important;
+}
+
+
+/* Move close icon to the right. */
+.jp-carousel-transitions .jp-carousel-close-hint {
+    position: fixed;
+    text-align: right;
+    right: 12px;
+    width: auto;
+}

@@ -3,240 +3,138 @@
 /******************************************************************************/
 /******************************* Variables Sass    ******************************/
 /******************************************************************************/
-/*Typography*/
+/******************************************************************************/
+/******************************* Body elements   ******************************/
+/******************************************************************************/
 /*Body Elements*/
+/******************************************************************************/
+/******************************* Animations   ******************************/
+/******************************************************************************/
+@-webkit-keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /*Animations*/
 /******************************************************************************/
-/******************************* Typographie principale************************/
+/***Titles 
 /******************************************************************************/
 h1 {
-  font-family: "Roboto Condensed";
-  font-size: 25px;
+  font-family: "PT Sans" !important;
+  font-size: 25px !important;
   color: #C6C6C6 !important;
-  margin-top: 20px;
+  margin-top: 15px;
+}
+
+h2,
+h3,
+h3 a {
+  font-family: "PT Sans" !important;
+  font-size: 20px !important;
+  color: #D54E21 !important;
+  font-weight: normal;
 }
 
 .sous-titre-principal {
-  font-size: 12px;
+  font-size: 12px !important;
   color: #999 !important;
-  text-align: left;
+  color: #C6C6C6;
   font-weight: bold;
-}
-
-p {
-  font-size: 14px;
-  color: #999 !important;
   text-align: left;
-  font-weight: 400;
 }
 
-a:hover {
-  color: #505050;
-  text-decoration: none;
-}
-
-figcaption {
-  font-family: "'Helvetica Neue',Arial,Helvetica,sans-serif" !important;
-  color: #999 !important;
-}
-
-/******************************************************************************/
-/***TEMP****************** Typographie principale TEMP*****************/
-/******************************************************************************/
-/* 
-h1{
-    font-family: 'PT Sans', sans-serif;
-    font-size: 30px;  
-    text-align: justify;
-    font-weight: 200;
-    line-height: 1.4;
-    margin:  0px;
-    padding: 0px;
-    padding-top: 15px;
-    color:#C6C6C6;
-  }
-   */
 h3,
-h3 a {
-  color: #D54E21;
-  font-family: "Roboto Condensed";
-  /* margin: 10px 0px 0px 0px; */
-  /* color:#C6C6C6;*/
-  font-weight: normal;
-  font-size: 20px;
+h3 {
+  color: #C6C6C6 !important;
+  margin-top: 100px;
+  margin-bottom: 15px;
 }
 
 h4 {
-  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 14px !important;
+  color: #999 !important;
+  font-weight: bold;
   padding: 0px 0px 0px 0px;
-  margin: 25px 0px 0px 0px;
-  color: #C6C6C6;
+  margin: 25px 0px 10px 0px;
   display: block;
 }
 
-h6 {
-  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
-  font-size: 14px;
-  padding: 0px 0px 0px 0px;
-  margin: 0px;
-  margin-top: 30px;
-  background: #303030;
-  color: #D54E21;
-  display: inline-block;
-  font-weight: 400;
-}
-
-.ngg-gallery-thumbnail img {
-  padding: 0px !important;
-  border-width: 0px !important;
-}
-
-/* 
-  p {
-    text-align: left;
-    font-weight: 400;
-    font-size: 14px;  
-    line-height: 23px;
-    color: #999;
-    margin:  0px;
-    margin-bottom: 5px;
-    padding: 0px;
-    padding-top: 5px;
-  } */
-/*Citation:*/
-blockquote {
+/******************************************************************************/
+/******************************* Main text elements************************/
+/******************************************************************************/
+p,
+ol,
+ul {
+  font-size: 14px !important;
+  color: #999 !important;
   text-align: left;
-  margin: 0px 5px 10px 0px;
-  padding: 0px 5px 5px 5px;
-  font-style: italic;
-  /*border-bottom: 1px solid #777;
-    border-top: 1px solid #777;*/
   font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #C6C6C6;
-  width: 100%;
+}
+
+ul {
+  padding-left: 0px;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+a {
+  font-size: 14px !important;
+  color: #999 !important;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #505050 !important;
+  text-decoration: none;
+  -webkit-animation: fadeInAnimation ease 0.3s;
+          animation: fadeInAnimation ease 0.3s;
+}
+
+blockquote {
+  color: #999 !important;
+  max-width: 600px !important;
 }
 
 blockquote p {
-  text-align: left;
-  margin: 5px 0px 5px 0px;
-  padding: 5px 0px 0px 0px;
+  font-size: 14px !important;
+  color: #999 !important;
   font-style: italic;
+  text-align: left;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #C6C6C6;
-  width: 90%;
+  width: 100%;
+}
+
+figcaption {
+  font-size: 12px !important;
+  color: #999 !important;
+}
+
+.p-caption {
+  font-size: 12px !important;
+  color: #999 !important;
 }
 
 /******************************************************************************/
 /******************************* Autres éléments typographie     **************/
 /******************************************************************************/
-/*catégories du site dans navbar*/
-.current_page_item > a {
-  /*color: $colorBlack;*/
-  /*text-decoration: underline;*/
-}
-
 hr {
   margin-top: 0px;
-  margin-bottom: 8px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-/******************************************************************************/
-/******************************* Listes
-/******************************************************************************/
-ul {
-  padding-left: 0px;
-}
-
-li,
-.cat-item {
-  list-style-type: none;
-  /*    line-height: 48px;*/
-}
-
-/******************************************************************************/
-/******************************* Nav Bar
-/******************************************************************************/
-/*Navbar Bootstrap*/
-.navbar {
-  padding: 0px;
-  background-color: #303030 !important;
-}
-
-.navbar-brand {
-  font-family: "Roboto Condensed" !important;
-  color: #C6C6C6 !important;
-  font-size: 25px;
-  line-height: 50px;
-  padding-bottom: 0px !important;
-}
-
-.navbar-subtitle {
-  font-family: "Roboto Condensed" !important;
-  color: #C6C6C6 !important;
-  font-size: 20px;
-  line-height: 50px;
-  padding-bottom: 0px !important;
-}
-
-.nav-link {
-  font-family: "Roboto Condensed" !important;
-  color: #C6C6C6 !important;
-  line-height: 20px !important;
-  text-decoration: none;
-  padding-left: 0px !important;
-  padding-right: 16px !important;
-  padding-top: 0px !important;
-}
-
-.nav-link:hover {
-  color: #505050 !important;
-  -webkit-animation: fadeInAnimation ease 0.3s;
-          animation: fadeInAnimation ease 0.3s;
-}
-
-.dropdown-toggle::focus {
-  color: #D54E21 !important;
-}
-
-.dropdown-menu {
-  top: 30px;
-  background-color: #303030 !important;
-  /* border-radius: 0px !important; */
-  /*    border-width: 0.4px !important;
-    border-color: $siteHighlightBGColor !important; */
-  -webkit-animation: fadeInAnimation ease 0.3s;
-          animation: fadeInAnimation ease 0.3s;
-}
-
-.dropdown-menu a {
-  padding-top: 0px;
-  padding-bottom: 0px;
-  line-height: 35px !important;
-  color: #C6C6C6 !important;
-  font-family: "Roboto Condensed" !important;
-}
-
-.dropdown-menu a:hover {
-  background-color: #505050 !important;
-  -webkit-animation: fadeInAnimation ease 0.2s;
-          animation: fadeInAnimation ease 0.2s;
-}
-
-.navbar-toggler {
-  margin-bottom: 8px;
-}
-
-.menu-item > a {
-  font-size: 16px;
-  line-height: 50px;
-  padding-left: 9px;
-  padding-right: 18px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #3f3f3f;
 }
 
 /* Css Document */

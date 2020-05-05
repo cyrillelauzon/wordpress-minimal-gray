@@ -2,36 +2,90 @@
 /******************************* Variables Sass    ******************************/
 /******************************************************************************/
 
-
-/*Typography*/
-$mainTitleColor : #C6C6C6;
-$mainTitleSubColor : #D54E21;
-$mainColor : #999;
-$colorBlack : rgba(0, 0, 0, 0.9);
-
 //$mainTitleFont : "'PT Sans', sans-serif";
-$mainTitleFont : "Roboto Condensed";
+//$mainTitleFont : "Roboto Condensed";
+$mainTitleFont : "PT Sans";
 $mainFont : "'Helvetica Neue',Arial,Helvetica,sans-serif";
 
 $mainTitleSize : 25px;
-$subTitleSize : 20px;
+$mainSubTitleSize : 20px;
 $mainTextSize: 14px;
 $smallTextSize: 12px;
+$menuTextSize: 16px;
 
-@mixin mainFont {
-    font-family: $mainFont !important;
+$interSectionMargin: 100px;
+$mainTextMargin: 15px;
+$smallTextMargin: 10px;
+
+$mainTitleColor : #C6C6C6;
+$mainSubTitleColor : #D54E21;
+$mainColor : #999;
+$colorBlack : rgba(0, 0, 0, 0.9);
+
+
+@mixin mainTitleFont {
+    font-family: $mainTitleFont !important;
+    font-size: $mainTitleSize !important;
+    color: $mainTitleColor !important;
+}
+
+@mixin mainSubTitleFont {
+    font-family: $mainTitleFont !important;
+    font-size: $mainSubTitleSize !important;
+    color: $mainSubTitleColor !important;
+}
+
+@mixin mainTextFont {
+    //font-family: $mainFont !important;
+    font-size: $mainTextSize !important;
     color: $mainColor !important;
 }
 
+@mixin smallTextFont {
+    //font-family: $mainFont !important;
+    font-size: $smallTextSize !important;
+    color: $mainColor !important;
+}
+
+
+
+/******************************************************************************/
+/******************************* Body elements   ******************************/
+/******************************************************************************/
+
 /*Body Elements*/
+$mainContainerWidth : 900px;
+
+$wpBlockGalleryWidth : 425px;
+$wpBlockGalleryHeight : 300px;
+
+$galeryBlockSize : 315px;
+$indexGaleryBlockSize : 145px;
+
 $siteBackgroundColor : #303030;
 $siteHighlightBGColor : #505050;
 
 
-$mainContainerWidth : 1250px;
-$galeryBlockSize : 315px;
-$indexGaleryBlockSize : 200px;
+/******************************************************************************/
+/******************************* Animations   ******************************/
+/******************************************************************************/
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
 
+    100% {
+        opacity: 1;
+    }
+}
+
+@mixin fastEaseIn {
+    animation: fadeInAnimation ease 0.3s;
+}
+
+@mixin fasterEaseIn {
+    animation: fadeInAnimation ease 0.2s;
+}
 
 /*Animations*/
 $shortSpeed : '0.9s';

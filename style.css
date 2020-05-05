@@ -6,258 +6,13 @@
 /******************************************************************************/
 /******************************* Variables Sass    ******************************/
 /******************************************************************************/
-/*Typography*/
+/******************************************************************************/
+/******************************* Body elements   ******************************/
+/******************************************************************************/
 /*Body Elements*/
-/*Animations*/
 /******************************************************************************/
-/******************************* Typographie principale************************/
+/******************************* Animations   ******************************/
 /******************************************************************************/
-h1 {
-  font-family: "Roboto Condensed";
-  font-size: 25px;
-  color: #C6C6C6 !important;
-  margin-top: 20px;
-}
-
-.sous-titre-principal {
-  font-size: 12px;
-  color: #999 !important;
-  text-align: left;
-  font-weight: bold;
-}
-
-p {
-  font-size: 14px;
-  color: #999 !important;
-  text-align: left;
-  font-weight: 400;
-}
-
-a:hover {
-  color: #505050;
-  text-decoration: none;
-}
-
-figcaption {
-  font-family: "'Helvetica Neue',Arial,Helvetica,sans-serif" !important;
-  color: #999 !important;
-}
-
-/******************************************************************************/
-/***TEMP****************** Typographie principale TEMP*****************/
-/******************************************************************************/
-/* 
-h1{
-    font-family: 'PT Sans', sans-serif;
-    font-size: 30px;  
-    text-align: justify;
-    font-weight: 200;
-    line-height: 1.4;
-    margin:  0px;
-    padding: 0px;
-    padding-top: 15px;
-    color:#C6C6C6;
-  }
-   */
-h3,
-h3 a {
-  color: #D54E21;
-  font-family: "Roboto Condensed";
-  /* margin: 10px 0px 0px 0px; */
-  /* color:#C6C6C6;*/
-  font-weight: normal;
-  font-size: 20px;
-}
-
-h4 {
-  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
-  font-size: 14px;
-  padding: 0px 0px 0px 0px;
-  margin: 25px 0px 0px 0px;
-  color: #C6C6C6;
-  display: block;
-}
-
-h6 {
-  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
-  font-size: 14px;
-  padding: 0px 0px 0px 0px;
-  margin: 0px;
-  margin-top: 30px;
-  background: #303030;
-  color: #D54E21;
-  display: inline-block;
-  font-weight: 400;
-}
-
-.ngg-gallery-thumbnail img {
-  padding: 0px !important;
-  border-width: 0px !important;
-}
-
-/* 
-  p {
-    text-align: left;
-    font-weight: 400;
-    font-size: 14px;  
-    line-height: 23px;
-    color: #999;
-    margin:  0px;
-    margin-bottom: 5px;
-    padding: 0px;
-    padding-top: 5px;
-  } */
-/*Citation:*/
-blockquote {
-  text-align: left;
-  margin: 0px 5px 10px 0px;
-  padding: 0px 5px 5px 5px;
-  font-style: italic;
-  /*border-bottom: 1px solid #777;
-    border-top: 1px solid #777;*/
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #C6C6C6;
-  width: 100%;
-}
-
-blockquote p {
-  text-align: left;
-  margin: 5px 0px 5px 0px;
-  padding: 5px 0px 0px 0px;
-  font-style: italic;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #C6C6C6;
-  width: 90%;
-}
-
-/******************************************************************************/
-/******************************* Autres éléments typographie     **************/
-/******************************************************************************/
-/*catégories du site dans navbar*/
-.current_page_item > a {
-  /*color: $colorBlack;*/
-  /*text-decoration: underline;*/
-}
-
-hr {
-  margin-top: 0px;
-  margin-bottom: 8px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-/******************************************************************************/
-/******************************* Listes
-/******************************************************************************/
-ul {
-  padding-left: 0px;
-}
-
-li,
-.cat-item {
-  list-style-type: none;
-  /*    line-height: 48px;*/
-}
-
-/******************************************************************************/
-/******************************* Nav Bar
-/******************************************************************************/
-/*Navbar Bootstrap*/
-.navbar {
-  padding: 0px;
-  background-color: #303030 !important;
-}
-
-.navbar-brand {
-  font-family: "Roboto Condensed" !important;
-  color: #C6C6C6 !important;
-  font-size: 25px;
-  line-height: 50px;
-  padding-bottom: 0px !important;
-}
-
-.navbar-subtitle {
-  font-family: "Roboto Condensed" !important;
-  color: #C6C6C6 !important;
-  font-size: 20px;
-  line-height: 50px;
-  padding-bottom: 0px !important;
-}
-
-.nav-link {
-  font-family: "Roboto Condensed" !important;
-  color: #C6C6C6 !important;
-  line-height: 20px !important;
-  text-decoration: none;
-  padding-left: 0px !important;
-  padding-right: 16px !important;
-  padding-top: 0px !important;
-}
-
-.nav-link:hover {
-  color: #505050 !important;
-  -webkit-animation: fadeInAnimation ease 0.3s;
-          animation: fadeInAnimation ease 0.3s;
-}
-
-.dropdown-toggle::focus {
-  color: #D54E21 !important;
-}
-
-.dropdown-menu {
-  top: 30px;
-  background-color: #303030 !important;
-  /* border-radius: 0px !important; */
-  /*    border-width: 0.4px !important;
-    border-color: $siteHighlightBGColor !important; */
-  -webkit-animation: fadeInAnimation ease 0.3s;
-          animation: fadeInAnimation ease 0.3s;
-}
-
-.dropdown-menu a {
-  padding-top: 0px;
-  padding-bottom: 0px;
-  line-height: 35px !important;
-  color: #C6C6C6 !important;
-  font-family: "Roboto Condensed" !important;
-}
-
-.dropdown-menu a:hover {
-  background-color: #505050 !important;
-  -webkit-animation: fadeInAnimation ease 0.2s;
-          animation: fadeInAnimation ease 0.2s;
-}
-
-.navbar-toggler {
-  margin-bottom: 8px;
-}
-
-.menu-item > a {
-  font-size: 16px;
-  line-height: 50px;
-  padding-left: 9px;
-  padding-right: 18px;
-}
-
-/******************************************************************************/
-/******************************* Navigation***********************/
-/******************************************************************************/
-body {
-  padding-top: 10px;
-  overflow-y: scroll;
-  background-color: #303030 !important;
-  background-color: 0;
-  -webkit-animation: fadeInAnimation ease 0.2s;
-          animation: fadeInAnimation ease 0.2s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
 @-webkit-keyframes fadeInAnimation {
   0% {
     opacity: 0;
@@ -266,7 +21,6 @@ body {
     opacity: 1;
   }
 }
-
 @keyframes fadeInAnimation {
   0% {
     opacity: 0;
@@ -276,105 +30,164 @@ body {
   }
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  border-style: none;
-  /* border-bottom-width: 1px;
-    border-bottom-color: rgb(235,235,235);
-    border-bottom-style: solid;*/
+/*Animations*/
+/******************************************************************************/
+/***Titles 
+/******************************************************************************/
+h1 {
+  font-family: "PT Sans" !important;
+  font-size: 25px !important;
+  color: #C6C6C6 !important;
+  margin-top: 15px;
 }
 
-.card-img {
-  max-width: 200px;
-  max-height: 200px;
-  height: auto;
-  margin-bottom: 5px;
-  margin-right: 5px;
-  padding-left: 8px;
+h2,
+h3,
+h3 a {
+  font-family: "PT Sans" !important;
+  font-size: 20px !important;
+  color: #D54E21 !important;
+  font-weight: normal;
 }
 
-/*Effet de transparence sur hover*/
-/* 
+.sous-titre-principal {
+  font-size: 12px !important;
+  color: #999 !important;
+  color: #C6C6C6;
+  font-weight: bold;
+  text-align: left;
+}
+
+h3,
+h3 {
+  color: #C6C6C6 !important;
+  margin-top: 100px;
+  margin-bottom: 15px;
+}
+
+h4 {
+  font-size: 14px !important;
+  color: #999 !important;
+  font-weight: bold;
+  padding: 0px 0px 0px 0px;
+  margin: 25px 0px 10px 0px;
+  display: block;
+}
+
+/******************************************************************************/
+/******************************* Main text elements************************/
+/******************************************************************************/
+p,
+ol,
+ul {
+  font-size: 14px !important;
+  color: #999 !important;
+  text-align: left;
+  font-weight: 400;
+}
+
+ul {
+  padding-left: 0px;
+}
+
+ul li {
+  list-style-type: none;
+}
+
 a {
-
-    :hover {
-        opacity: 0.8;
-        transition: opacity 0.3s ease;
-    }
-
-    img {
-        opacity: 1;
-    }
-
+  font-size: 14px !important;
+  color: #999 !important;
+  text-decoration: underline;
 }
- */
+
+a:hover {
+  color: #505050 !important;
+  text-decoration: none;
+  -webkit-animation: fadeInAnimation ease 0.3s;
+          animation: fadeInAnimation ease 0.3s;
+}
+
+blockquote {
+  color: #999 !important;
+  max-width: 600px !important;
+}
+
+blockquote p {
+  font-size: 14px !important;
+  color: #999 !important;
+  font-style: italic;
+  text-align: left;
+  font-weight: 400;
+  width: 100%;
+}
+
+figcaption {
+  font-size: 12px !important;
+  color: #999 !important;
+}
+
+.p-caption {
+  font-size: 12px !important;
+  color: #999 !important;
+}
+
 /******************************************************************************/
-/******************************* Bootstrap container/
+/******************************* Autres éléments typographie     **************/
 /******************************************************************************/
-.container {
-  width: 900px !important;
+hr {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #3f3f3f;
 }
 
-.thumbnail {
-  width: 750px !important;
-}
-
-/*Container d'une dimension fixe*/
-@media (min-width: 200px) {
-  .container {
-    width: 200px !important;
-  }
-  .desktop-only {
-    display: none;
-  }
-  .mobile-only {
-    display: block;
-  }
-}
-
-@media (min-width: 320px) {
-  .container {
-    width: 280px !important;
-  }
-}
-
-@media (min-width: 575px) {
-  .container {
-    width: 280px !important;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    width: 768px !important;
-  }
-  .mobile-only {
-    display: block;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-    width: 1250px !important;
-  }
-}
-
-@media (min-width: 1250px) {
-  .container {
-    width: 1250px !important;
-  }
+/******************************************************************************/
+/******************************* Misc Wordpress
+/******************************************************************************/
+/*Lien de téléchargement pour bloc fichier wordpress*/
+.wp-block-file__button {
+  display: none;
 }
 
 /******************************************************************************/
 /******************************* Wordpress Gallery Blocks/
 /******************************************************************************/
-@media only screen and (max-width: 640px) {
-  .wp-block-gallery .blocks-gallery-item figure {
+.blocks-gallery-item {
+  -webkit-box-sizing: content-box !important;
+          box-sizing: content-box !important;
+  width: 425px !important;
+  height: 300px !important;
+  padding-right: 10px !important;
+  -webkit-box-flex: 0 !important;
+      -ms-flex-positive: 0 !important;
+          flex-grow: 0 !important;
+}
+
+.blocks-gallery-item figure,
+.blocks-gallery-item img {
+  width: 425px !important;
+  height: 300px !important;
+}
+
+@media (max-width: 640px) {
+  .blocks-gallery-item figure,
+  .blocks-gallery-item img {
     -webkit-box-orient: vertical !important;
     -webkit-box-direction: normal !important;
         -ms-flex-direction: column !important;
             flex-direction: column !important;
+    width: 200px !important;
+    height: 200px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .blocks-gallery-item {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    width: 200px !important;
+    height: 200px !important;
   }
 }
 
@@ -393,27 +206,6 @@ a {
   }
 }
 
-/*Blocs Wordpress Gallery
- Qui deviennent responsifs sur mobile seulement
-*/
-@media only screen and (max-width: 640px) {
-  .wp-block-image {
-    width: 270px !important;
-  }
-}
-
-@media only screen and (max-width: 640px) {
-  li.blocks-gallery-item {
-    padding-right: 2px;
-    float: left;
-    width: 270px !important;
-    margin: 0px;
-  }
-  li.blocks-gallery-item figure {
-    width: 270px !important;
-  }
-}
-
 /*Sur écrans d'ordinateurs on cache le caption entièrement 
 On utilise plutôt l'encart description dans l'image et affiche dans le carousel jetpack*/
 @media only screen and (min-width: 640px) {
@@ -423,12 +215,31 @@ On utilise plutôt l'encart description dans l'image et affiche dans le carousel
 }
 
 /******************************************************************************/
+/******************************* Wordpress embed Blocks/
+/******************************************************************************/
+figure.wp-block-embed.is-type-video {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  /*16:9*/
+}
+
+figure.wp-block-embed.is-type-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/******************************************************************************/
 /******************************* WP-Jetpack Carousel/
 /******************************************************************************/
 .jp-carousel-info p {
   text-align: center !important;
-  font-family: "'Helvetica Neue',Arial,Helvetica,sans-serif" !important;
-  font-size: 17px !important;
+  font-size: 14px !important;
+  color: #999 !important;
 }
 
 /*
@@ -471,5 +282,170 @@ div#jp-carousel-comments-loading span,
   text-align: right;
   right: 12px;
   width: auto;
+}
+
+/******************************************************************************/
+/******************************* Navigation***********************/
+/******************************************************************************/
+body {
+  padding-top: 10px;
+  overflow-y: scroll;
+  background-color: #303030 !important;
+  -webkit-animation: fadeInAnimation ease 0.2s;
+          animation: fadeInAnimation ease 0.2s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-style: none;
+  /* border-bottom-width: 1px;
+    border-bottom-color: rgb(235,235,235);
+    border-bottom-style: solid;*/
+}
+
+/* .card-img {
+    max-width: $indexGaleryBlockSize;
+    max-height: $indexGaleryBlockSize;
+    height: auto;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    padding-left: 8px;
+} */
+/*Effet de transparence sur hover*/
+/* 
+a {
+
+    :hover {
+        opacity: 0.8;
+        transition: opacity 0.3s ease;
+    }
+
+    img {
+        opacity: 1;
+    }
+
+}
+ */
+/******************************************************************************/
+/******************************* Bootstrap container/
+/******************************************************************************/
+.container {
+  width: 900px !important;
+}
+
+.thumbnail {
+  width: 750px !important;
+}
+
+/*Container d'une dimension fixe*/
+@media (min-width: 200px) {
+  .container {
+    width: 250px !important;
+  }
+  .desktop-only {
+    display: none;
+  }
+  .mobile-only {
+    display: block;
+  }
+}
+
+@media (min-width: 576px) {
+  .container {
+    width: 576px !important;
+  }
+}
+
+/* @media (min-width: 575px) {
+    .container {
+        width: 280px !important;
+    }
+
+} */
+@media (min-width: 768px) {
+  .container {
+    width: 768px !important;
+  }
+  .mobile-only {
+    display: block;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 900px !important;
+  }
+}
+
+@media (min-width: 900px) {
+  .container {
+    width: 900px !important;
+  }
+}
+
+/******************************************************************************/
+/******************************* Navbar Bootstrap
+/******************************************************************************/
+.navbar-brand {
+  font-family: "PT Sans" !important;
+  font-size: 25px !important;
+  color: #C6C6C6 !important;
+  padding-bottom: 0px !important;
+  text-decoration: none !important;
+}
+
+.nav-link {
+  font-family: "PT Sans" !important;
+  font-size: 25px !important;
+  color: #C6C6C6 !important;
+  font-size: 16px !important;
+  line-height: 38px !important;
+  text-decoration: none !important;
+  padding: 0px, 0px, 10px, 16px !important;
+}
+
+.nav-link:hover {
+  color: #505050 !important;
+  -webkit-animation: fadeInAnimation ease 0.3s;
+          animation: fadeInAnimation ease 0.3s;
+}
+
+/*Navbar Bootstrap*/
+.navbar {
+  padding: 0px;
+  background-color: #303030 !important;
+}
+
+.dropdown-menu {
+  top: 45px;
+  background-color: #303030 !important;
+  -webkit-animation: fadeInAnimation ease 0.3s;
+          animation: fadeInAnimation ease 0.3s;
+}
+
+.dropdown-menu a {
+  font-family: "PT Sans" !important;
+  font-size: 25px !important;
+  color: #C6C6C6 !important;
+  font-size: 16px !important;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  line-height: 38px !important;
+  text-decoration: none !important;
+}
+
+.dropdown-menu a:hover {
+  background-color: #505050 !important;
+  -webkit-animation: fadeInAnimation ease 0.3s;
+          animation: fadeInAnimation ease 0.3s;
+}
+
+.navbar-toggler {
+  margin-bottom: 8px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -58,15 +58,20 @@
         <!-- Barre Navigation -->
 
 
-           <!--  <span class="navbar-subtitle"><?php bloginfo('description');?></span> -->
-           <a class="navbar-brand align-baseline" href="<?php echo home_url(); ?>"><?php bloginfo('name');?></a>               
-            
-            <nav class="navbar navbar-expand-sm navbar-light" data-toggle="affix">
+
+                   
+           
+             
+            <nav class="navbar navbar-expand-md navbar-light" data-toggle="affix">
               
 
               <div class="d-sm-flex d-block flex-sm-nowrap">
                       <!-- Titre du blogue -->
-                                   <a class="nav-link align-baseline" href="<?php echo home_url(); ?>"><?php bloginfo('description');?></a>
+                      <a class="navbar-brand align-baseline" href="<?php echo home_url(); ?>"><?php bloginfo('name');?></a>       
+                    <!--   <a class="navbar-subtitle align-baseline" href="<?php echo home_url(); ?>">-&nbsp;<?php bloginfo('description');?></a>          -->
+
+
+                               <!--     <a class="nav-link align-baseline" href="<?php echo home_url(); ?>"><?php bloginfo('description');?></a> -->
                       
                       <!-- Menu de Navigation -->
                       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -79,7 +84,7 @@
                           'container'			=> 'div',
                           'container_class'	=> 'collapse navbar-collapse',
                           'container_id'		=> 'mainNav',
-                          'menu_class'		=> 'navbar-nav mr-auto',
+                          'menu_class'		=> 'navbar-nav mr-auto navbar-right',
                             'fallback_cb'		=> 'WP_Bootstrap_Navwalker::fallback',
                             'walker'			=> new WP_Bootstrap_Navwalker()
                         ) );?> 
@@ -104,8 +109,10 @@
                         wp_nav_menu( $defaults ); 
                       ?> -->
               </div>
+
+              
             </nav><!-- Barre Navigation -->
-           <br/>
+           <hr/><br/>
 
 
 
