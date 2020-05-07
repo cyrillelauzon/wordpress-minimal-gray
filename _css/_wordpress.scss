@@ -1,5 +1,3 @@
-
-
 /******************************************************************************/
 /******************************* Misc Wordpress
 /******************************************************************************/
@@ -16,29 +14,34 @@
 
 
 //Affichage des blocks d'images de galeries wordpress
-.blocks-gallery-item {
-    box-sizing: content-box !important;
+@mixin desktopBlockSize {
     width: $wpBlockGalleryWidth !important;
     height: $wpBlockGalleryHeight !important;
+}
+
+@mixin mobileBlockSize {
+    width: $wpBlockGallerySizeMobile !important;
+    height: $wpBlockGallerySizeMobile !important;
+    flex-direction: column !important;
+}
+
+.blocks-gallery-item {
+    @include desktopBlockSize;
+    box-sizing: content-box !important;
     padding-right: 10px !important;
     flex-grow: 0 !important;
 
     figure,
     img {
-        width: $wpBlockGalleryWidth !important;
-        height: $wpBlockGalleryHeight !important;
+        @include desktopBlockSize;
 
         @media (max-width: 640px) {
-            flex-direction: column !important;
-            width: 200px !important;
-            height: 200px !important;
+            @include mobileBlockSize;
         }
     }
 
     @media (max-width: 640px) {
-        flex-direction: column !important;
-        width: 200px !important;
-        height: 200px !important;
+        @include mobileBlockSize;
     }
 
 }
@@ -60,8 +63,6 @@
 }
 
 
-
-
 /*Sur écrans d'ordinateurs on cache le caption entièrement 
 On utilise plutôt l'encart description dans l'image et affiche dans le carousel jetpack*/
 figcaption.blocks-gallery-item__caption {
@@ -69,7 +70,6 @@ figcaption.blocks-gallery-item__caption {
         display: none;
     }
 }
-
 
 
 /******************************************************************************/
@@ -101,12 +101,10 @@ figure.wp-block-embed.is-type-video iframe {
 /******************************* WP-Jetpack Carousel/
 /******************************************************************************/
 
-
-
 .jp-carousel-info {
     p {
-        text-align: center !important;
         @include mainTextFont;
+        text-align: center !important;
     }
 }
 

@@ -33,16 +33,26 @@ img {
     border-bottom-color: rgb(235,235,235);
     border-bottom-style: solid;*/
 }
+/* .card-link {
+    &:hover {
+        opacity: 0.4;
+        animation: fadeInAnimation ease 0.8s;
+    }
+} */
 
-//Bootstrap cards
-/* .card-img {
+.card-img {
     max-width: $indexGaleryBlockSize;
     max-height: $indexGaleryBlockSize;
     height: auto;
     margin-bottom: 5px;
     margin-right: 5px;
     padding-left: 8px;
-} */
+
+    &:hover {
+        opacity: 0.4;
+        animation: fadeAnimation ease 0.8s;
+    }
+}
 
 /*Effet de transparence sur hover*/
 /* 

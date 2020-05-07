@@ -1,9 +1,13 @@
 @charset "iso-8859-1";
-@import url('https://fonts.googleapis.com/css?family=Slabo&display=swap');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Droid+Sans&display=swap');
+
 
 
 @import "_css/variables";
-@import "_css/typography";
+@import "_css/typography-gutenberg";
 
 
 
@@ -28,6 +32,39 @@
   font-weight: 500;
 }
 
+
+//Affichage des blocks d'images de galeries wordpress
+@mixin desktopBlockSize {
+  width: $wpBlockGalleryWidth !important;
+  height: $wpBlockGalleryHeight !important;
+}
+
+@mixin mobileBlockSize {
+  width: $wpBlockGallerySizeMobile !important;
+  height: $wpBlockGallerySizeMobile !important;
+  flex-direction: column !important;
+}
+
+.blocks-gallery-item {
+  @include desktopBlockSize;
+  box-sizing: content-box !important;
+  padding-right: 10px !important;
+  flex-grow: 0 !important;
+
+  figure,
+  img {
+    @include desktopBlockSize;
+
+    @media (max-width: 640px) {
+      @include mobileBlockSize;
+    }
+  }
+
+  @media (max-width: 640px) {
+    @include mobileBlockSize;
+  }
+
+}
 
 
 /******************************************************************************/

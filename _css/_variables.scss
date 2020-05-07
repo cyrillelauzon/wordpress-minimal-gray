@@ -4,6 +4,7 @@
 
 //$mainTitleFont : "'PT Sans', sans-serif";
 //$mainTitleFont : "Roboto Condensed";
+
 $mainTitleFont : "PT Sans";
 $mainFont : "'Helvetica Neue',Arial,Helvetica,sans-serif";
 
@@ -23,28 +24,29 @@ $mainColor : #999;
 $colorBlack : rgba(0, 0, 0, 0.9);
 
 
+@mixin makeFont($family, $size, $color) {
+    font: {
+        family: $family !important;
+        size: $size !important;
+    }
+
+    color: $color !important;
+}
+
 @mixin mainTitleFont {
-    font-family: $mainTitleFont !important;
-    font-size: $mainTitleSize !important;
-    color: $mainTitleColor !important;
+    @include makeFont($mainTitleFont, $mainTitleSize, $mainTitleColor);
 }
 
 @mixin mainSubTitleFont {
-    font-family: $mainTitleFont !important;
-    font-size: $mainSubTitleSize !important;
-    color: $mainSubTitleColor !important;
+    @include makeFont($mainTitleFont, $mainSubTitleSize, $mainSubTitleColor);
 }
 
 @mixin mainTextFont {
-    //font-family: $mainFont !important;
-    font-size: $mainTextSize !important;
-    color: $mainColor !important;
+    @include makeFont("", $mainTextSize, $mainColor);
 }
 
 @mixin smallTextFont {
-    //font-family: $mainFont !important;
-    font-size: $smallTextSize !important;
-    color: $mainColor !important;
+    @include makeFont("", $smallTextSize, $mainColor);
 }
 
 
@@ -58,6 +60,7 @@ $mainContainerWidth : 900px;
 
 $wpBlockGalleryWidth : 425px;
 $wpBlockGalleryHeight : 300px;
+$wpBlockGallerySizeMobile : 200px;
 
 $galeryBlockSize : 315px;
 $indexGaleryBlockSize : 145px;

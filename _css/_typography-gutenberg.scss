@@ -2,17 +2,51 @@
 /***Titles 
 /******************************************************************************/
 
-h1 {
+/* Approximate the theme width, except for full-width images. */
+.wp-block {
+    max-width: 900px;
+
+    &[data-align="wide"] {
+        max-width: 900px;
+    }
+
+    &[data-align="full"] {
+        max-width: none;
+    }
+}
+
+body {
+    padding-top: 10px;
+    overflow-y: scroll;
+    background-color: $siteBackgroundColor !important;
+
+}
+
+
+
+.editor-writing-flow .wp-block h1 {
     @include mainTitleFont;
     margin-top: $mainTextMargin;
 }
 
 
-h2,
-h3,
-h3 a {
+.editor-post-title__block .editor-post-title__input,
+.editor-writing-flow .wp-block h2,
+.editor-writing-flow .wp-block h3,
+.editor-writing-flow .wp-block h3 a {
     @include mainSubTitleFont;
 }
+
+.editor-post-title__block {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+
+    .editor-post-title__input {
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+}
+
 
 
 //Info displayed under page title 
@@ -24,35 +58,38 @@ h3 a {
 }
 
 //Ample top margin so H3 can be used to separate sections in text
-h3 {
+.editor-writing-flow .wp-block h3 {
     color: $mainTitleColor !important;
     margin-top: $interSectionMargin;
     margin-bottom: $mainTextMargin;
 }
 
 
-h4 {
+.editor-writing-flow .wp-block h4 {
     @include mainTextFont;
     font-weight: bold;
 
     padding: 0px 0px 0px 0px;
     margin: 25px 0px 10px 0px;
-   // display: block;
+    // display: block;
 }
 
 
 /******************************************************************************/
 /******************************* Main text elements************************/
 /******************************************************************************/
-p,
-ol,
-ul {
+.editor-writing-flow .wp-block textarea,
+.editor-writing-flow .wp-block .wp-block-freeform,
+.editor-rich-text p,
+.editor-post-title__input,
+.wp-block-quote__citation {
+
     @include mainTextFont;
     text-align: left;
     font-weight: 400;
 }
 
-ul {
+.editor-writing-flow .wp-block ul {
     padding-left: 0px;
 
     li {
@@ -60,7 +97,7 @@ ul {
     }
 }
 
-a {
+.editor-writing-flow .wp-block a {
     @include mainTextFont;
     text-decoration: underline;
 
@@ -73,7 +110,7 @@ a {
 
 
 //Blocs de citations
-blockquote {
+.wp-block blockquote {
     color: $mainColor !important;
     max-width: 600px !important;
 
@@ -87,7 +124,7 @@ blockquote {
 }
 
 //Captions under images
-figcaption {
+.wp-block figcaption {
     @include smallTextFont;
 }
 
@@ -101,7 +138,7 @@ figcaption {
 /******************************* Autres éléments typographie     **************/
 /******************************************************************************/
 
-hr {
+.editor-writing-flow .wp-block hr {
     margin-top: 0px;
     margin-bottom: $smallTextMargin;
     border-bottom: 1px solid rgb(63, 63, 63);
