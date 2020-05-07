@@ -7,6 +7,12 @@
 /******************************* Variables Sass    ******************************/
 /******************************************************************************/
 /******************************************************************************/
+/******************************* TextStyles mixin******************************/
+/******************************************************************************/
+/******************************************************************************/
+/******************************* TextStyles mixin******************************/
+/******************************************************************************/
+/******************************************************************************/
 /******************************* Body elements   ******************************/
 /******************************************************************************/
 /*Body Elements*/
@@ -59,6 +65,9 @@ h3 a {
 }
 
 h3 {
+  font-family: "PT Sans" !important;
+  font-size: 20px !important;
+  color: #D54E21 !important;
   color: #C6C6C6 !important;
   margin-top: 100px;
   margin-bottom: 15px;
@@ -68,6 +77,8 @@ h4 {
   font-family: "" !important;
   font-size: 14px !important;
   color: #999 !important;
+  text-align: left;
+  font-weight: 400;
   font-weight: bold;
   padding: 0px 0px 0px 0px;
   margin: 25px 0px 10px 0px;
@@ -78,7 +89,8 @@ h4 {
 /******************************************************************************/
 p,
 ol,
-ul {
+ul,
+a {
   font-family: "" !important;
   font-size: 14px !important;
   color: #999 !important;
@@ -98,6 +110,8 @@ a {
   font-family: "" !important;
   font-size: 14px !important;
   color: #999 !important;
+  text-align: left;
+  font-weight: 400;
   text-decoration: underline;
 }
 
@@ -117,9 +131,9 @@ blockquote p {
   font-family: "" !important;
   font-size: 14px !important;
   color: #999 !important;
-  font-style: italic;
   text-align: left;
   font-weight: 400;
+  font-style: italic;
   width: 100%;
 }
 
@@ -244,6 +258,8 @@ figure.wp-block-embed.is-type-video iframe {
   font-family: "" !important;
   font-size: 14px !important;
   color: #999 !important;
+  text-align: left;
+  font-weight: 400;
   text-align: center !important;
 }
 

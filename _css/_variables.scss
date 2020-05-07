@@ -24,6 +24,9 @@ $mainColor : #999;
 $colorBlack : rgba(0, 0, 0, 0.9);
 
 
+/******************************************************************************/
+/******************************* TextStyles mixin******************************/
+/******************************************************************************/
 @mixin makeFont($family, $size, $color) {
     font: {
         family: $family !important;
@@ -33,20 +36,97 @@ $colorBlack : rgba(0, 0, 0, 0.9);
     color: $color !important;
 }
 
-@mixin mainTitleFont {
+@mixin styleTitle {
     @include makeFont($mainTitleFont, $mainTitleSize, $mainTitleColor);
 }
 
-@mixin mainSubTitleFont {
+@mixin styleSubTitle {
     @include makeFont($mainTitleFont, $mainSubTitleSize, $mainSubTitleColor);
 }
 
-@mixin mainTextFont {
+@mixin styleMainText {
     @include makeFont("", $mainTextSize, $mainColor);
+    text-align: left;
+    font-weight: 400;
 }
 
-@mixin smallTextFont {
+@mixin styleSmallText {
     @include makeFont("", $smallTextSize, $mainColor);
+}
+
+/******************************************************************************/
+/******************************* TextStyles mixin******************************/
+/******************************************************************************/
+//Styles are defined in mixins so the same style can be applied inside theme and
+//gutenberg editor via _typography.scss and _typography-gutenberg.scss
+
+
+
+@mixin styleH1 {
+    @include styleTitle;
+    margin-top: $mainTextMargin;
+}
+
+//Main page title
+@mixin styleH3 {
+    @include styleSubTitle;
+    color: $mainTitleColor !important;
+    margin-top: $interSectionMargin;
+    margin-bottom: $mainTextMargin;
+}
+
+//Info displayed under page title 
+@mixin sousTitrePrincipal {
+    @include styleSmallText;
+    color: $mainTitleColor;
+    font-weight: bold;
+    text-align: left;
+}
+
+//page section title
+@mixin styleH4 {
+    @include styleMainText;
+    font-weight: bold;
+
+    padding: 0px 0px 0px 0px;
+    margin: 25px 0px 10px 0px;
+    // display: block;
+}
+
+@mixin styleA {
+    @include styleMainText;
+    text-decoration: underline;
+
+    &:hover {
+        color: $siteHighlightBGColor !important;
+        text-decoration: none;
+        @include fastEaseIn;
+    }
+}
+
+@mixin styleUl {
+    padding-left: 0px;
+
+    li {
+        list-style-type: none;
+    }
+}
+
+@mixin styleBlockquote {
+    color: $mainColor !important;
+    max-width: 600px !important;
+
+    p {
+        @include styleMainText;
+        font-style: italic;
+        width: 100%;
+    }
+}
+
+@mixin styleHr {
+    margin-top: 0px;
+    margin-bottom: $smallTextMargin;
+    border-bottom: 1px solid rgb(63, 63, 63);
 }
 
 

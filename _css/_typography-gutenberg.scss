@@ -19,14 +19,12 @@ body {
     padding-top: 10px;
     overflow-y: scroll;
     background-color: $siteBackgroundColor !important;
-
 }
 
 
 
 .editor-writing-flow .wp-block h1 {
-    @include mainTitleFont;
-    margin-top: $mainTextMargin;
+    @include styleH1;
 }
 
 
@@ -34,7 +32,7 @@ body {
 .editor-writing-flow .wp-block h2,
 .editor-writing-flow .wp-block h3,
 .editor-writing-flow .wp-block h3 a {
-    @include mainSubTitleFont;
+    @include styleSubTitle;
 }
 
 .editor-post-title__block {
@@ -51,27 +49,17 @@ body {
 
 //Info displayed under page title 
 .sous-titre-principal {
-    @include smallTextFont;
-    color: $mainTitleColor;
-    font-weight: bold;
-    text-align: left;
+    @include sousTitrePrincipal;
 }
 
 //Ample top margin so H3 can be used to separate sections in text
 .editor-writing-flow .wp-block h3 {
-    color: $mainTitleColor !important;
-    margin-top: $interSectionMargin;
-    margin-bottom: $mainTextMargin;
+    @include styleH3;
 }
 
 
 .editor-writing-flow .wp-block h4 {
-    @include mainTextFont;
-    font-weight: bold;
-
-    padding: 0px 0px 0px 0px;
-    margin: 25px 0px 10px 0px;
-    // display: block;
+    @include styleH4;
 }
 
 
@@ -84,53 +72,31 @@ body {
 .editor-post-title__input,
 .wp-block-quote__citation {
 
-    @include mainTextFont;
-    text-align: left;
-    font-weight: 400;
+    @include styleMainText;
 }
 
 .editor-writing-flow .wp-block ul {
-    padding-left: 0px;
-
-    li {
-        list-style-type: none;
-    }
+    @include styleUl;
 }
 
 .editor-writing-flow .wp-block a {
-    @include mainTextFont;
-    text-decoration: underline;
-
-    &:hover {
-        color: $siteHighlightBGColor !important;
-        text-decoration: none;
-        @include fastEaseIn;
-    }
+    @include styleA;
 }
 
 
 //Blocs de citations
 .wp-block blockquote {
-    color: $mainColor !important;
-    max-width: 600px !important;
-
-    p {
-        @include mainTextFont;
-        font-style: italic;
-        text-align: left;
-        font-weight: 400;
-        width: 100%;
-    }
+    @include styleBlockquote;
 }
 
 //Captions under images
 .wp-block figcaption {
-    @include smallTextFont;
+    @include styleSmallText;
 }
 
 //To use inside gutenberg for caption-like text
 .p-caption {
-    @include smallTextFont;
+    @include styleSmallText;
 }
 
 
@@ -139,7 +105,5 @@ body {
 /******************************************************************************/
 
 .editor-writing-flow .wp-block hr {
-    margin-top: 0px;
-    margin-bottom: $smallTextMargin;
-    border-bottom: 1px solid rgb(63, 63, 63);
+    @include styleHr;
 }

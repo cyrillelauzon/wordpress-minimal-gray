@@ -144,13 +144,13 @@ a {
 /******************************************************************************/
 
 .navbar-brand {
-    @include mainTitleFont;
+    @include styleTitle;
     padding-bottom: 0px !important;
     text-decoration: none !important;
 }
 
 .nav-link {
-    @include mainTitleFont;
+    @include styleTitle;
     font-size: $menuTextSize !important;
     line-height: 38px !important;
 
@@ -175,7 +175,7 @@ a {
     @include fastEaseIn;
 
     a {
-        @include mainTitleFont;
+        @include styleTitle;
         font-size: $menuTextSize !important;
         padding-top: 0px;
         padding-bottom: 0px;

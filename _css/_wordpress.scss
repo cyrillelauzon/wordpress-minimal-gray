@@ -103,7 +103,7 @@ figure.wp-block-embed.is-type-video iframe {
 
 .jp-carousel-info {
     p {
-        @include mainTextFont;
+        @include styleMainText;
         text-align: center !important;
     }
 }
