@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: accueil
+ * The main template file
  *
  * This is the most generic template file in a WordPress theme and one of the
  * two required files for a theme (the other being style.css).
@@ -17,48 +17,51 @@
 get_header(); ?>
 
 
-
-  <!--Main Section-->
-    <div class='row'>
-
-      <div class='col-lg-12'>
-
-          <?php
-          $pages = get_pages(array( 'sort_order' => 'post_date', 'sort_column' => 'menu_order' ));
-          echo '<div class="row">';
-   
-
-            foreach ( $pages as $page ) {
-
-             $post = get_post($page->ID);          
-              
-                                    
-                          //echo '<div class="col-lg-4">';
-                          //echo '<div class="card bg-light text-dark rounded-0">';
-               
-                          $cardCtnt = "";
-                          $featured_img_url = get_the_post_thumbnail_url($post->ID, 'full'); 
-                          if($featured_img_url){
-                           // $cardCtnt = '<img class="card-img" src="' . $featured_img_url . '"/>';
-                            $cardCtnt = '<a href="' . get_page_link( $page->ID ) . '" class=".card-link"><img class="card-img" src="' . $featured_img_url . '" /></a>';
-                            //$cardCtnt .= '<div class="card-body"><a href="' . get_page_link( $page->ID ) . '" class="card-link">' . $page->post_title . '</a></div>';
-                          }
-                          
-                          
-                          echo $cardCtnt;
-                    //  echo '</div>'; /*lg-4*/  
-                       //echo '</div></div>'; /*lg-4+card*/
-
-          
-                    } 
-           ?>
+<?php if ( have_posts() ) : ?>
+<?php while ( have_posts() ) : the_post(); ?>
+  
+  <!--BLOG-POST-->
+  <div class="blog-main colMain">
+    
+    <div  id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+      <div class="blog-post">
+      
+        <!-- <hr/> -->
+        <h2><?php the_title(); ?></h2>
+        <h4><?php the_date(); ?></h4>        
         
-      </div><!--col-->
-    </div><!--row-->
+
+         <!-- <?php if ( function_exists( 'add_theme_support' ) ) the_post_thumbnail(); ?> -->
+         
+         <?php the_content(); ?> 
+         
+          <?php edit_post_link(); ?>
+          <?php wp_link_pages(); ?>
+      
+  
+   <!--   <div class="post-footer"> -->
+          
+        <!--  <div class="blog-date"><?php the_time( 'M j y' ); ?></div> -->
+        <!-- <div class="comments"><?php comments_popup_link( 'Pas de commentaires', '1 commentaire', '% commentaires' ); ?></div> -->
+     <!-- </div>end post footer-->
+  
+
+    </div></div>
+    
+    <!--end post-->
+    
+
+  <?php endwhile; /* rewind or continue if all posts have been fetched */ ?>
+    <div class="navigation index">
+      <div class="alignleft"><?php next_posts_link( 'Articles précédents' ); ?></div>
+      <div class="alignright"><?php previous_posts_link( 'Articles suivants' ); ?></div>
+    </div><!--end navigation-->
+  <?php else : ?>
+  <?php endif; ?>
+
 
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
-
 
 

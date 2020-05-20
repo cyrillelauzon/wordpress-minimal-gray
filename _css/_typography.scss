@@ -15,11 +15,10 @@ h3 a {
 
 
 //Info displayed under page title 
-.sous-titre-principal {
+.legende-sous-titre {
     @include sousTitrePrincipal;
 }
 
-//Ample top margin so H3 can be used to separate sections in text
 h3 {
     @include styleH3;
 }
@@ -29,6 +28,10 @@ h4 {
     @include styleH4;
 }
 
+h5,
+h6 {
+    @include styleH5;
+}
 
 /******************************************************************************/
 /******************************* Main text elements************************/
@@ -42,6 +45,10 @@ a {
 
 ul {
     @include styleUl;
+}
+
+li {
+    //margin-left: 10px !important;
 }
 
 a {
@@ -71,4 +78,9 @@ figcaption {
 
 hr {
     @include styleHr;
+}
+
+.blog-post {
+    margin-top: $mainTextMargin;
+    margin-bottom: $interSectionMargin;
 }

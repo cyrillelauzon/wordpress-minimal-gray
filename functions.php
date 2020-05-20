@@ -34,6 +34,43 @@
 ) );
 
 
+//Shortcode pour retour facile vers cyrillelauzon.blog à partir d'un article
+//Si jamais le site migre vers une nouvelle adresse, aucun changement ne sera nessaire
+function displayPagesThumbs(){
+   // $i = "<div class='row'><div class='col-lg-12'>";
+    $pages = get_pages(array( 'sort_order' => 'post_date', 'sort_column' => 'menu_order' ));
+   // $i .= '<div class="row">';
+
+
+      foreach ( $pages as $page ) {
+
+       $post = get_post($page->ID);          
+        
+                              
+                    //echo '<div class="col-lg-4">';
+                    //echo '<div class="card bg-light text-dark rounded-0">';
+         
+                    $cardCtnt = "";
+                    $featured_img_url = get_the_post_thumbnail_url($post->ID, 'full'); 
+                    if($featured_img_url){
+                     // $cardCtnt = '<img class="card-img" src="' . $featured_img_url . '"/>';
+                      $cardCtnt = '<a href="' . get_page_link( $page->ID ) . '" class=".card-link"><img class="card-img" src="' . $featured_img_url . '" /></a>';
+                      //$cardCtnt .= '<div class="card-body"><a href="' . get_page_link( $page->ID ) . '" class="card-link">' . $page->post_title . '</a></div>';
+                    }
+                    
+                    
+                    $i .= $cardCtnt;
+              //  echo '</div>'; /*lg-4*/  
+                 //echo '</div></div>'; /*lg-4+card*/
+
+    
+              } 
+           //   $i .= "</div></div>";
+    return $i;
+}
+
+
+
 
 //Shortcode pour retour facile vers cyrillelauzon.blog à partir d'un article
 //Si jamais le site migre vers une nouvelle adresse, aucun changement ne sera nessaire
@@ -42,8 +79,12 @@ function return_link_to_blog_function(){
     return $i;
 }
 
+
+
+
 function register_shortcodes(){
     add_shortcode('retour', 'return_link_to_blog_function');
+    add_shortcode('thumbs', 'displayPagesThumbs');
 }
 register_shortcodes();
 
@@ -67,6 +108,8 @@ function mytheme_setup_theme_supported_features() {
  
 add_action( 'after_setup_theme', 'mytheme_setup_theme_supported_features' );
 add_editor_style( 'style-editor.css' );
+add_editor_style('Quicksand');
+add_editor_style('Lato');
 
 
 //Cacher les commentaires dans le caroussel Jetpack

@@ -5,14 +5,16 @@
 //$mainTitleFont : "'PT Sans', sans-serif";
 //$mainTitleFont : "Roboto Condensed";
 
-$mainTitleFont : "PT Sans";
-$mainFont : "'Helvetica Neue',Arial,Helvetica,sans-serif";
+//$mainTitleFont : "PT Sans";
+$mainTitleFont : "Quicksand";
+//$mainFont : "'Helvetica Neue',Arial,Helvetica,sans-serif";
+$mainFont : "Roboto";
 
 $mainTitleSize : 25px;
-$mainSubTitleSize : 20px;
+$mainSubTitleSize : 16px;
 $mainTextSize: 14px;
-$smallTextSize: 12px;
-$menuTextSize: 16px;
+$smallTextSize: 13px;
+$menuTextSize: 14px;
 
 $interSectionMargin: 100px;
 $mainTextMargin: 15px;
@@ -20,8 +22,27 @@ $smallTextMargin: 10px;
 
 $mainTitleColor : #C6C6C6;
 $mainSubTitleColor : #D54E21;
-$mainColor : #999;
+
+$mainLegendColor : rgb(182, 182, 182);
+$mainColor : rgb(136, 136, 136);
 $colorBlack : rgba(0, 0, 0, 0.9);
+$siteBackgroundColor : #303030;
+$siteHighlightBGColor : #505050;
+$siteDarkAccentColor : rgb(43, 43, 43);
+
+/******************************************************************************/
+/******************************* Body elements   ******************************/
+/******************************************************************************/
+
+/*Body Elements*/
+$mainContainerWidth : 900px;
+
+$wpBlockGalleryWidth : 425px;
+$wpBlockGalleryHeight : 300px;
+$wpBlockGallerySizeMobile : 200px;
+
+$galeryBlockSize : 315px;
+$indexGaleryBlockSize : 164px;
 
 
 /******************************************************************************/
@@ -45,32 +66,47 @@ $colorBlack : rgba(0, 0, 0, 0.9);
 }
 
 @mixin styleMainText {
-    @include makeFont("", $mainTextSize, $mainColor);
+    @include makeFont($mainFont, $mainTextSize, $mainColor);
     text-align: left;
     font-weight: 400;
 }
 
 @mixin styleSmallText {
-    @include makeFont("", $smallTextSize, $mainColor);
+    font-size: $smallTextSize !important;
+    color: $mainColor !important;
+    font-weight: 400;
 }
 
 /******************************************************************************/
 /******************************* TextStyles mixin******************************/
 /******************************************************************************/
-//Styles are defined in mixins so the same style can be applied inside theme and
-//gutenberg editor via _typography.scss and _typography-gutenberg.scss
+//Styles are defined in mixins so the same style can be applied    
+//inside theme and gutenberg editor respectively : _typography.scss and _typography-gutenberg.scss
 
-
-
-@mixin styleH1 {
-    @include styleTitle;
-    margin-top: $mainTextMargin;
-}
 
 //Main page title
+@mixin styleH1 {
+    @include styleTitle;
+    font-size: $mainSubTitleSize !important;
+    color: $mainSubTitleColor !important;
+    font-weight: 400;
+    margin-top: -10px;
+}
+
+//Main subtitle in red
+@mixin styleH2 {
+    @include styleSubTitle;
+    // margin-top: $mainTextMargin;
+    font-weight: 400;
+    margin-bottom: $mainTextMargin;
+}
+
+//Main subtitle in gray
+//Ample top margin so H3 can be used to separate sections in text
 @mixin styleH3 {
     @include styleSubTitle;
     color: $mainTitleColor !important;
+    font-weight: 400;
     margin-top: $interSectionMargin;
     margin-bottom: $mainTextMargin;
 }
@@ -78,8 +114,7 @@ $colorBlack : rgba(0, 0, 0, 0.9);
 //Info displayed under page title 
 @mixin sousTitrePrincipal {
     @include styleSmallText;
-    color: $mainTitleColor;
-    font-weight: bold;
+    color: $mainColor !important;
     text-align: left;
 }
 
@@ -89,18 +124,31 @@ $colorBlack : rgba(0, 0, 0, 0.9);
     font-weight: bold;
 
     padding: 0px 0px 0px 0px;
-    margin: 25px 0px 10px 0px;
+    margin: 10px 0px 25px 0px;
+    // display: block;
+}
+
+//page section title
+@mixin styleH5 {
+    @include styleMainText;
+    color: $mainTitleColor !important;
+    //font-weight: bold;
+
+    padding: 0px 0px 0px 0px;
+    margin: 15px 0px 10px 0px;
     // display: block;
 }
 
 @mixin styleA {
     @include styleMainText;
-    text-decoration: underline;
+    opacity: 1;
+    transition: opacity 0.3s ease;
 
     &:hover {
         color: $siteHighlightBGColor !important;
         text-decoration: none;
-        @include fastEaseIn;
+        opacity: 0.7;
+        transition: opacity 0.3s ease;
     }
 }
 
@@ -108,18 +156,28 @@ $colorBlack : rgba(0, 0, 0, 0.9);
     padding-left: 0px;
 
     li {
+        //margin-left: 10px !important;
         list-style-type: none;
     }
 }
 
 @mixin styleBlockquote {
     color: $mainColor !important;
+    width: auto;
+    display: table;
     max-width: 600px !important;
+    border-left: 1px solid $mainColor;
+    padding-left: 10px;
 
     p {
         @include styleMainText;
         font-style: italic;
         width: 100%;
+    }
+
+    cite {
+        font-style: normal;
+        text-decoration: none !important;
     }
 }
 
@@ -131,27 +189,14 @@ $colorBlack : rgba(0, 0, 0, 0.9);
 
 
 
-/******************************************************************************/
-/******************************* Body elements   ******************************/
-/******************************************************************************/
-
-/*Body Elements*/
-$mainContainerWidth : 900px;
-
-$wpBlockGalleryWidth : 425px;
-$wpBlockGalleryHeight : 300px;
-$wpBlockGallerySizeMobile : 200px;
-
-$galeryBlockSize : 315px;
-$indexGaleryBlockSize : 145px;
-
-$siteBackgroundColor : #303030;
-$siteHighlightBGColor : #505050;
 
 
 /******************************************************************************/
 /******************************* Animations   ******************************/
 /******************************************************************************/
+/*Animations*/
+$shortSpeed : '0.9s';
+
 @keyframes fadeInAnimation {
     0% {
         opacity: 0;
@@ -163,12 +208,10 @@ $siteHighlightBGColor : #505050;
 }
 
 @mixin fastEaseIn {
-    animation: fadeInAnimation ease 0.3s;
+    transition: ease 0.3s;
 }
 
 @mixin fasterEaseIn {
-    animation: fadeInAnimation ease 0.2s;
+    transition: ease 0.2s;
 }
 
-/*Animations*/
-$shortSpeed : '0.9s';

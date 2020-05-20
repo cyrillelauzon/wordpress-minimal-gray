@@ -62,7 +62,7 @@
                    
            
              
-            <nav class="navbar navbar-expand-md navbar-light" data-toggle="affix">
+            <nav class="navbar navbar-expand-md navbar-light sticky-top" data-toggle="affix">
               
 
               <div class="d-sm-flex d-block flex-sm-nowrap">
@@ -112,7 +112,7 @@
 
               
             </nav><!-- Barre Navigation -->
-           <hr/><br/>
+    <br/>
 
 
 

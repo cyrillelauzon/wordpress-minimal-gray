@@ -1,24 +1,28 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=PT+Sans&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Droid+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Quicksand");
+@import url("https://fonts.googleapis.com/css?family=Lato");
+@import url("https://fonts.googleapis.com/css?family=Raleway");
 /******************************************************************************/
 /******************************* Variables Sass    ******************************/
-/******************************************************************************/
-/******************************************************************************/
-/******************************* TextStyles mixin******************************/
-/******************************************************************************/
-/******************************************************************************/
-/******************************* TextStyles mixin******************************/
 /******************************************************************************/
 /******************************************************************************/
 /******************************* Body elements   ******************************/
 /******************************************************************************/
 /*Body Elements*/
 /******************************************************************************/
+/******************************* TextStyles mixin******************************/
+/******************************************************************************/
+/******************************************************************************/
+/******************************* TextStyles mixin******************************/
+/******************************************************************************/
+/******************************************************************************/
 /******************************* Animations   ******************************/
 /******************************************************************************/
+/*Animations*/
 @-webkit-keyframes fadeInAnimation {
   0% {
     opacity: 0;
@@ -36,7 +40,6 @@
   }
 }
 
-/*Animations*/
 /******************************************************************************/
 /***Titles 
 /******************************************************************************/
@@ -56,22 +59,26 @@
 body {
   padding-top: 10px;
   overflow-y: scroll;
+  color: #888888 !important;
   background-color: #303030 !important;
 }
 
 .editor-writing-flow .wp-block h1 {
-  font-family: "PT Sans" !important;
+  font-family: "Quicksand" !important;
   font-size: 25px !important;
   color: #C6C6C6 !important;
-  margin-top: 15px;
+  font-size: 16px !important;
+  color: #D54E21 !important;
+  font-weight: 400;
+  margin-top: -10px;
 }
 
 .editor-post-title__block .editor-post-title__input,
 .editor-writing-flow .wp-block h2,
 .editor-writing-flow .wp-block h3,
 .editor-writing-flow .wp-block h3 a {
-  font-family: "PT Sans" !important;
-  font-size: 20px !important;
+  font-family: "Quicksand" !important;
+  font-size: 16px !important;
   color: #D54E21 !important;
 }
 
@@ -85,33 +92,44 @@ body {
   padding-bottom: 0px;
 }
 
-.sous-titre-principal {
-  font-family: "" !important;
-  font-size: 12px !important;
-  color: #999 !important;
-  color: #C6C6C6;
-  font-weight: bold;
+.legende-sous-titre {
+  font-size: 13px !important;
+  color: #888888 !important;
+  font-weight: 400;
+  color: #888888 !important;
   text-align: left;
 }
 
 .editor-writing-flow .wp-block h3 {
-  font-family: "PT Sans" !important;
-  font-size: 20px !important;
+  font-family: "Quicksand" !important;
+  font-size: 16px !important;
   color: #D54E21 !important;
   color: #C6C6C6 !important;
+  font-weight: 400;
   margin-top: 100px;
   margin-bottom: 15px;
 }
 
 .editor-writing-flow .wp-block h4 {
-  font-family: "" !important;
+  font-family: "Roboto" !important;
   font-size: 14px !important;
-  color: #999 !important;
+  color: #888888 !important;
   text-align: left;
   font-weight: 400;
   font-weight: bold;
   padding: 0px 0px 0px 0px;
-  margin: 25px 0px 10px 0px;
+  margin: 10px 0px 25px 0px;
+}
+
+.editor-writing-flow .wp-block h5 {
+  font-family: "Roboto" !important;
+  font-size: 14px !important;
+  color: #888888 !important;
+  text-align: left;
+  font-weight: 400;
+  color: #C6C6C6 !important;
+  padding: 0px 0px 0px 0px;
+  margin: 15px 0px 10px 0px;
 }
 
 /******************************************************************************/
@@ -119,12 +137,14 @@ body {
 /******************************************************************************/
 .editor-writing-flow .wp-block textarea,
 .editor-writing-flow .wp-block .wp-block-freeform,
-.editor-rich-text p,
+.rich-text,
 .editor-post-title__input,
-.wp-block-quote__citation {
-  font-family: "" !important;
+.wp-block-quote__citation,
+.editor-block-list__layout .editor-block-list__block,
+.editor-block-list__layout .editor-block-list__block p {
+  font-family: "Roboto" !important;
   font-size: 14px !important;
-  color: #999 !important;
+  color: #888888 !important;
   text-align: left;
   font-weight: 400;
 }
@@ -138,46 +158,58 @@ body {
 }
 
 .editor-writing-flow .wp-block a {
-  font-family: "" !important;
+  font-family: "Roboto" !important;
   font-size: 14px !important;
-  color: #999 !important;
+  color: #888888 !important;
   text-align: left;
   font-weight: 400;
-  text-decoration: underline;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .editor-writing-flow .wp-block a:hover {
   color: #505050 !important;
   text-decoration: none;
-  -webkit-animation: fadeInAnimation ease 0.3s;
-          animation: fadeInAnimation ease 0.3s;
+  opacity: 0.7;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .wp-block blockquote {
-  color: #999 !important;
+  color: #888888 !important;
+  width: auto;
+  display: table;
   max-width: 600px !important;
+  border-left: 1px solid #888888;
+  padding-left: 10px;
 }
 
 .wp-block blockquote p {
-  font-family: "" !important;
+  font-family: "Roboto" !important;
   font-size: 14px !important;
-  color: #999 !important;
+  color: #888888 !important;
   text-align: left;
   font-weight: 400;
   font-style: italic;
   width: 100%;
 }
 
+.wp-block blockquote cite {
+  font-style: normal;
+  text-decoration: none !important;
+}
+
 .wp-block figcaption {
-  font-family: "" !important;
-  font-size: 12px !important;
-  color: #999 !important;
+  font-size: 13px !important;
+  color: #888888 !important;
+  font-weight: 400;
 }
 
 .p-caption {
-  font-family: "" !important;
-  font-size: 12px !important;
-  color: #999 !important;
+  font-size: 13px !important;
+  color: #888888 !important;
+  font-weight: 400;
 }
 
 /******************************************************************************/
@@ -198,7 +230,7 @@ body {
 /******************************************************************************/
 .editor-post-title__input {
   /*font-family: "'Times New Roman', Times, serif'";*/
-  font-family: "'Helvetica Neue',Arial,Helvetica,sans-serif" !important;
+  font-family: "Roboto" !important;
   color: rgba(0, 0, 0, 0.9);
   font-size: 20px;
   line-height: 39px;

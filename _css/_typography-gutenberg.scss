@@ -18,6 +18,7 @@
 body {
     padding-top: 10px;
     overflow-y: scroll;
+    color: $mainColor !important;
     background-color: $siteBackgroundColor !important;
 }
 
@@ -48,7 +49,7 @@ body {
 
 
 //Info displayed under page title 
-.sous-titre-principal {
+.legende-sous-titre {
     @include sousTitrePrincipal;
 }
 
@@ -62,15 +63,20 @@ body {
     @include styleH4;
 }
 
+.editor-writing-flow .wp-block h5 {
+    @include styleH5;
+}
 
 /******************************************************************************/
 /******************************* Main text elements************************/
 /******************************************************************************/
 .editor-writing-flow .wp-block textarea,
 .editor-writing-flow .wp-block .wp-block-freeform,
-.editor-rich-text p,
+.rich-text,
 .editor-post-title__input,
-.wp-block-quote__citation {
+.wp-block-quote__citation,
+.editor-block-list__layout .editor-block-list__block,
+.editor-block-list__layout .editor-block-list__block p  {
 
     @include styleMainText;
 }

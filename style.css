@@ -3,22 +3,26 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Droid+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Quicksand");
+@import url("https://fonts.googleapis.com/css?family=Lato");
+@import url("https://fonts.googleapis.com/css?family=Raleway");
 /******************************************************************************/
 /******************************* Variables Sass    ******************************/
-/******************************************************************************/
-/******************************************************************************/
-/******************************* TextStyles mixin******************************/
-/******************************************************************************/
-/******************************************************************************/
-/******************************* TextStyles mixin******************************/
 /******************************************************************************/
 /******************************************************************************/
 /******************************* Body elements   ******************************/
 /******************************************************************************/
 /*Body Elements*/
 /******************************************************************************/
+/******************************* TextStyles mixin******************************/
+/******************************************************************************/
+/******************************************************************************/
+/******************************* TextStyles mixin******************************/
+/******************************************************************************/
+/******************************************************************************/
 /******************************* Animations   ******************************/
 /******************************************************************************/
+/*Animations*/
 @-webkit-keyframes fadeInAnimation {
   0% {
     opacity: 0;
@@ -36,52 +40,66 @@
   }
 }
 
-/*Animations*/
 /******************************************************************************/
 /***Titles 
 /******************************************************************************/
 h1 {
-  font-family: "PT Sans" !important;
+  font-family: "Quicksand" !important;
   font-size: 25px !important;
   color: #C6C6C6 !important;
-  margin-top: 15px;
+  font-size: 16px !important;
+  color: #D54E21 !important;
+  font-weight: 400;
+  margin-top: -10px;
 }
 
 h2,
 h3,
 h3 a {
-  font-family: "PT Sans" !important;
-  font-size: 20px !important;
+  font-family: "Quicksand" !important;
+  font-size: 16px !important;
   color: #D54E21 !important;
 }
 
-.sous-titre-principal {
-  font-family: "" !important;
-  font-size: 12px !important;
-  color: #999 !important;
-  color: #C6C6C6;
-  font-weight: bold;
+.legende-sous-titre {
+  font-size: 13px !important;
+  color: #888888 !important;
+  font-weight: 400;
+  color: #888888 !important;
   text-align: left;
 }
 
 h3 {
-  font-family: "PT Sans" !important;
-  font-size: 20px !important;
+  font-family: "Quicksand" !important;
+  font-size: 16px !important;
   color: #D54E21 !important;
   color: #C6C6C6 !important;
+  font-weight: 400;
   margin-top: 100px;
   margin-bottom: 15px;
 }
 
 h4 {
-  font-family: "" !important;
+  font-family: "Roboto" !important;
   font-size: 14px !important;
-  color: #999 !important;
+  color: #888888 !important;
   text-align: left;
   font-weight: 400;
   font-weight: bold;
   padding: 0px 0px 0px 0px;
-  margin: 25px 0px 10px 0px;
+  margin: 10px 0px 25px 0px;
+}
+
+h5,
+h6 {
+  font-family: "Roboto" !important;
+  font-size: 14px !important;
+  color: #888888 !important;
+  text-align: left;
+  font-weight: 400;
+  color: #C6C6C6 !important;
+  padding: 0px 0px 0px 0px;
+  margin: 15px 0px 10px 0px;
 }
 
 /******************************************************************************/
@@ -91,9 +109,9 @@ p,
 ol,
 ul,
 a {
-  font-family: "" !important;
+  font-family: "Roboto" !important;
   font-size: 14px !important;
-  color: #999 !important;
+  color: #888888 !important;
   text-align: left;
   font-weight: 400;
 }
@@ -107,46 +125,58 @@ ul li {
 }
 
 a {
-  font-family: "" !important;
+  font-family: "Roboto" !important;
   font-size: 14px !important;
-  color: #999 !important;
+  color: #888888 !important;
   text-align: left;
   font-weight: 400;
-  text-decoration: underline;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 a:hover {
   color: #505050 !important;
   text-decoration: none;
-  -webkit-animation: fadeInAnimation ease 0.3s;
-          animation: fadeInAnimation ease 0.3s;
+  opacity: 0.7;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 blockquote {
-  color: #999 !important;
+  color: #888888 !important;
+  width: auto;
+  display: table;
   max-width: 600px !important;
+  border-left: 1px solid #888888;
+  padding-left: 10px;
 }
 
 blockquote p {
-  font-family: "" !important;
+  font-family: "Roboto" !important;
   font-size: 14px !important;
-  color: #999 !important;
+  color: #888888 !important;
   text-align: left;
   font-weight: 400;
   font-style: italic;
   width: 100%;
 }
 
+blockquote cite {
+  font-style: normal;
+  text-decoration: none !important;
+}
+
 figcaption {
-  font-family: "" !important;
-  font-size: 12px !important;
-  color: #999 !important;
+  font-size: 13px !important;
+  color: #888888 !important;
+  font-weight: 400;
 }
 
 .p-caption {
-  font-family: "" !important;
-  font-size: 12px !important;
-  color: #999 !important;
+  font-size: 13px !important;
+  color: #888888 !important;
+  font-weight: 400;
 }
 
 /******************************************************************************/
@@ -158,12 +188,21 @@ hr {
   border-bottom: 1px solid #3f3f3f;
 }
 
+.blog-post {
+  margin-top: 15px;
+  margin-bottom: 100px;
+}
+
 /******************************************************************************/
 /******************************* Misc Wordpress
 /******************************************************************************/
 /*Lien de téléchargement pour bloc fichier wordpress*/
 .wp-block-file__button {
   display: none;
+}
+
+.wp-block-cover {
+  margin-bottom: 15px;
 }
 
 /******************************************************************************/
@@ -178,12 +217,16 @@ hr {
   -webkit-box-flex: 0 !important;
       -ms-flex-positive: 0 !important;
           flex-grow: 0 !important;
+  opacity: 1;
 }
 
 .blocks-gallery-item figure,
 .blocks-gallery-item img {
   width: 425px !important;
   height: 300px !important;
+  opacity: 1;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 @media (max-width: 640px) {
@@ -200,6 +243,52 @@ hr {
 
 @media (max-width: 640px) {
   .blocks-gallery-item {
+    width: 200px !important;
+    height: 200px !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+}
+
+.blocks-gallery-item figure:hover {
+  opacity: 0.3;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.small-boxes .blocks-gallery-item {
+  width: 164px !important;
+  height: 164px !important;
+  -webkit-box-sizing: content-box !important;
+          box-sizing: content-box !important;
+  padding-right: 10px !important;
+  -webkit-box-flex: 0 !important;
+      -ms-flex-positive: 0 !important;
+          flex-grow: 0 !important;
+}
+
+.small-boxes .blocks-gallery-item figure,
+.small-boxes .blocks-gallery-item img {
+  width: 164px !important;
+  height: 164px !important;
+}
+
+@media (max-width: 640px) {
+  .small-boxes .blocks-gallery-item figure,
+  .small-boxes .blocks-gallery-item img {
+    width: 200px !important;
+    height: 200px !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .small-boxes .blocks-gallery-item {
     width: 200px !important;
     height: 200px !important;
     -webkit-box-orient: vertical !important;
@@ -233,7 +322,7 @@ On utilise plutôt l'encart description dans l'image et affiche dans le carousel
 }
 
 /******************************************************************************/
-/******************************* Wordpress embed Blocks/
+/******************************* Wordpress embed video Blocks/
 /******************************************************************************/
 figure.wp-block-embed.is-type-video {
   position: relative;
@@ -255,9 +344,9 @@ figure.wp-block-embed.is-type-video iframe {
 /******************************* WP-Jetpack Carousel/
 /******************************************************************************/
 .jp-carousel-info p {
-  font-family: "" !important;
+  font-family: "Roboto" !important;
   font-size: 14px !important;
-  color: #999 !important;
+  color: #888888 !important;
   text-align: left;
   font-weight: 400;
   text-align: center !important;
@@ -309,11 +398,11 @@ div#jp-carousel-comments-loading span,
 /******************************* Navigation***********************/
 /******************************************************************************/
 body {
-  padding-top: 10px;
+  padding-top: 0px;
   overflow-y: scroll;
   background-color: #303030 !important;
-  -webkit-animation: fadeInAnimation ease 0.2s;
-          animation: fadeInAnimation ease 0.2s;
+  -webkit-animation: fadeInAnimation ease 0.3s;
+          animation: fadeInAnimation ease 0.3s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
   -webkit-animation-fill-mode: forwards;
@@ -324,47 +413,30 @@ img {
   max-width: 100%;
   height: auto;
   border-style: none;
-  /* border-bottom-width: 1px;
-    border-bottom-color: rgb(235,235,235);
-    border-bottom-style: solid;*/
 }
 
-/* .card-link {
-    &:hover {
-        opacity: 0.4;
-        animation: fadeInAnimation ease 0.8s;
-    }
-} */
 .card-img {
-  max-width: 145px;
-  max-height: 145px;
+  max-width: 164px;
+  max-height: 164px;
   height: auto;
-  margin-bottom: 5px;
   margin-right: 5px;
-  padding-left: 8px;
+  padding-bottom: 5px;
+  border-radius: 0px;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .card-img:hover {
-  opacity: 0.4;
-  -webkit-animation: fadeAnimation ease 0.8s;
-          animation: fadeAnimation ease 0.8s;
+  opacity: 0.3;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
-/*Effet de transparence sur hover*/
-/* 
-a {
-
-    :hover {
-        opacity: 0.8;
-        transition: opacity 0.3s ease;
-    }
-
-    img {
-        opacity: 1;
-    }
-
+.container {
+  background-color: #303030;
 }
- */
+
 /******************************************************************************/
 /******************************* Bootstrap container/
 /******************************************************************************/
@@ -425,8 +497,14 @@ a {
 /******************************************************************************/
 /******************************* Navbar Bootstrap
 /******************************************************************************/
+/*Navbar Bootstrap*/
+.navbar {
+  padding: 0px;
+  background-color: #303030 !important;
+}
+
 .navbar-brand {
-  font-family: "PT Sans" !important;
+  font-family: "Quicksand" !important;
   font-size: 25px !important;
   color: #C6C6C6 !important;
   padding-bottom: 0px !important;
@@ -434,49 +512,37 @@ a {
 }
 
 .nav-link {
-  font-family: "PT Sans" !important;
+  font-family: "Quicksand" !important;
   font-size: 25px !important;
   color: #C6C6C6 !important;
-  font-size: 16px !important;
+  font-size: 14px !important;
   line-height: 38px !important;
   text-decoration: none !important;
   padding: 0px, 0px, 10px, 16px !important;
 }
 
-.nav-link:hover {
-  color: #505050 !important;
-  -webkit-animation: fadeInAnimation ease 0.3s;
-          animation: fadeInAnimation ease 0.3s;
-}
-
-/*Navbar Bootstrap*/
-.navbar {
-  padding: 0px;
-  background-color: #303030 !important;
-}
-
 .dropdown-menu {
   top: 45px;
-  background-color: #303030 !important;
-  -webkit-animation: fadeInAnimation ease 0.3s;
-          animation: fadeInAnimation ease 0.3s;
+  background-color: #2b2b2b !important;
+  -webkit-animation: fadeInAnimation ease-in-out 0.3s;
+          animation: fadeInAnimation ease-in-out 0.3s;
 }
 
 .dropdown-menu a {
-  font-family: "PT Sans" !important;
+  font-family: "Quicksand" !important;
   font-size: 25px !important;
   color: #C6C6C6 !important;
-  font-size: 16px !important;
+  font-size: 14px !important;
   padding-top: 0px;
   padding-bottom: 0px;
   line-height: 38px !important;
-  text-decoration: none !important;
+  background-color: #2b2b2b !important;
+  opacity: 1 !important;
 }
 
 .dropdown-menu a:hover {
-  background-color: #505050 !important;
-  -webkit-animation: fadeInAnimation ease 0.3s;
-          animation: fadeInAnimation ease 0.3s;
+  background-color: #303030 !important;
+  opacity: 1 !important;
 }
 
 .navbar-toggler {

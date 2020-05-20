@@ -8,6 +8,10 @@
     display: none;
 }
 
+.wp-block-cover {
+    margin-bottom: $mainTextMargin;
+}
+
 /******************************************************************************/
 /******************************* Wordpress Gallery Blocks/
 /******************************************************************************/
@@ -30,10 +34,13 @@
     box-sizing: content-box !important;
     padding-right: 10px !important;
     flex-grow: 0 !important;
+    opacity: 1;
 
     figure,
     img {
         @include desktopBlockSize;
+        opacity: 1;
+        transition: 0.3s ease-in-out;
 
         @media (max-width: 640px) {
             @include mobileBlockSize;
@@ -44,6 +51,37 @@
         @include mobileBlockSize;
     }
 
+    figure {
+        &:hover {
+            opacity: 0.3;
+            transition: 0.3s ease-in-out;
+        }
+    }
+
+}
+
+.small-boxes {
+    .blocks-gallery-item {
+        width: $indexGaleryBlockSize !important;
+        height: $indexGaleryBlockSize !important;
+        box-sizing: content-box !important;
+        padding-right: 10px !important;
+        flex-grow: 0 !important;
+
+        figure,
+        img {
+            width: $indexGaleryBlockSize !important;
+            height: $indexGaleryBlockSize !important;
+
+            @media (max-width: 640px) {
+                @include mobileBlockSize;
+            }
+        }
+
+        @media (max-width: 640px) {
+            @include mobileBlockSize;
+        }
+    }
 }
 
 // Affichage des captions de galerie en mode mobile seulement:
@@ -73,7 +111,7 @@ figcaption.blocks-gallery-item__caption {
 
 
 /******************************************************************************/
-/******************************* Wordpress embed Blocks/
+/******************************* Wordpress embed video Blocks/
 /******************************************************************************/
 
 //Embed video-width to 100% width fix as per this thread (towards end of page:)

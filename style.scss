@@ -3,6 +3,9 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Droid+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 
 @import "_css/variables";
 @import "_css/typography";
@@ -14,11 +17,12 @@
 /******************************************************************************/
 
 body {
-    padding-top: 10px;
+    padding-top: 0px;
+
     overflow-y: scroll;
     background-color: $siteBackgroundColor !important;
 
-    @include fasterEaseIn;
+    animation: fadeInAnimation ease 0.3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
@@ -29,47 +33,30 @@ img {
     max-width: 100%;
     height: auto;
     border-style: none;
-    /* border-bottom-width: 1px;
-    border-bottom-color: rgb(235,235,235);
-    border-bottom-style: solid;*/
 }
-/* .card-link {
-    &:hover {
-        opacity: 0.4;
-        animation: fadeInAnimation ease 0.8s;
-    }
-} */
 
 .card-img {
     max-width: $indexGaleryBlockSize;
     max-height: $indexGaleryBlockSize;
     height: auto;
-    margin-bottom: 5px;
     margin-right: 5px;
-    padding-left: 8px;
+    padding-bottom: 5px;
+    border-radius: 0px;
+    opacity: 1;
+    transition: opacity 0.3s ease;
 
     &:hover {
-        opacity: 0.4;
-        animation: fadeAnimation ease 0.8s;
-    }
-}
-
-/*Effet de transparence sur hover*/
-/* 
-a {
-
-    :hover {
-        opacity: 0.8;
+        opacity: 0.3;
         transition: opacity 0.3s ease;
     }
 
-    img {
-        opacity: 1;
-    }
-
 }
- */
 
+
+.container {
+    background-color: $siteBackgroundColor;
+    //opacity: 0.8;
+}
 
 
 
@@ -142,6 +129,12 @@ a {
 /******************************************************************************/
 /******************************* Navbar Bootstrap
 /******************************************************************************/
+/*Navbar Bootstrap*/
+.navbar {
+
+    padding: 0px;
+    background-color: $siteBackgroundColor !important;
+}
 
 .navbar-brand {
     @include styleTitle;
@@ -156,23 +149,13 @@ a {
 
     text-decoration: none !important;
     padding: 0px, 0px, 10px, 16px !important;
-
-    &:hover {
-        color: $siteHighlightBGColor !important;
-        @include fastEaseIn;
-    }
 }
 
-/*Navbar Bootstrap*/
-.navbar {
-    padding: 0px;
-    background-color: $siteBackgroundColor !important;
-}
 
 .dropdown-menu {
     top: 45px;
-    background-color: $siteBackgroundColor !important;
-    @include fastEaseIn;
+    background-color: $siteDarkAccentColor !important;
+    animation: fadeInAnimation ease-in-out 0.3s;
 
     a {
         @include styleTitle;
@@ -180,11 +163,13 @@ a {
         padding-top: 0px;
         padding-bottom: 0px;
         line-height: 38px !important;
-        text-decoration: none !important;
+        
+        background-color: $siteDarkAccentColor !important;
+        opacity: 1 !important;
 
         &:hover {
-            background-color: $siteHighlightBGColor !important;
-            @include fastEaseIn;
+            background-color: $siteBackgroundColor !important;
+            opacity: 1 !important;
         }
     }
 }
