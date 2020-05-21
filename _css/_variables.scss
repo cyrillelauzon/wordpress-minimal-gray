@@ -11,7 +11,7 @@ $mainTitleFont : "Quicksand";
 $mainFont : "Roboto";
 
 $mainTitleSize : 25px;
-$mainSubTitleSize : 16px;
+$mainSubTitleSize : 18px;
 $mainTextSize: 14px;
 $smallTextSize: 13px;
 $menuTextSize: 14px;
@@ -21,10 +21,10 @@ $mainTextMargin: 15px;
 $smallTextMargin: 10px;
 
 $mainTitleColor : #C6C6C6;
+$mainColor : rgb(136, 136, 136);
 $mainSubTitleColor : #D54E21;
 
 $mainLegendColor : rgb(182, 182, 182);
-$mainColor : rgb(136, 136, 136);
 $colorBlack : rgba(0, 0, 0, 0.9);
 $siteBackgroundColor : #303030;
 $siteHighlightBGColor : #505050;
@@ -63,6 +63,8 @@ $indexGaleryBlockSize : 164px;
 
 @mixin styleSubTitle {
     @include makeFont($mainTitleFont, $mainSubTitleSize, $mainSubTitleColor);
+    margin-bottom: $mainTextMargin;
+    font-weight: 400;
 }
 
 @mixin styleMainText {
@@ -75,6 +77,7 @@ $indexGaleryBlockSize : 164px;
     font-size: $smallTextSize !important;
     color: $mainColor !important;
     font-weight: 400;
+    text-align: left;
 }
 
 /******************************************************************************/
@@ -86,19 +89,17 @@ $indexGaleryBlockSize : 164px;
 
 //Main page title
 @mixin styleH1 {
-    @include styleTitle;
-    font-size: $mainSubTitleSize !important;
-    color: $mainSubTitleColor !important;
-    font-weight: 400;
+    @include styleSubTitle;
     margin-top: -10px;
 }
 
-//Main subtitle in red
 @mixin styleH2 {
     @include styleSubTitle;
-    // margin-top: $mainTextMargin;
-    font-weight: 400;
-    margin-bottom: $mainTextMargin;
+}
+
+//Info displayed under page title 
+@mixin sousTitrePrincipal {
+    @include styleSmallText;
 }
 
 //Main subtitle in gray
@@ -106,16 +107,7 @@ $indexGaleryBlockSize : 164px;
 @mixin styleH3 {
     @include styleSubTitle;
     color: $mainTitleColor !important;
-    font-weight: 400;
     margin-top: $interSectionMargin;
-    margin-bottom: $mainTextMargin;
-}
-
-//Info displayed under page title 
-@mixin sousTitrePrincipal {
-    @include styleSmallText;
-    color: $mainColor !important;
-    text-align: left;
 }
 
 //page section title
@@ -125,18 +117,15 @@ $indexGaleryBlockSize : 164px;
 
     padding: 0px 0px 0px 0px;
     margin: 10px 0px 25px 0px;
-    // display: block;
 }
 
 //page section title
 @mixin styleH5 {
     @include styleMainText;
     color: $mainTitleColor !important;
-    //font-weight: bold;
 
     padding: 0px 0px 0px 0px;
     margin: 15px 0px 10px 0px;
-    // display: block;
 }
 
 @mixin styleA {
@@ -176,6 +165,7 @@ $indexGaleryBlockSize : 164px;
     }
 
     cite {
+        @include styleMainText;
         font-style: normal;
         text-decoration: none !important;
     }

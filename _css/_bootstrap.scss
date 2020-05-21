@@ -1,0 +1,119 @@
+
+
+/******************************************************************************/
+/*******************************  Bootstrap Navbar
+/******************************************************************************/
+/*Navbar Bootstrap*/
+.navbar {
+
+    padding: 0px;
+    background-color: $siteBackgroundColor !important;
+}
+
+.navbar-brand {
+    @include styleTitle;
+    padding-bottom: 0px !important;
+    text-decoration: none !important;
+}
+
+.nav-link {
+    @include styleTitle;
+    font-size: $menuTextSize !important;
+    line-height: 38px !important;
+
+    text-decoration: none !important;
+    padding: 0px, 0px, 10px, 16px !important;
+}
+
+
+.dropdown-menu {
+    top: 45px;
+    background-color: $siteDarkAccentColor !important;
+    animation: fadeInAnimation ease-in-out 0.3s;
+
+    a {
+        @include styleTitle;
+        font-size: $menuTextSize !important;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        line-height: 38px !important;
+        
+        background-color: $siteDarkAccentColor !important;
+        opacity: 1 !important;
+
+        &:hover {
+            background-color: $siteBackgroundColor !important;
+            opacity: 1 !important;
+        }
+    }
+}
+
+.navbar-toggler {
+    margin-bottom: 8px;
+}
+
+/******************************************************************************/
+/******************************* Bootstrap container/
+/******************************************************************************/
+
+.container {
+    width: 900px !important;
+}
+
+.thumbnail {
+    width: 750px !important;
+}
+
+
+/*Container d'une dimension fixe*/
+@media (min-width: 200px) {
+    .container {
+        width: 250px !important;
+    }
+
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block;
+    }
+}
+
+@media (min-width: 576px) {
+
+    .container {
+        width: 576px !important;
+    }
+}
+
+/* @media (min-width: 575px) {
+    .container {
+        width: 280px !important;
+    }
+
+} */
+
+@media (min-width: 768px) {
+    .container {
+        width: 768px !important;
+    }
+
+    .mobile-only {
+        display: block;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: $mainContainerWidth !important;
+    }
+}
+
+@media (min-width: $mainContainerWidth) {
+    .container {
+        width: $mainContainerWidth !important;
+    }
+}
+
+

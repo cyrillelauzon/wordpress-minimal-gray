@@ -34,8 +34,7 @@
 ) );
 
 
-//Shortcode pour retour facile vers cyrillelauzon.blog à partir d'un article
-//Si jamais le site migre vers une nouvelle adresse, aucun changement ne sera nessaire
+
 function displayPagesThumbs(){
    // $i = "<div class='row'><div class='col-lg-12'>";
     $pages = get_pages(array( 'sort_order' => 'post_date', 'sort_column' => 'menu_order' ));

@@ -1,4 +1,52 @@
 /******************************************************************************/
+/******************************* Navigation***********************/
+/******************************************************************************/
+
+body {
+    padding-top: 0px;
+
+    overflow-y: scroll;
+    background-color: $siteBackgroundColor !important;
+
+    animation: fadeInAnimation ease 0.3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-style: none;
+}
+
+.card-img {
+    max-width: $indexGaleryBlockSize;
+    max-height: $indexGaleryBlockSize;
+    height: auto;
+    margin-right: 5px;
+    padding-bottom: 5px;
+    border-radius: 0px;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+        opacity: 0.3;
+        transition: opacity 0.3s ease;
+    }
+
+}
+
+
+.container {
+    background-color: $siteBackgroundColor;
+    //opacity: 0.8;
+}
+
+
+
+/******************************************************************************/
 /***Titles 
 /******************************************************************************/
 
@@ -7,12 +55,13 @@ h1 {
 }
 
 
-h2,
-h3,
+h2 {
+    @include styleH2;
+}
+
 h3 a {
     @include styleSubTitle;
 }
-
 
 //Info displayed under page title 
 .legende-sous-titre {
@@ -37,9 +86,7 @@ h6 {
 /******************************* Main text elements************************/
 /******************************************************************************/
 p,
-ol,
-ul,
-a {
+ol {
     @include styleMainText;
 }
 
@@ -66,10 +113,6 @@ figcaption {
     @include styleSmallText;
 }
 
-//To use inside gutenberg for caption-like text
-.p-caption {
-    @include styleSmallText;
-}
 
 
 /******************************************************************************/

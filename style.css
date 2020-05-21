@@ -1,11 +1,10 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=PT+Sans&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Droid+Sans&display=swap");
+/* @import url('https://fonts.googleapis.com/css?family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Droid+Sans&display=swap'); */
 @import url("https://fonts.googleapis.com/css?family=Quicksand");
 @import url("https://fonts.googleapis.com/css?family=Lato");
-@import url("https://fonts.googleapis.com/css?family=Raleway");
 /******************************************************************************/
 /******************************* Variables Sass    ******************************/
 /******************************************************************************/
@@ -41,42 +40,91 @@
 }
 
 /******************************************************************************/
+/******************************* Navigation***********************/
+/******************************************************************************/
+body {
+  padding-top: 0px;
+  overflow-y: scroll;
+  background-color: #303030 !important;
+  -webkit-animation: fadeInAnimation ease 0.3s;
+          animation: fadeInAnimation ease 0.3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-style: none;
+}
+
+.card-img {
+  max-width: 164px;
+  max-height: 164px;
+  height: auto;
+  margin-right: 5px;
+  padding-bottom: 5px;
+  border-radius: 0px;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.card-img:hover {
+  opacity: 0.3;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.container {
+  background-color: #303030;
+}
+
+/******************************************************************************/
 /***Titles 
 /******************************************************************************/
 h1 {
   font-family: "Quicksand" !important;
-  font-size: 25px !important;
-  color: #C6C6C6 !important;
-  font-size: 16px !important;
+  font-size: 18px !important;
   color: #D54E21 !important;
+  margin-bottom: 15px;
   font-weight: 400;
   margin-top: -10px;
 }
 
-h2,
-h3,
+h2 {
+  font-family: "Quicksand" !important;
+  font-size: 18px !important;
+  color: #D54E21 !important;
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+
 h3 a {
   font-family: "Quicksand" !important;
-  font-size: 16px !important;
+  font-size: 18px !important;
   color: #D54E21 !important;
+  margin-bottom: 15px;
+  font-weight: 400;
 }
 
 .legende-sous-titre {
   font-size: 13px !important;
   color: #888888 !important;
   font-weight: 400;
-  color: #888888 !important;
   text-align: left;
 }
 
 h3 {
   font-family: "Quicksand" !important;
-  font-size: 16px !important;
+  font-size: 18px !important;
   color: #D54E21 !important;
-  color: #C6C6C6 !important;
-  font-weight: 400;
-  margin-top: 100px;
   margin-bottom: 15px;
+  font-weight: 400;
+  color: #C6C6C6 !important;
+  margin-top: 100px;
 }
 
 h4 {
@@ -106,9 +154,7 @@ h6 {
 /******************************* Main text elements************************/
 /******************************************************************************/
 p,
-ol,
-ul,
-a {
+ol {
   font-family: "Roboto" !important;
   font-size: 14px !important;
   color: #888888 !important;
@@ -163,6 +209,11 @@ blockquote p {
 }
 
 blockquote cite {
+  font-family: "Roboto" !important;
+  font-size: 14px !important;
+  color: #888888 !important;
+  text-align: left;
+  font-weight: 400;
   font-style: normal;
   text-decoration: none !important;
 }
@@ -171,12 +222,7 @@ figcaption {
   font-size: 13px !important;
   color: #888888 !important;
   font-weight: 400;
-}
-
-.p-caption {
-  font-size: 13px !important;
-  color: #888888 !important;
-  font-weight: 400;
+  text-align: left;
 }
 
 /******************************************************************************/
@@ -395,46 +441,58 @@ div#jp-carousel-comments-loading span,
 }
 
 /******************************************************************************/
-/******************************* Navigation***********************/
+/*******************************  Bootstrap Navbar
 /******************************************************************************/
-body {
-  padding-top: 0px;
-  overflow-y: scroll;
+/*Navbar Bootstrap*/
+.navbar {
+  padding: 0px;
   background-color: #303030 !important;
-  -webkit-animation: fadeInAnimation ease 0.3s;
-          animation: fadeInAnimation ease 0.3s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  border-style: none;
+.navbar-brand {
+  font-family: "Quicksand" !important;
+  font-size: 25px !important;
+  color: #C6C6C6 !important;
+  padding-bottom: 0px !important;
+  text-decoration: none !important;
 }
 
-.card-img {
-  max-width: 164px;
-  max-height: 164px;
-  height: auto;
-  margin-right: 5px;
-  padding-bottom: 5px;
-  border-radius: 0px;
-  opacity: 1;
-  -webkit-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
+.nav-link {
+  font-family: "Quicksand" !important;
+  font-size: 25px !important;
+  color: #C6C6C6 !important;
+  font-size: 14px !important;
+  line-height: 38px !important;
+  text-decoration: none !important;
+  padding: 0px, 0px, 10px, 16px !important;
 }
 
-.card-img:hover {
-  opacity: 0.3;
-  -webkit-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
+.dropdown-menu {
+  top: 45px;
+  background-color: #2b2b2b !important;
+  -webkit-animation: fadeInAnimation ease-in-out 0.3s;
+          animation: fadeInAnimation ease-in-out 0.3s;
 }
 
-.container {
-  background-color: #303030;
+.dropdown-menu a {
+  font-family: "Quicksand" !important;
+  font-size: 25px !important;
+  color: #C6C6C6 !important;
+  font-size: 14px !important;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  line-height: 38px !important;
+  background-color: #2b2b2b !important;
+  opacity: 1 !important;
+}
+
+.dropdown-menu a:hover {
+  background-color: #303030 !important;
+  opacity: 1 !important;
+}
+
+.navbar-toggler {
+  margin-bottom: 8px;
 }
 
 /******************************************************************************/
@@ -492,60 +550,5 @@ img {
   .container {
     width: 900px !important;
   }
-}
-
-/******************************************************************************/
-/******************************* Navbar Bootstrap
-/******************************************************************************/
-/*Navbar Bootstrap*/
-.navbar {
-  padding: 0px;
-  background-color: #303030 !important;
-}
-
-.navbar-brand {
-  font-family: "Quicksand" !important;
-  font-size: 25px !important;
-  color: #C6C6C6 !important;
-  padding-bottom: 0px !important;
-  text-decoration: none !important;
-}
-
-.nav-link {
-  font-family: "Quicksand" !important;
-  font-size: 25px !important;
-  color: #C6C6C6 !important;
-  font-size: 14px !important;
-  line-height: 38px !important;
-  text-decoration: none !important;
-  padding: 0px, 0px, 10px, 16px !important;
-}
-
-.dropdown-menu {
-  top: 45px;
-  background-color: #2b2b2b !important;
-  -webkit-animation: fadeInAnimation ease-in-out 0.3s;
-          animation: fadeInAnimation ease-in-out 0.3s;
-}
-
-.dropdown-menu a {
-  font-family: "Quicksand" !important;
-  font-size: 25px !important;
-  color: #C6C6C6 !important;
-  font-size: 14px !important;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  line-height: 38px !important;
-  background-color: #2b2b2b !important;
-  opacity: 1 !important;
-}
-
-.dropdown-menu a:hover {
-  background-color: #303030 !important;
-  opacity: 1 !important;
-}
-
-.navbar-toggler {
-  margin-bottom: 8px;
 }
 /*# sourceMappingURL=style.css.map */

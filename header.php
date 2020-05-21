@@ -65,8 +65,9 @@
             <nav class="navbar navbar-expand-md navbar-light sticky-top" data-toggle="affix">
               
 
-              <div class="d-sm-flex d-block flex-sm-nowrap">
+               <div class="d-sm-flex d-block flex-sm-nowrap"> 
                       <!-- Titre du blogue -->
+                      
                       <a class="navbar-brand align-baseline" href="<?php echo home_url(); ?>"><?php bloginfo('name');?></a>       
                     <!--   <a class="navbar-subtitle align-baseline" href="<?php echo home_url(); ?>">-&nbsp;<?php bloginfo('description');?></a>          -->
 
@@ -84,7 +85,7 @@
                           'container'			=> 'div',
                           'container_class'	=> 'collapse navbar-collapse',
                           'container_id'		=> 'mainNav',
-                          'menu_class'		=> 'navbar-nav mr-auto navbar-right',
+                          'menu_class'		=> 'navbar-nav ml-auto navbar-right',
                             'fallback_cb'		=> 'WP_Bootstrap_Navwalker::fallback',
                             'walker'			=> new WP_Bootstrap_Navwalker()
                         ) );?> 
@@ -108,6 +109,8 @@
                         
                         wp_nav_menu( $defaults ); 
                       ?> -->
+
+
               </div>
 
               

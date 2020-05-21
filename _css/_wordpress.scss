@@ -16,6 +16,9 @@
 /******************************* Wordpress Gallery Blocks/
 /******************************************************************************/
 
+//TODO Refactor in a mixin to create a box with Width and height
+
+
 
 //Affichage des blocks d'images de galeries wordpress
 @mixin desktopBlockSize {
@@ -28,6 +31,42 @@
     height: $wpBlockGallerySizeMobile !important;
     flex-direction: column !important;
 }
+
+
+@mixin makeBlock($width, $height, $widthMobile, $heightMobile){
+    width: $width !important;
+    height: $height !important;
+    box-sizing: content-box !important;
+    padding-right: 10px !important;
+    flex-grow: 0 !important;
+
+    figure,
+    img {
+        width: $indexGaleryBlockSize !important;
+        height: $indexGaleryBlockSize !important;
+        opacity: 1;
+        transition: 0.3s ease-in-out;
+
+        @media (max-width: 640px) {
+            width: $widthMobile !important;
+            height: $heightMobile !important;
+        }
+    }
+
+    figure {
+        &:hover {
+            opacity: 0.3;
+            transition: 0.3s ease-in-out;
+        }
+    }
+
+    @media (max-width: 640px) {
+        width: $widthMobile !important;
+        height: $heightMobile !important;
+    }
+
+}
+
 
 .blocks-gallery-item {
     @include desktopBlockSize;
