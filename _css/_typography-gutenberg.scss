@@ -24,10 +24,6 @@ body {
 
 
 
-.editor-writing-flow .wp-block h1 {
-    @include styleH1;
-}
-
 
 .editor-post-title__block .editor-post-title__input,
 .editor-writing-flow .wp-block h2,
@@ -48,38 +44,57 @@ body {
 
 
 
+.editor-writing-flow .wp-block textarea,
+.editor-writing-flow .wp-block .wp-block-freeform,
+p.rich-text,
+.wp-block-quote__citation,
+.editor-block-list__layout .editor-block-list__block,
+.editor-block-list__layout .editor-block-list__block p {
+
+    @include styleMainText;
+}
+
 //Info displayed under page title 
 .legende-sous-titre {
     @include sousTitrePrincipal;
 }
 
+
+.editor-writing-flow .wp-block h1 {
+    @include styleH1;
+}
+
 //Ample top margin so H3 can be used to separate sections in text
-.editor-writing-flow .wp-block h3 {
+h1 {
+    @include styleH1;
+
+}
+
+h2 {
+    @include styleH2;
+
+}
+
+h3 {
     @include styleH3;
+
 }
 
 
-.editor-writing-flow .wp-block h4 {
+h4 {
     @include styleH4;
+
 }
 
-.editor-writing-flow .wp-block h5 {
+h5 {
     @include styleH5;
+
 }
 
 /******************************************************************************/
 /******************************* Main text elements************************/
 /******************************************************************************/
-.editor-writing-flow .wp-block textarea,
-.editor-writing-flow .wp-block .wp-block-freeform,
-.rich-text,
-.editor-post-title__input,
-.wp-block-quote__citation,
-.editor-block-list__layout .editor-block-list__block,
-.editor-block-list__layout .editor-block-list__block p  {
 
-    @include styleMainText;
-}
 
 .editor-writing-flow .wp-block ul {
     @include styleUl;
@@ -110,6 +125,7 @@ body {
 /******************************* Autres éléments typographie     **************/
 /******************************************************************************/
 
-.editor-writing-flow .wp-block hr {
+hr.wp-block-separator {
     @include styleHr;
+    
 }

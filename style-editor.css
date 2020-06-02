@@ -59,27 +59,18 @@
 body {
   padding-top: 10px;
   overflow-y: scroll;
-  color: #888888 !important;
+  color: #a0a0a0 !important;
   background-color: #303030 !important;
-}
-
-.editor-writing-flow .wp-block h1 {
-  font-family: "Quicksand" !important;
-  font-size: 18px !important;
-  color: #D54E21 !important;
-  margin-bottom: 15px;
-  font-weight: 400;
-  margin-top: -10px;
 }
 
 .editor-post-title__block .editor-post-title__input,
 .editor-writing-flow .wp-block h2,
 .editor-writing-flow .wp-block h3,
 .editor-writing-flow .wp-block h3 a {
-  font-family: "Quicksand" !important;
-  font-size: 18px !important;
-  color: #D54E21 !important;
-  margin-bottom: 15px;
+  font-family: "Roboto" !important;
+  font-size: 19px !important;
+  color: #ec5725 !important;
+  margin-bottom: 10px;
   font-weight: 400;
 }
 
@@ -93,139 +84,162 @@ body {
   padding-bottom: 0px;
 }
 
-.legende-sous-titre {
-  font-size: 13px !important;
-  color: #888888 !important;
+.editor-writing-flow .wp-block textarea,
+.editor-writing-flow .wp-block .wp-block-freeform,
+p.rich-text,
+.wp-block-quote__citation,
+.editor-block-list__layout .editor-block-list__block,
+.editor-block-list__layout .editor-block-list__block p {
+  font-size: 15px !important;
+  color: #a0a0a0 !important;
   font-weight: 400;
-  text-align: left;
 }
 
-.editor-writing-flow .wp-block h3 {
-  font-family: "Quicksand" !important;
-  font-size: 18px !important;
-  color: #D54E21 !important;
-  margin-bottom: 15px;
+.legende-sous-titre {
+  font-size: 13px !important;
+  color: #a0a0a0 !important;
+  font-weight: 400;
+  text-align: left !important;
+}
+
+.editor-writing-flow .wp-block h1 {
+  font-family: "Roboto" !important;
+  font-size: 19px !important;
+  color: #ec5725 !important;
+  margin-bottom: 10px;
+  font-weight: 400;
+  margin-top: -10px;
+}
+
+h1 {
+  font-family: "Roboto" !important;
+  font-size: 19px !important;
+  color: #ec5725 !important;
+  margin-bottom: 10px;
+  font-weight: 400;
+  margin-top: -10px;
+}
+
+h2 {
+  font-family: "Roboto" !important;
+  font-size: 19px !important;
+  color: #ec5725 !important;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+h3 {
+  font-family: "Roboto" !important;
+  font-size: 19px !important;
+  color: #ec5725 !important;
+  margin-bottom: 10px;
   font-weight: 400;
   color: #C6C6C6 !important;
   margin-top: 100px;
+  margin-bottom: 30px;
 }
 
-.editor-writing-flow .wp-block h4 {
-  font-family: "Roboto" !important;
-  font-size: 14px !important;
-  color: #888888 !important;
-  text-align: left;
+h4 {
+  font-size: 15px !important;
+  color: #a0a0a0 !important;
   font-weight: 400;
   font-weight: bold;
-  padding: 0px 0px 0px 0px;
+  padding: 0px;
   margin: 10px 0px 25px 0px;
 }
 
-.editor-writing-flow .wp-block h5 {
-  font-family: "Roboto" !important;
-  font-size: 14px !important;
-  color: #888888 !important;
-  text-align: left;
+h5 {
+  font-size: 15px !important;
+  color: #a0a0a0 !important;
   font-weight: 400;
   color: #C6C6C6 !important;
-  padding: 0px 0px 0px 0px;
+  padding: 0px;
   margin: 15px 0px 10px 0px;
 }
 
 /******************************************************************************/
 /******************************* Main text elements************************/
 /******************************************************************************/
-.editor-writing-flow .wp-block textarea,
-.editor-writing-flow .wp-block .wp-block-freeform,
-.rich-text,
-.editor-post-title__input,
-.wp-block-quote__citation,
-.editor-block-list__layout .editor-block-list__block,
-.editor-block-list__layout .editor-block-list__block p {
-  font-family: "Roboto" !important;
-  font-size: 14px !important;
-  color: #888888 !important;
-  text-align: left;
-  font-weight: 400;
-}
-
 .editor-writing-flow .wp-block ul {
   padding-left: 0px;
 }
 
 .editor-writing-flow .wp-block ul li {
+  font-size: 15px !important;
+  color: #a0a0a0 !important;
+  font-weight: 400;
   list-style-type: none;
 }
 
 .editor-writing-flow .wp-block a {
-  font-family: "Roboto" !important;
-  font-size: 14px !important;
-  color: #888888 !important;
-  text-align: left;
+  font-size: 15px !important;
+  color: #a0a0a0 !important;
   font-weight: 400;
   opacity: 1;
-  -webkit-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .editor-writing-flow .wp-block a:hover {
-  color: #505050 !important;
+  color: #ebebeb !important;
   text-decoration: none;
-  opacity: 0.7;
-  -webkit-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .wp-block blockquote {
-  color: #888888 !important;
-  width: auto;
   display: table;
+  color: #a0a0a0 !important;
+  width: auto;
   max-width: 600px !important;
-  border-left: 1px solid #888888;
-  padding-left: 10px;
+  border-left: 1px solid #a0a0a0 !important;
+  padding-left: 10px !important;
 }
 
 .wp-block blockquote p {
-  font-family: "Roboto" !important;
-  font-size: 14px !important;
-  color: #888888 !important;
-  text-align: left;
+  font-size: 16px !important;
+  color: #C6C6C6 !important;
   font-weight: 400;
+  padding-left: 10px;
   font-style: italic;
   width: 100%;
+  text-align: left;
 }
 
-.wp-block blockquote cite {
-  font-family: "Roboto" !important;
-  font-size: 14px !important;
-  color: #888888 !important;
-  text-align: left;
+.wp-block blockquote cite,
+.wp-block blockquote cite a {
+  font-size: 16px !important;
+  color: #C6C6C6 !important;
   font-weight: 400;
+  padding-left: 10px;
   font-style: normal;
+  text-align: left;
   text-decoration: none !important;
 }
 
 .wp-block figcaption {
   font-size: 13px !important;
-  color: #888888 !important;
+  color: #a0a0a0 !important;
   font-weight: 400;
-  text-align: left;
+  text-align: left !important;
 }
 
 .p-caption {
   font-size: 13px !important;
-  color: #888888 !important;
+  color: #a0a0a0 !important;
   font-weight: 400;
-  text-align: left;
+  text-align: left !important;
 }
 
 /******************************************************************************/
 /******************************* Autres éléments typographie     **************/
 /******************************************************************************/
-.editor-writing-flow .wp-block hr {
+hr.wp-block-separator {
+  width: 100%;
+  max-width: 100% !important;
   margin-top: 0px;
   margin-bottom: 10px;
-  border-bottom: 1px solid #3f3f3f;
+  border-bottom: 1px solid #a0a0a0 !important;
 }
 
 /* Css Document */
@@ -237,7 +251,7 @@ body {
 /******************************************************************************/
 .editor-post-title__input {
   /*font-family: "'Times New Roman', Times, serif'";*/
-  font-family: "Roboto" !important;
+  font-family: "" !important;
   color: rgba(0, 0, 0, 0.9);
   font-size: 20px;
   line-height: 39px;
@@ -266,8 +280,8 @@ body {
 @media (max-width: 640px) {
   .blocks-gallery-item figure,
   .blocks-gallery-item img {
-    width: 200px !important;
-    height: 200px !important;
+    width: 95% !important;
+    height: 95% !important;
     -webkit-box-orient: vertical !important;
     -webkit-box-direction: normal !important;
         -ms-flex-direction: column !important;
@@ -277,8 +291,8 @@ body {
 
 @media (max-width: 640px) {
   .blocks-gallery-item {
-    width: 200px !important;
-    height: 200px !important;
+    width: 95% !important;
+    height: 95% !important;
     -webkit-box-orient: vertical !important;
     -webkit-box-direction: normal !important;
         -ms-flex-direction: column !important;

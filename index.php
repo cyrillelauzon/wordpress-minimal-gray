@@ -28,7 +28,7 @@ get_header(); ?>
       
         <!-- <hr/> -->
         <h2><?php the_title(); ?></h2>
-        <h4><?php the_date(); ?></h4>        
+        <p><?php the_date(); ?></p>        
         
 
          <!-- <?php if ( function_exists( 'add_theme_support' ) ) the_post_thumbnail(); ?> -->

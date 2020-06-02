@@ -12,114 +12,86 @@
     margin-bottom: $mainTextMargin;
 }
 
+//Pour éviter un bogue où l'utilisation de colonnes transforme le curseur en curseur de liens
+.wp-block-columns, .wp-block-column, .wp-block-cover{
+    cursor: default !important;
+}
+
 /******************************************************************************/
 /******************************* Wordpress Gallery Blocks/
 /******************************************************************************/
 
-//TODO Refactor in a mixin to create a box with Width and height
-
-
-
-//Affichage des blocks d'images de galeries wordpress
-@mixin desktopBlockSize {
-    width: $wpBlockGalleryWidth !important;
-    height: $wpBlockGalleryHeight !important;
-}
-
-@mixin mobileBlockSize {
-    width: $wpBlockGallerySizeMobile !important;
-    height: $wpBlockGallerySizeMobile !important;
-    flex-direction: column !important;
-}
-
-
-@mixin makeBlock($width, $height, $widthMobile, $heightMobile){
+@mixin setSize($width, $height) {
     width: $width !important;
     height: $height !important;
+}
+
+@mixin quickFadeOnHover {
+    &:hover {
+        opacity: 0.6;
+        transition:  0.3s ease-in-out;
+        
+    }
+}
+
+@mixin makeBlock($width, $height, $widthMobile, $heightMobile) {
+    @include setSize($width, $height);
     box-sizing: content-box !important;
     padding-right: 10px !important;
     flex-grow: 0 !important;
 
+
+ 
+
+
+
+    @media (max-width: 640px) {
+        @include setSize($widthMobile, $heightMobile);
+        flex-direction: column !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        padding-bottom: 10px !important;
+        flex: none !important;
+    }
+
     figure,
     img {
-        width: $indexGaleryBlockSize !important;
-        height: $indexGaleryBlockSize !important;
+        @include setSize($width, $height);
         opacity: 1;
+        //background:transparent;
         transition: 0.3s ease-in-out;
 
         @media (max-width: 640px) {
-            width: $widthMobile !important;
-            height: $heightMobile !important;
+            @include setSize($widthMobile, $heightMobile);
+            flex-direction: column !important;
+            padding-bottom: 10px !important;
+            flex: none !important;
         }
     }
 
     figure {
-        &:hover {
-            opacity: 0.3;
-            transition: 0.3s ease-in-out;
-        }
+        @include quickFadeOnHover;
     }
 
-    @media (max-width: 640px) {
-        width: $widthMobile !important;
-        height: $heightMobile !important;
-    }
 
 }
 
-
 .blocks-gallery-item {
-    @include desktopBlockSize;
-    box-sizing: content-box !important;
-    padding-right: 10px !important;
-    flex-grow: 0 !important;
+    @include makeBlock($wpBlockGalleryWidth, $wpBlockGalleryHeight, $wpBlockGallerySizeMobile, 150px);
+
+/*     color:white !important;
     opacity: 1;
+    transition: background-color 0.3s ease-in-out;
 
-    figure,
-    img {
-        @include desktopBlockSize;
-        opacity: 1;
-        transition: 0.3s ease-in-out;
-
-        @media (max-width: 640px) {
-            @include mobileBlockSize;
-        }
-    }
-
-    @media (max-width: 640px) {
-        @include mobileBlockSize;
-    }
-
-    figure {
-        &:hover {
-            opacity: 0.3;
-            transition: 0.3s ease-in-out;
-        }
-    }
-
+    &:hover {
+        color:white !important;
+        transition: background-color 0.3s ease-in-out;
+    } */
 }
 
 .small-boxes {
     .blocks-gallery-item {
-        width: $indexGaleryBlockSize !important;
-        height: $indexGaleryBlockSize !important;
-        box-sizing: content-box !important;
-        padding-right: 10px !important;
-        flex-grow: 0 !important;
-
-        figure,
-        img {
-            width: $indexGaleryBlockSize !important;
-            height: $indexGaleryBlockSize !important;
-
-            @media (max-width: 640px) {
-                @include mobileBlockSize;
-            }
-        }
-
-        @media (max-width: 640px) {
-            @include mobileBlockSize;
-        }
+        @include makeBlock($indexGaleryBlockSize, $indexGaleryBlockSize, $wpBlockGallerySizeMobile, 150px);
     }
 }
 
@@ -202,6 +174,14 @@ div.jp-carousel-buttons a.jp-carousel-commentlink,
 }
 
 
+
+.jp-carousel-overlay{
+    background-color: $siteBackgroundColor !important;
+}
+
+.jp-carousel-fadeaway{
+    display: none !important;
+}
 
 /* Hide comment form header. */
 /* Center the metabox. */

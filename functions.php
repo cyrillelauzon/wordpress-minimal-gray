@@ -33,6 +33,9 @@
 	'primary' => __( 'Primary Menu', 'mimimal' ),
 ) );
 
+add_theme_support( 'dark-editor-style' );
+add_theme_support( 'wp-block-styles' );
+add_theme_support( 'responsive-embeds' );
 
 
 function displayPagesThumbs(){
@@ -40,6 +43,7 @@ function displayPagesThumbs(){
     $pages = get_pages(array( 'sort_order' => 'post_date', 'sort_column' => 'menu_order' ));
    // $i .= '<div class="row">';
 
+    $i = "";
 
       foreach ( $pages as $page ) {
 

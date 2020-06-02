@@ -3,7 +3,7 @@
 /******************************************************************************/
 
 body {
-    padding-top: 0px;
+    padding-top: 30px;
 
     overflow-y: scroll;
     background-color: $siteBackgroundColor !important;
@@ -12,7 +12,6 @@ body {
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
-
 
 
 img {
@@ -38,11 +37,6 @@ img {
 
 }
 
-
-.container {
-    background-color: $siteBackgroundColor;
-    //opacity: 0.8;
-}
 
 
 
@@ -109,10 +103,23 @@ blockquote {
 }
 
 //Captions under images
-figcaption {
+figcaption,
+.cite {
     @include styleSmallText;
+    text-align: right !important;
+
 }
 
+.cite-center {
+    @include styleSmallText;
+    text-align: center !important;
+}
+
+.blocks-gallery-caption,
+.cite {
+    text-align: right !important;
+    width: 100% !important;
+}
 
 
 /******************************************************************************/
@@ -126,4 +133,18 @@ hr {
 .blog-post {
     margin-top: $mainTextMargin;
     margin-bottom: $interSectionMargin;
+}
+
+.meow-contact-form__group-label,
+.meow-contact-form-message {
+    @include styleH5;
+    margin-top: 0px !important;
+    margin-bottom: 10px !important;
+}
+
+.meow-contact-form__group-input,
+.meow-contact-form__group-textarea{
+    background-color: $siteBackgroundColor;
+    color: $mainColor;
+    border: 1px solid $mainColor !important;
 }

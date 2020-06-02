@@ -5,24 +5,26 @@
 //$mainTitleFont : "'PT Sans', sans-serif";
 //$mainTitleFont : "Roboto Condensed";
 
-//$mainTitleFont : "PT Sans";
+
 $mainTitleFont : "Quicksand";
 //$mainFont : "'Helvetica Neue',Arial,Helvetica,sans-serif";
-$mainFont : "Roboto";
+$mainFont : "";
 
 $mainTitleSize : 25px;
-$mainSubTitleSize : 18px;
-$mainTextSize: 14px;
+$mainSubTitleSize : 19px;
+$mainTextSize: 15px;
 $smallTextSize: 13px;
-$menuTextSize: 14px;
+$menuTextSize: 15px;
+$emphasisTextSize: 16px;
 
 $interSectionMargin: 100px;
 $mainTextMargin: 15px;
 $smallTextMargin: 10px;
 
 $mainTitleColor : #C6C6C6;
-$mainColor : rgb(136, 136, 136);
-$mainSubTitleColor : #D54E21;
+$mainTitleHighlight : rgb(235, 235, 235);
+$mainColor :rgb(160, 160, 160);
+$mainSubTitleColor : rgb(236, 87, 37);
 
 $mainLegendColor : rgb(182, 182, 182);
 $colorBlack : rgba(0, 0, 0, 0.9);
@@ -39,9 +41,7 @@ $mainContainerWidth : 900px;
 
 $wpBlockGalleryWidth : 425px;
 $wpBlockGalleryHeight : 300px;
-$wpBlockGallerySizeMobile : 200px;
-
-$galeryBlockSize : 315px;
+$wpBlockGallerySizeMobile : 95%;
 $indexGaleryBlockSize : 164px;
 
 
@@ -49,11 +49,8 @@ $indexGaleryBlockSize : 164px;
 /******************************* TextStyles mixin******************************/
 /******************************************************************************/
 @mixin makeFont($family, $size, $color) {
-    font: {
-        family: $family !important;
-        size: $size !important;
-    }
-
+    font-family: $family !important;
+    font-size: $size !important;
     color: $color !important;
 }
 
@@ -62,14 +59,15 @@ $indexGaleryBlockSize : 164px;
 }
 
 @mixin styleSubTitle {
-    @include makeFont($mainTitleFont, $mainSubTitleSize, $mainSubTitleColor);
-    margin-bottom: $mainTextMargin;
+    @include makeFont("Roboto", $mainSubTitleSize, $mainSubTitleColor);
+    margin-bottom: $smallTextMargin;
     font-weight: 400;
 }
 
 @mixin styleMainText {
-    @include makeFont($mainFont, $mainTextSize, $mainColor);
-    text-align: left;
+    //@include makeFont($mainFont, $mainTextSize, $mainColor);
+    font-size: $mainTextSize !important;
+    color: $mainColor !important;
     font-weight: 400;
 }
 
@@ -77,7 +75,14 @@ $indexGaleryBlockSize : 164px;
     font-size: $smallTextSize !important;
     color: $mainColor !important;
     font-weight: 400;
-    text-align: left;
+    text-align: left !important;
+}
+
+@mixin styleEmphasisText {
+    //@include makeFont($mainFont, $mainTextSize, $mainColor);
+    font-size: $emphasisTextSize !important;
+    color: $mainTitleColor !important;
+    font-weight: 400;
 }
 
 /******************************************************************************/
@@ -108,6 +113,8 @@ $indexGaleryBlockSize : 164px;
     @include styleSubTitle;
     color: $mainTitleColor !important;
     margin-top: $interSectionMargin;
+
+    margin-bottom: 30px;
 }
 
 //page section title
@@ -115,7 +122,7 @@ $indexGaleryBlockSize : 164px;
     @include styleMainText;
     font-weight: bold;
 
-    padding: 0px 0px 0px 0px;
+    padding: 0px;
     margin: 10px 0px 25px 0px;
 }
 
@@ -124,20 +131,19 @@ $indexGaleryBlockSize : 164px;
     @include styleMainText;
     color: $mainTitleColor !important;
 
-    padding: 0px 0px 0px 0px;
+    padding: 0px;
     margin: 15px 0px 10px 0px;
 }
 
 @mixin styleA {
     @include styleMainText;
     opacity: 1;
-    transition: opacity 0.3s ease;
+    transition: color 0.3s ease;
 
     &:hover {
-        color: $siteHighlightBGColor !important;
+        color: $mainTitleHighlight !important;
         text-decoration: none;
-        opacity: 0.7;
-        transition: opacity 0.3s ease;
+        transition: color 0.3s ease;
     }
 }
 
@@ -146,35 +152,45 @@ $indexGaleryBlockSize : 164px;
 
     li {
         //margin-left: 10px !important;
+        @include styleMainText;
         list-style-type: none;
     }
 }
 
 @mixin styleBlockquote {
+    display: table;
     color: $mainColor !important;
     width: auto;
-    display: table;
     max-width: 600px !important;
-    border-left: 1px solid $mainColor;
-    padding-left: 10px;
+    border-left: 1px solid $mainColor !important;
+    padding-left: 10px !important;
+
+
 
     p {
-        @include styleMainText;
+        @include styleEmphasisText;
+        padding-left: 10px;
         font-style: italic;
         width: 100%;
+        text-align: left;
     }
 
-    cite {
-        @include styleMainText;
+    cite,
+    cite a {
+        @include styleEmphasisText;
+        padding-left: 10px;
         font-style: normal;
+        text-align: left;
         text-decoration: none !important;
     }
 }
 
 @mixin styleHr {
+    width: 100%;
+    max-width: 100% !important;
     margin-top: 0px;
     margin-bottom: $smallTextMargin;
-    border-bottom: 1px solid rgb(63, 63, 63);
+    border-bottom: 1px solid $mainColor !important;
 }
 
 
@@ -204,4 +220,3 @@ $shortSpeed : '0.9s';
 @mixin fasterEaseIn {
     transition: ease 0.2s;
 }
-
