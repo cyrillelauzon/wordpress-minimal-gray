@@ -112,9 +112,9 @@ $indexGaleryBlockSize : 164px;
 @mixin styleH3 {
     @include styleSubTitle;
     color: $mainTitleColor !important;
-    margin-top: $interSectionMargin;
+    padding-top: $interSectionMargin;
 
-    margin-bottom: 30px;
+    padding-bottom: 30px;
 }
 
 //page section title

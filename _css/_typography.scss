@@ -148,3 +148,19 @@ hr {
     color: $mainColor;
     border: 1px solid $mainColor !important;
 }
+
+footer{
+    background-color: $siteDarkAccentColor;
+    min-height: 500px;
+}
+
+.related-post-banner{
+    padding-bottom: 50px;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+        opacity: 0.7;
+        transition: opacity 0.3s ease;
+    }
+}

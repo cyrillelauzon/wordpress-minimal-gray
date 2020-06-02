@@ -1,11 +1,65 @@
 
 
 
-
+   <br><br><br><br><br><br><br><br><br>
 
     </main><!-- container -->
 
     <footer>
+      <div class="container">
+
+     
+      
+      
+           
+          <?php
+              //Read the tag to search for in other posts
+              $relatedPostsTag = get_post_custom_values( "related-posts-tag", $post->ID );
+              $querySearchTag = "NULL";
+              if($relatedPostsTag[0]) {
+                $querySearchTag = $relatedPostsTag[0];
+              } 
+
+              //Building the WP_query so related pages contains the tag slug stored in related-posts-tag
+              $args = array(
+                'post_type' => 'page',
+                'tag' => $querySearchTag,
+                'posts_per_page' => 10,
+              );
+              $query = new WP_Query($args);
+          
+          
+              //Display cards of related posts with featured image and post title at the bottom
+              if ($query->have_posts()) :
+                echo ('<h3>Projets connexes</h3>');
+                while ($query->have_posts()) :
+                  
+                  $post = get_post($query->the_post()); 
+                  $cardCtnt = "";
+                  $featured_img_url = get_the_post_thumbnail_url($post->ID, 'full'); 
+                  if($featured_img_url){
+                    //TEMP code pour afficher des cartes bootstrap au lieu de bannières
+                    /* $cardCtnt = '<div class="col-lg-12">';
+                    $cardCtnt .= "<div class='card'>";
+                    $cardCtnt .= '<a href="' . get_page_link( $post->ID ) . '" class=".card-link"><img class="card-img-top" src="' . $featured_img_url . '" /></a>';
+                    $cardCtnt .= '<div class="card-body"><a href="' . get_page_link( $post->ID ) . '" class="card-link">' . $post->post_title . '</a></div></div></div>'; */
+
+                    $cardCtnt = '<div class="related-post-banner">';
+                    $cardCtnt .= '<a href="' . get_page_link( $post->ID ) . '" class=".card-link"><img class="card-img-top" src="' . $featured_img_url . '" /></a>';
+                    $cardCtnt .= '<a href="' . get_page_link( $post->ID ) . '" class="card-link">' . $post->post_title . '</a></div>';
+                  }
+                  
+                  
+                  echo $cardCtnt;
+                  
+                  
+                ?>
+                
+         
+              <?php endwhile; else: ?>
+              <?php endif; wp_reset_query(); ?>
+      </div>
+
       <br><br><br><br><br><br><br><br><br>
     </footer>
 
