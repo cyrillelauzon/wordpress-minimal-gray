@@ -30,7 +30,7 @@
     background-color: $siteDarkAccentColor !important;
     animation: fadeInAnimation ease-in-out 0.3s;
 
-    @media (max-width: 576px) {
+    @media (max-width: $sm) {
         background-color: $siteBackgroundColor !important;
         border: none;
         max-width: 95%;
@@ -47,7 +47,7 @@
         background-color: $siteDarkAccentColor !important;
         opacity: 1 !important;
 
-        @media (max-width: 576px) {
+        @media (max-width: $sm) {
             background-color: $siteBackgroundColor !important;
             padding-left: 5px !important;
         }
@@ -67,8 +67,10 @@
 /******************************* Bootstrap container/
 /******************************************************************************/
 
+//TODO rewrite with new bootstrap 4 breakpoints
+
 .container {
-    width: 900px !important;
+    width: $mainContainerWidth!important;
 }
 
 .thumbnail {
@@ -77,7 +79,7 @@
 
 
 /*Container d'une dimension fixe*/
-@media (min-width: 200px) {
+@media (min-width: $xs) {
     .container {
         width: 95% !important;
     }
@@ -92,23 +94,16 @@
     }
 }
 
-@media (min-width: 576px) {
+@media (min-width: $sm) {
 
     .container {
-        width: 576px !important;
+        width: $sm !important;
     }
 }
 
-/* @media (min-width: 575px) {
+@media (min-width: $md) {
     .container {
-        width: 280px !important;
-    }
-
-} */
-
-@media (min-width: 768px) {
-    .container {
-        width: 768px !important;
+        width: $md !important;
     }
 
     .mobile-only {
@@ -116,7 +111,7 @@
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: $lg) {
     .container {
         width: $mainContainerWidth !important;
     }
