@@ -41,7 +41,7 @@
 
 
  <body>
-    <main role="main" class="container">
+    <main role="main" class="container-lg">
 
         <!-- Affichage d'une image en fond de page qui couvre toute la page -->
         <?php 

@@ -1,8 +1,19 @@
 
-//TODO comment
+
+/*****************************************************************************
+text-styles.scss
+
+Définition de styles de textes génériques qui sont ensuites appliqués
+à des mixins correspondants à h1, h2, p etc
+
+But: réutilisation du code dans style.scss et style-editor.scss afin de styler
+à la fois l'éditeur gutenberg et le thème
+/******************************************************************************/
+
+
 
 /******************************************************************************/
-/******************************* TextStyles mixin******************************/
+/******************************* styles génériques
 /******************************************************************************/
 @mixin makeFont($family, $size, $color) {
     font-family: $family !important;
@@ -42,11 +53,8 @@
 }
 
 /******************************************************************************/
-/******************************* TextStyles mixin******************************/
+/************ Style spécifiques pour réutilisation dans gutenberg
 /******************************************************************************/
-//Styles are defined in mixins so the same style can be applied    
-//inside theme and gutenberg editor respectively : _typography.scss and _typography-gutenberg.scss
-
 
 //Main page title
 @mixin styleH1 {

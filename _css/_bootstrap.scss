@@ -1,5 +1,3 @@
-
-
 /******************************************************************************/
 /*******************************  Bootstrap Navbar
 /******************************************************************************/
@@ -43,7 +41,7 @@
         padding-top: 0px;
         padding-bottom: 0px;
         line-height: 38px !important;
-        
+
         background-color: $siteDarkAccentColor !important;
         opacity: 1 !important;
 
@@ -67,24 +65,7 @@
 /******************************* Bootstrap container/
 /******************************************************************************/
 
-//TODO rewrite with new bootstrap 4 breakpoints
-
-.container {
-    width: $mainContainerWidth!important;
-}
-
-.thumbnail {
-    width: 750px !important;
-}
-
-
-/*Container d'une dimension fixe*/
 @media (min-width: $xs) {
-    .container {
-        width: 95% !important;
-    }
-
-
     .desktop-only {
         display: none;
     }
@@ -95,32 +76,20 @@
 }
 
 @media (min-width: $sm) {
-
-    .container {
-        width: $sm !important;
-    }
-}
-
-@media (min-width: $md) {
-    .container {
-        width: $md !important;
+    .desktop-only {
+        display: block;
     }
 
     .mobile-only {
-        display: block;
+        display: none;
     }
 }
 
+//À partir de la dimension d'écran lg, la largeur du container ne peut pas dépasser mainContainerWidth
+//En dessous de lg, la largeur est de 100% 
+// https://getbootstrap.com/docs/4.4/layout/overview/#containers
 @media (min-width: $lg) {
-    .container {
+    .container-lg {
         width: $mainContainerWidth !important;
     }
 }
-
-@media (min-width: $mainContainerWidth) {
-    .container {
-        width: $mainContainerWidth !important;
-    }
-}
-
-
