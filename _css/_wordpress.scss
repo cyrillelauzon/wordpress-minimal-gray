@@ -211,3 +211,23 @@ div#jp-carousel-comments-loading span,
     right: 12px;
     width: auto;
 }
+
+
+
+/******************************************************************************/
+/******************************* meow-contact-form
+/******************************************************************************/
+.meow-contact-form__group-label,
+.meow-contact-form-message {
+    @include styleH5;
+    margin-top: 0px !important;
+    margin-bottom: 10px !important;
+}
+
+.meow-contact-form__group-input,
+.meow-contact-form__group-textarea{
+    background-color: $siteBackgroundColor;
+    color: $mainColor;
+    border: 1px solid $mainColor !important;
+}
+
