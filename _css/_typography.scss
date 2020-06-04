@@ -2,7 +2,12 @@
 /******************************* Navigation***********************/
 /******************************************************************************/
 
+html{
+    min-height: 100vh;
+}
+
 body {
+    height: 100%;
     padding-top: 30px;
 
     overflow-y: scroll;
@@ -20,6 +25,8 @@ img {
     border-style: none;
 }
 
+
+//TODO identify/replace
 .card-img {
     max-width: $indexGaleryBlockSize;
     max-height: $indexGaleryBlockSize;
@@ -135,26 +142,20 @@ hr {
     margin-bottom: $interSectionMargin;
 }
 
-.meow-contact-form__group-label,
-.meow-contact-form-message {
-    @include styleH5;
-    margin-top: 0px !important;
-    margin-bottom: 10px !important;
-}
 
-.meow-contact-form__group-input,
-.meow-contact-form__group-textarea{
-    background-color: $siteBackgroundColor;
-    color: $mainColor;
-    border: 1px solid $mainColor !important;
-}
+
+
+/******************************************************************************/
+/******************************* Blog Footer                    **************/
+/******************************************************************************/
 
 footer{
     background-color: $siteDarkAccentColor;
-    min-height: 500px;
+    height: 100%;;
 }
 
 .related-post-banner{
+    width: 50%;
     padding-bottom: 50px;
     opacity: 1;
     transition: opacity 0.3s ease;
@@ -163,4 +164,8 @@ footer{
         opacity: 0.7;
         transition: opacity 0.3s ease;
     }
+}
+
+.card-img-top{
+    padding-bottom: 10px;
 }

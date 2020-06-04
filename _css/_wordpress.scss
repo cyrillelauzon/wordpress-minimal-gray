@@ -17,9 +17,35 @@
     cursor: default !important;
 }
 
+
+
+
+/******************************************************************************/
+/******************************* meow-contact-form
+/******************************************************************************/
+
+.meow-contact-form__group-label,
+.meow-contact-form-message {
+    @include styleH5;
+    margin-top: 0px !important;
+    margin-bottom: 10px !important;
+}
+
+.meow-contact-form__group-input,
+.meow-contact-form__group-textarea{
+    background-color: $siteBackgroundColor;
+    color: $mainColor;
+    border: 1px solid $mainColor !important;
+}
+
+
+
 /******************************************************************************/
 /******************************* Wordpress Gallery Blocks/
 /******************************************************************************/
+
+
+//TODO #15 clean/comment
 
 @mixin setSize($width, $height) {
     width: $width !important;
@@ -40,12 +66,7 @@
     padding-right: 10px !important;
     flex-grow: 0 !important;
 
-
- 
-
-
-
-    @media (max-width: 640px) {
+    @media (max-width: $sm) {
         @include setSize($widthMobile, $heightMobile);
         flex-direction: column !important;
         margin-left: auto !important;
@@ -61,7 +82,7 @@
         //background:transparent;
         transition: 0.3s ease-in-out;
 
-        @media (max-width: 640px) {
+        @media (max-width: $sm) {
             @include setSize($widthMobile, $heightMobile);
             flex-direction: column !important;
             padding-bottom: 10px !important;
@@ -95,9 +116,13 @@
     }
 }
 
+
+
+//TODO rewrite/verifier si pertinent
+
 // Affichage des captions de galerie en mode mobile seulement:
 .wp-block-gallery .blocks-gallery-item figcaption {
-    @media only screen and (max-width: 640px) {
+    @media only screen and (max-width: $sm) {
         position: relative !important;
         bottom: auto !important;
         max-height: 100% !important;
