@@ -10,9 +10,11 @@
 /******************************* Variables Sass    ******************************/
 /******************************************************************************/
 /******************************************************************************/
-/******************************* Body elements   ******************************/
+/******************************* Gallery blocks  ******************************/
 /******************************************************************************/
-/*Body Elements*/
+/******************************************************************************/
+/******************************* media breakpoints*****************************/
+/******************************************************************************/
 /******************************************************************************/
 /******************************* TextStyles mixin******************************/
 /******************************************************************************/
@@ -43,7 +45,12 @@
 /******************************************************************************/
 /******************************* Navigation***********************/
 /******************************************************************************/
+html {
+  min-height: 100vh;
+}
+
 body {
+  height: 100%;
   padding-top: 30px;
   overflow-y: scroll;
   background-color: #303030 !important;
@@ -250,6 +257,51 @@ hr {
   margin-bottom: 100px;
 }
 
+/******************************************************************************/
+/******************************* Blog Footer                    **************/
+/******************************************************************************/
+footer {
+  background-color: #2b2b2b;
+  height: 100%;
+}
+
+.related-post-banner {
+  width: 50%;
+  padding-bottom: 50px;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.related-post-banner:hover {
+  opacity: 0.7;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.card-img-top {
+  padding-bottom: 10px;
+}
+
+/******************************************************************************/
+/******************************* Misc Wordpress
+/******************************************************************************/
+/*Lien de téléchargement pour bloc fichier wordpress*/
+.wp-block-file__button {
+  display: none;
+}
+
+.wp-block-cover {
+  margin-bottom: 15px;
+}
+
+.wp-block-columns, .wp-block-column, .wp-block-cover {
+  cursor: default !important;
+}
+
+/******************************************************************************/
+/******************************* meow-contact-form
+/******************************************************************************/
 .meow-contact-form__group-label,
 .meow-contact-form-message {
   font-size: 15px !important;
@@ -267,40 +319,6 @@ hr {
   background-color: #303030;
   color: #a0a0a0;
   border: 1px solid #a0a0a0 !important;
-}
-
-footer {
-  background-color: #2b2b2b;
-  min-height: 500px;
-}
-
-.related-post-banner {
-  padding-bottom: 50px;
-  opacity: 1;
-  -webkit-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
-}
-
-.related-post-banner:hover {
-  opacity: 0.7;
-  -webkit-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
-}
-
-/******************************************************************************/
-/******************************* Misc Wordpress
-/******************************************************************************/
-/*Lien de téléchargement pour bloc fichier wordpress*/
-.wp-block-file__button {
-  display: none;
-}
-
-.wp-block-cover {
-  margin-bottom: 15px;
-}
-
-.wp-block-columns, .wp-block-column, .wp-block-cover {
-  cursor: default !important;
 }
 
 /******************************************************************************/
@@ -325,7 +343,7 @@ footer {
     } */
 }
 
-@media (max-width: 640px) {
+@media (max-width: 576px) {
   .blocks-gallery-item {
     width: 95% !important;
     height: 150px !important;
@@ -351,7 +369,7 @@ footer {
   transition: 0.3s ease-in-out;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 576px) {
   .blocks-gallery-item figure,
   .blocks-gallery-item img {
     width: 95% !important;
@@ -384,7 +402,7 @@ footer {
           flex-grow: 0 !important;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 576px) {
   .small-boxes .blocks-gallery-item {
     width: 95% !important;
     height: 150px !important;
@@ -410,7 +428,7 @@ footer {
   transition: 0.3s ease-in-out;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 576px) {
   .small-boxes .blocks-gallery-item figure,
   .small-boxes .blocks-gallery-item img {
     width: 95% !important;
@@ -432,7 +450,7 @@ footer {
   transition: 0.3s ease-in-out;
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 576px) {
   .wp-block-gallery .blocks-gallery-item figcaption {
     position: relative !important;
     bottom: auto !important;
@@ -634,12 +652,6 @@ div#jp-carousel-comments-loading span,
   }
 }
 
-/* @media (min-width: 575px) {
-    .container {
-        width: 280px !important;
-    }
-
-} */
 @media (min-width: 768px) {
   .container {
     width: 768px !important;

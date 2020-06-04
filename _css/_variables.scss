@@ -33,11 +33,8 @@ $siteHighlightBGColor : #505050;
 $siteDarkAccentColor : rgb(43, 43, 43);
 
 /******************************************************************************/
-/******************************* Body elements   ******************************/
+/******************************* Gallery blocks  ******************************/
 /******************************************************************************/
-
-/*Body Elements*/
-$mainContainerWidth : 900px;
 
 $wpBlockGalleryWidth : 425px;
 $wpBlockGalleryHeight : 300px;
@@ -45,3 +42,16 @@ $wpBlockGallerySizeMobile : 95%;
 $indexGaleryBlockSize : 164px;
 
 
+/******************************************************************************/
+/******************************* media breakpoints*****************************/
+/******************************************************************************/
+
+//naming convention and sizes from bootstrap
+$xs : 200px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px; 
+$xl: 1200px;
+
+//container size for lg screens and up:
+$mainContainerWidth : 900px;
