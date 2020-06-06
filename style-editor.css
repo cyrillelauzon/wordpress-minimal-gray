@@ -57,9 +57,9 @@ body {
 .editor-writing-flow .wp-block h2,
 .editor-writing-flow .wp-block h3,
 .editor-writing-flow .wp-block h3 a {
-  font-family: "Roboto" !important;
-  font-size: 19px !important;
-  color: #ec5725 !important;
+  font-family: "Roboto";
+  font-size: 19px;
+  color: #ec5725;
   margin-bottom: 10px;
   font-weight: 400;
 }
@@ -80,58 +80,58 @@ p.rich-text,
 .wp-block-quote__citation,
 .editor-block-list__layout .editor-block-list__block,
 .editor-block-list__layout .editor-block-list__block p {
-  font-size: 15px !important;
-  color: #a0a0a0 !important;
+  font-size: 15px;
+  color: #a0a0a0;
   font-weight: 400;
 }
 
 .legende-sous-titre {
-  font-size: 13px !important;
-  color: #a0a0a0 !important;
+  font-size: 13px;
+  color: #a0a0a0;
   font-weight: 400;
-  text-align: left !important;
+  text-align: left;
 }
 
 .editor-writing-flow .wp-block h1 {
-  font-family: "Roboto" !important;
-  font-size: 19px !important;
-  color: #ec5725 !important;
+  font-family: "Roboto";
+  font-size: 19px;
+  color: #ec5725;
   margin-bottom: 10px;
   font-weight: 400;
   margin-top: -10px;
 }
 
 h1 {
-  font-family: "Roboto" !important;
-  font-size: 19px !important;
-  color: #ec5725 !important;
+  font-family: "Roboto";
+  font-size: 19px;
+  color: #ec5725;
   margin-bottom: 10px;
   font-weight: 400;
   margin-top: -10px;
 }
 
 h2 {
-  font-family: "Roboto" !important;
-  font-size: 19px !important;
-  color: #ec5725 !important;
+  font-family: "Roboto";
+  font-size: 19px;
+  color: #ec5725;
   margin-bottom: 10px;
   font-weight: 400;
 }
 
 h3 {
-  font-family: "Roboto" !important;
-  font-size: 19px !important;
-  color: #ec5725 !important;
+  font-family: "Roboto";
+  font-size: 19px;
+  color: #ec5725;
   margin-bottom: 10px;
   font-weight: 400;
-  color: #C6C6C6 !important;
+  color: #C6C6C6;
   padding-top: 100px;
   padding-bottom: 30px;
 }
 
 h4 {
-  font-size: 15px !important;
-  color: #a0a0a0 !important;
+  font-size: 15px;
+  color: #a0a0a0;
   font-weight: 400;
   font-weight: bold;
   padding: 0px;
@@ -139,10 +139,10 @@ h4 {
 }
 
 h5 {
-  font-size: 15px !important;
-  color: #a0a0a0 !important;
+  font-size: 15px;
+  color: #a0a0a0;
   font-weight: 400;
-  color: #C6C6C6 !important;
+  color: #C6C6C6;
   padding: 0px;
   margin: 15px 0px 10px 0px;
 }
@@ -155,15 +155,15 @@ h5 {
 }
 
 .editor-writing-flow .wp-block ul li {
-  font-size: 15px !important;
-  color: #a0a0a0 !important;
+  font-size: 15px;
+  color: #a0a0a0;
   font-weight: 400;
   list-style-type: none;
 }
 
 .editor-writing-flow .wp-block a {
-  font-size: 15px !important;
-  color: #a0a0a0 !important;
+  font-size: 15px;
+  color: #a0a0a0;
   font-weight: 400;
   opacity: 1;
   -webkit-transition: color 0.3s ease;
@@ -171,7 +171,7 @@ h5 {
 }
 
 .editor-writing-flow .wp-block a:hover {
-  color: #ebebeb !important;
+  color: #ebebeb;
   text-decoration: none;
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
@@ -179,16 +179,16 @@ h5 {
 
 .wp-block blockquote {
   display: table;
-  color: #a0a0a0 !important;
+  color: #a0a0a0;
   width: auto;
-  max-width: 600px !important;
-  border-left: 1px solid #a0a0a0 !important;
-  padding-left: 10px !important;
+  max-width: 600px;
+  border-left: 1px solid #a0a0a0;
+  padding-left: 10px;
 }
 
 .wp-block blockquote p {
-  font-size: 16px !important;
-  color: #C6C6C6 !important;
+  font-size: 16px;
+  color: #C6C6C6;
   font-weight: 400;
   padding-left: 10px;
   font-style: italic;
@@ -198,27 +198,27 @@ h5 {
 
 .wp-block blockquote cite,
 .wp-block blockquote cite a {
-  font-size: 16px !important;
-  color: #C6C6C6 !important;
+  font-size: 16px;
+  color: #C6C6C6;
   font-weight: 400;
   padding-left: 10px;
   font-style: normal;
   text-align: left;
-  text-decoration: none !important;
+  text-decoration: none;
 }
 
 .wp-block figcaption {
-  font-size: 13px !important;
-  color: #a0a0a0 !important;
+  font-size: 13px;
+  color: #a0a0a0;
   font-weight: 400;
-  text-align: left !important;
+  text-align: left;
 }
 
 .p-caption {
-  font-size: 13px !important;
-  color: #a0a0a0 !important;
+  font-size: 13px;
+  color: #a0a0a0;
   font-weight: 400;
-  text-align: left !important;
+  text-align: left;
 }
 
 /******************************************************************************/
@@ -226,10 +226,10 @@ h5 {
 /******************************************************************************/
 hr.wp-block-separator {
   width: 100%;
-  max-width: 100% !important;
+  max-width: 100%;
   margin-top: 0px;
   margin-bottom: 10px;
-  border-bottom: 1px solid #a0a0a0 !important;
+  border-bottom: 1px solid #a0a0a0;
 }
 
 /******************************************************************************/

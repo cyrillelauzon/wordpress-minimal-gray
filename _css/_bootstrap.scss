@@ -1,35 +1,37 @@
 /******************************************************************************/
 /*******************************  Bootstrap Navbar
 /******************************************************************************/
+
+
 /*Navbar Bootstrap*/
-.navbar {
+#css-overrides .navbar {
     padding: 0px;
-    background-color: $siteBackgroundColor !important;
+    background-color: $siteBackgroundColor;
 }
 
-.navbar-brand {
+#css-overrides .navbar-brand {
     @include styleTitle;
-    padding-bottom: 0px !important;
-    text-decoration: none !important;
+    padding-bottom: 0px;
+    text-decoration: none;
 }
 
-.nav-link {
+#css-overrides .nav-link {
     @include styleTitle;
-    font-size: $menuTextSize !important;
-    line-height: 38px !important;
+    font-size: $menuTextSize;
+    line-height: 38px;
 
-    text-decoration: none !important;
-    padding: 0px, 0px, 10px, 16px !important;
+    text-decoration: none;
+    padding: 0px, 0px, 10px, 16px;
 }
 
 
-.dropdown-menu {
+#css-overrides .dropdown-menu {
     top: 45px;
-    background-color: $siteDarkAccentColor !important;
+    background-color: $siteDarkAccentColor;
     animation: fadeInAnimation ease-in-out 0.3s;
 
     @media (max-width: $sm) {
-        background-color: $siteBackgroundColor !important;
+        background-color: $siteBackgroundColor;
         border: none;
         max-width: 95%;
     }
@@ -37,27 +39,27 @@
 
     a {
         @include styleTitle;
-        font-size: $menuTextSize !important;
+        font-size: $menuTextSize;
         padding-top: 0px;
         padding-bottom: 0px;
-        line-height: 38px !important;
+        line-height: 38px;
 
-        background-color: $siteDarkAccentColor !important;
-        opacity: 1 !important;
+        background-color: $siteDarkAccentColor;
+        opacity: 1;
 
         @media (max-width: $sm) {
-            background-color: $siteBackgroundColor !important;
-            padding-left: 5px !important;
+            background-color: $siteBackgroundColor;
+            padding-left: 5px;
         }
 
         &:hover {
-            background-color: $siteBackgroundColor !important;
-            opacity: 1 !important;
+            background-color: $siteBackgroundColor;
+            opacity: 1;
         }
     }
 }
 
-.navbar-toggler {
+#css-overrides .navbar-toggler {
     margin-bottom: 8px;
 }
 
@@ -89,7 +91,7 @@
 //En dessous de lg, la largeur est de 100% 
 // https://getbootstrap.com/docs/4.4/layout/overview/#containers
 @media (min-width: $lg) {
-    .container-lg {
-        width: $mainContainerWidth !important;
+    #css-overrides .container-lg {
+        width: $mainContainerWidth;
     }
 }

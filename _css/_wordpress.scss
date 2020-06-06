@@ -13,30 +13,14 @@
 }
 
 //Pour éviter un bogue où l'utilisation de colonnes transforme le curseur en curseur de liens
-.wp-block-columns, .wp-block-column, .wp-block-cover{
-    cursor: default !important;
+#css-overrides .wp-block-columns,
+#css-overrides .wp-block-column,
+#css-overrides .wp-block-media-text,
+#css-overrides .wp-block-media-text__content,
+#css-overrides .wp-block-cover {
+    cursor: default;
 }
 
-
-
-
-/******************************************************************************/
-/******************************* meow-contact-form
-/******************************************************************************/
-
-.meow-contact-form__group-label,
-.meow-contact-form-message {
-    @include styleH5;
-    margin-top: 0px !important;
-    margin-bottom: 10px !important;
-}
-
-.meow-contact-form__group-input,
-.meow-contact-form__group-textarea{
-    background-color: $siteBackgroundColor;
-    color: $mainColor;
-    border: 1px solid $mainColor !important;
-}
 
 
 
@@ -46,71 +30,51 @@
 
 
 //TODO #15 clean/comment
-
 @mixin setSize($width, $height) {
-    width: $width !important;
-    height: $height !important;
-}
-
-@mixin quickFadeOnHover {
-    &:hover {
-        opacity: 0.6;
-        transition:  0.3s ease-in-out;
-        
-    }
+    width: $width;
+    height: $height;
 }
 
 @mixin makeBlock($width, $height, $widthMobile, $heightMobile) {
     @include setSize($width, $height);
-    box-sizing: content-box !important;
-    padding-right: 10px !important;
-    flex-grow: 0 !important;
+    box-sizing: content-box;
+    padding-right: 10px;
+    flex-grow: 0;
 
     @media (max-width: $sm) {
         @include setSize($widthMobile, $heightMobile);
-        flex-direction: column !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-        padding-bottom: 10px !important;
-        flex: none !important;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 10px;
+        flex: none;
     }
 
     figure,
     img {
         @include setSize($width, $height);
         opacity: 1;
-        //background:transparent;
         transition: 0.3s ease-in-out;
 
         @media (max-width: $sm) {
             @include setSize($widthMobile, $heightMobile);
-            flex-direction: column !important;
-            padding-bottom: 10px !important;
-            flex: none !important;
+            flex-direction: column;
+            padding-bottom: 10px;
+            flex: none;
         }
     }
 
     figure {
         @include quickFadeOnHover;
     }
-
-
 }
 
-.blocks-gallery-item {
+#css-overrides .blocks-gallery-item {
     @include makeBlock($wpBlockGalleryWidth, $wpBlockGalleryHeight, $wpBlockGallerySizeMobile, 150px);
 
-/*     color:white !important;
-    opacity: 1;
-    transition: background-color 0.3s ease-in-out;
-
-    &:hover {
-        color:white !important;
-        transition: background-color 0.3s ease-in-out;
-    } */
 }
 
-.small-boxes {
+#css-overrides .small-boxes {
     .blocks-gallery-item {
         @include makeBlock($indexGaleryBlockSize, $indexGaleryBlockSize, $wpBlockGallerySizeMobile, 150px);
     }
@@ -121,16 +85,16 @@
 //TODO rewrite/verifier si pertinent
 
 // Affichage des captions de galerie en mode mobile seulement:
-.wp-block-gallery .blocks-gallery-item figcaption {
+#css-overrides .wp-block-gallery .blocks-gallery-item figcaption {
     @media only screen and (max-width: $sm) {
-        position: relative !important;
-        bottom: auto !important;
-        max-height: 100% !important;
-        overflow: auto !important;
-        padding: 10px 0 20px 0 !important;
-        color: #333 !important;
-        text-align: center !important;
-        font-size: 13px !important;
+        position: relative;
+        bottom: auto;
+        max-height: 100%;
+        overflow: auto;
+        padding: 10px 0 20px 0;
+        color: #333;
+        text-align: center;
+        font-size: 13px;
         background: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 0%, transparent) !important;
     }
 
@@ -178,7 +142,7 @@ figure.wp-block-embed.is-type-video iframe {
 .jp-carousel-info {
     p {
         @include styleMainText;
-        text-align: center !important;
+        text-align: center;
     }
 }
 
@@ -194,18 +158,18 @@ div.jp-carousel-buttons a.jp-carousel-commentlink,
 }
 
 /* Remove Padding from Link Area */
-.jp-carousel-buttons {
-    padding: 0 !important;
+#css-overrides .jp-carousel-buttons {
+    padding: 0;
 }
 
 
 
-.jp-carousel-overlay{
-    background-color: $siteBackgroundColor !important;
+#css-overrides .jp-carousel-overlay {
+    background-color: $siteBackgroundColor;
 }
 
-.jp-carousel-fadeaway{
-    display: none !important;
+#css-overrides .jp-carousel-fadeaway {
+    display: none;
 }
 
 /* Hide comment form header. */
@@ -217,20 +181,20 @@ div#jp-carousel-comments-loading span,
     display: none !important;
 }
 
-.jp-carousel-titleanddesc {
-    border: none !important;
-    padding-top: 0px !important;
-    margin-top: 0px !important;
-    width: 100% !important;
+#css-overrides .jp-carousel-titleanddesc {
+    border: none;
+    padding-top: 0px;
+    margin-top: 0px;
+    width: 100%;
 }
 
-.jp-carousel-left-column-wrapper {
-    width: 100% !important;
+#css-overrides .jp-carousel-left-column-wrapper {
+    width: 100%;
 }
 
 
 /* Move close icon to the right. */
-.jp-carousel-transitions .jp-carousel-close-hint {
+#css-overrides .jp-carousel-transitions .jp-carousel-close-hint {
     position: fixed;
     text-align: right;
     right: 12px;
@@ -242,17 +206,19 @@ div#jp-carousel-comments-loading span,
 /******************************************************************************/
 /******************************* meow-contact-form
 /******************************************************************************/
-.meow-contact-form__group-label,
-.meow-contact-form-message {
+
+#css-overrides .meow-contact-form__group-label,
+#css-overrides .meow-contact-form-message {
     @include styleH5;
-    margin-top: 0px !important;
-    margin-bottom: 10px !important;
+    margin-top: 0px;
+    margin-bottom: 10px;
 }
 
-.meow-contact-form__group-input,
-.meow-contact-form__group-textarea{
+#css-overrides .meow-contact-form__group-input,
+#css-overrides .meow-contact-form__group-textarea {
     background-color: $siteBackgroundColor;
     color: $mainColor;
-    border: 1px solid $mainColor !important;
+    border: 1px solid $mainColor;
 }
+
 

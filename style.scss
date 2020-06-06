@@ -18,7 +18,8 @@
 /******************************* Navigation***********************/
 /******************************************************************************/
 
-body {
+
+#css-overrides {
     padding-top: 30px;
 
     overflow-y: scroll;
@@ -29,8 +30,7 @@ body {
     animation-fill-mode: forwards;
 }
 
-
-img {
+#css-overrides img {
     max-width: 100%;
     height: auto;
     border-style: none;
@@ -61,12 +61,12 @@ img {
 /***Titles 
 /******************************************************************************/
 
-h1 {
+#css-overrides h1 {
     @include styleH1;
 }
 
 
-h2 {
+#css-overrides h2 {
     @include styleH2;
 }
 
@@ -75,65 +75,65 @@ h3 a {
 }
 
 //Info displayed under page title 
-.legende-sous-titre {
+#css-overrides .legende-sous-titre {
     @include sousTitrePrincipal;
 }
 
-h3 {
+#css-overrides h3 {
     @include styleH3;
 }
 
 
-h4 {
+#css-overrides h4 {
     @include styleH4;
 }
 
-h5,
-h6 {
+#css-overrides h5,
+#css-overrides h6 {
     @include styleH5;
 }
 
 /******************************************************************************/
 /******************************* Main text elements************************/
 /******************************************************************************/
-p,
-ol {
+#css-overrides p,
+#css-overrides ol {
     @include styleMainText;
 }
 
-ul {
+#css-overrides ul {
     @include styleUl;
 }
 
-li {
+#css-overrides li {
     //margin-left: 10px !important;
 }
 
-a {
+#css-overrides a {
     @include styleA;
 }
 
 
 //Blocs de citations
-blockquote {
+#css-overrides blockquote {
     @include styleBlockquote;
 }
 
 //Captions under images
-figcaption,
-.cite {
+#css-overrides figcaption,
+#css-overrides .cite {
     @include styleSmallText;
     text-align: right !important;
 
 }
 
-.cite-center {
+#css-overrides .cite-center {
     @include styleSmallText;
     text-align: center !important;
 }
 
-.blocks-gallery-caption,
-.cite {
+#css-overrides .blocks-gallery-caption,
+#css-overrides .cite {
     text-align: right !important;
     width: 100% !important;
 }
@@ -143,12 +143,12 @@ figcaption,
 /******************************* Autres éléments typographie     **************/
 /******************************************************************************/
 
-hr {
+#css-overrides hr {
     @include styleHr;
 }
 
 //TODO commenter et retrouver usage
-.blog-post {
+#css-overrides .blog-post {
     margin-top: $mainTextMargin;
     margin-bottom: $interSectionMargin;
 }
@@ -159,19 +159,19 @@ hr {
 /******************************* Footer page     **************/
 /******************************************************************************/
 
-footer {
+#css-overrides footer {
     background-color: $siteDarkAccentColor;
     min-height: 500px;
 }
 
-.related-post-banner {
+#css-overrides .related-post-banner {
     padding-bottom: 50px;
     opacity: 1;
     transition: opacity 0.3s ease;
+    width: 50%;
 
     &:hover {
         opacity: 0.7;
         transition: opacity 0.3s ease;
     }
 }
-

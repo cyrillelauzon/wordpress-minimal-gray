@@ -6,7 +6,7 @@
     </main><!-- container -->
 
     <footer>
-      <div class="container">
+      <div class="container-lg">
 
      
       
@@ -31,7 +31,7 @@
           
               //Display cards of related posts with featured image and post title at the bottom
               if ($query->have_posts()) :
-                echo ('<h4 style="padding-top:50px !important;">Oeuvres connexes</h4>');
+                echo ('<h4 style="padding-top:50px !important;">À voir également</h4>');
                 while ($query->have_posts()) :
                   
                   $post = get_post($query->the_post()); 
