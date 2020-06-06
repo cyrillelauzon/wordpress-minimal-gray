@@ -13,41 +13,38 @@ But: réutilisation du code dans style.scss et style-editor.scss afin de styler
 /******************************************************************************/
 /******************************* styles génériques
 /******************************************************************************/
-@mixin makeFont($family, $size, $color) {
-    font-family: $family;
-    font-size: $size;
-    color: $color;
-}
-
 @mixin styleTitle {
-    @include makeFont($mainTitleFont, $mainTitleSize, $mainTitleColor);
+    font-family: $mainTitleFont;
+    font-size: $mainTitleSize;
+    color: $mainTitleColor;
 }
 
 @mixin styleSubTitle {
-    @include makeFont("Roboto", $mainSubTitleSize, $mainSubTitleColor);
+    font-family: $mainSubTitleFont;
+    font-size: $mainSubTitleSize;
+    color: $mainSubTitleColor;
+
     margin-bottom: $smallTextMargin;
-    font-weight: 400;
+    font-weight: normal;
 }
 
 @mixin styleMainText {
-    //@include makeFont($mainFont, $mainTextSize, $mainColor);
     font-size: $mainTextSize;
     color: $mainColor;
-    font-weight: 400;
+    font-weight: normal;
 }
 
 @mixin styleSmallText {
     font-size: $smallTextSize;
     color: $mainColor;
-    font-weight: 400;
+    font-weight: normal;
     text-align: left;
 }
 
 @mixin styleEmphasisText {
-    //@include makeFont($mainFont, $mainTextSize, $mainColor);
     font-size: $emphasisTextSize;
     color: $mainTitleColor;
-    font-weight: 400;
+    font-weight: normal;
 }
 
 /******************************************************************************/
@@ -100,13 +97,9 @@ But: réutilisation du code dans style.scss et style-editor.scss afin de styler
 @mixin styleA {
     @include styleMainText;
     opacity: 1;
-    transition: color 0.3s ease;
-
-    &:hover {
-        color: $mainTitleHighlight;
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
+    text-decoration: none;
+    @include colorChangeOnHover($mainColor, $mainTitleHighlight);
+    
 }
 
 @mixin styleUl {
@@ -153,7 +146,3 @@ But: réutilisation du code dans style.scss et style-editor.scss afin de styler
     margin-bottom: $smallTextMargin;
     border-bottom: 1px solid $mainColor;
 }
-
-
-
-

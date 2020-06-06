@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css?family=Droid+Sans&display=swap'); */
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
 @import url('https://fonts.googleapis.com/css?family=Lato');
-@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 @import "_css/variables";
 @import "_css/text-styles";
@@ -19,15 +19,14 @@
 /******************************************************************************/
 
 
+//Appliqué à body
 #css-overrides {
     padding-top: 30px;
 
     overflow-y: scroll;
     background-color: $siteBackgroundColor !important;
 
-    animation: fadeInAnimation ease 0.3s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+    @include quickFadeInAnimation;
 }
 
 #css-overrides img {
@@ -35,26 +34,6 @@
     height: auto;
     border-style: none;
 }
-
-//TODO commenter et retrouver usage
-.card-img {
-    max-width: $indexGaleryBlockSize;
-    max-height: $indexGaleryBlockSize;
-    height: auto;
-    margin-right: 5px;
-    padding-bottom: 5px;
-    border-radius: 0px;
-    opacity: 1;
-    transition: opacity 0.3s ease;
-
-    &:hover {
-        opacity: 0.3;
-        transition: opacity 0.3s ease;
-    }
-
-}
-
-
 
 
 /******************************************************************************/
@@ -123,19 +102,19 @@ h3 a {
 #css-overrides figcaption,
 #css-overrides .cite {
     @include styleSmallText;
-    text-align: right !important;
+    text-align: right;
 
 }
 
 #css-overrides .cite-center {
     @include styleSmallText;
-    text-align: center !important;
+    text-align: center;
 }
 
 #css-overrides .blocks-gallery-caption,
 #css-overrides .cite {
-    text-align: right !important;
-    width: 100% !important;
+    text-align: right;
+    width: 100%;
 }
 
 
@@ -147,7 +126,7 @@ h3 a {
     @include styleHr;
 }
 
-//TODO commenter et retrouver usage
+//Marges affichage d'un post de blogue dans la section Nouvelles
 #css-overrides .blog-post {
     margin-top: $mainTextMargin;
     margin-bottom: $interSectionMargin;
@@ -164,14 +143,9 @@ h3 a {
     min-height: 500px;
 }
 
+//Lien bannière en bas de page vers post relié au post courant
 #css-overrides .related-post-banner {
     padding-bottom: 50px;
-    opacity: 1;
-    transition: opacity 0.3s ease;
     width: 50%;
-
-    &:hover {
-        opacity: 0.7;
-        transition: opacity 0.3s ease;
-    }
+    @include opacityFadeOnHover(0.7);
 }

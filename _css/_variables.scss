@@ -4,18 +4,18 @@
 
 //$mainTitleFont : "'PT Sans', sans-serif";
 //$mainTitleFont : "Roboto Condensed";
-
-
 $mainTitleFont : "Quicksand";
+$mainSubTitleFont: "Roboto";
 //$mainFont : "'Helvetica Neue',Arial,Helvetica,sans-serif";
-$mainFont : "";
+$mainFont : "";   //Font principal de bootstrap conservé
 
 $mainTitleSize : 25px;
 $mainSubTitleSize : 19px;
-$mainTextSize: 15px;
-$smallTextSize: 13px;
 $menuTextSize: 15px;
+
+$mainTextSize: 15px;
 $emphasisTextSize: 16px;
+$smallTextSize: 13px;
 
 $interSectionMargin: 100px;
 $mainTextMargin: 15px;
@@ -23,14 +23,14 @@ $smallTextMargin: 10px;
 
 $mainTitleColor : #C6C6C6;
 $mainTitleHighlight : rgb(235, 235, 235);
-$mainColor :rgb(160, 160, 160);
 $mainSubTitleColor : rgb(236, 87, 37);
+$mainColor :rgb(160, 160, 160);
 
 $mainLegendColor : rgb(182, 182, 182);
-$colorBlack : rgba(0, 0, 0, 0.9);
 $siteBackgroundColor : #303030;
 $siteHighlightBGColor : #505050;
 $siteDarkAccentColor : rgb(43, 43, 43);
+$colorBlack : rgba(0, 0, 0, 0.9);
 
 /******************************************************************************/
 /******************************* Gallery blocks  ******************************/

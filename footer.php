@@ -1,18 +1,11 @@
+<br><br><br><br><br><br><br><br><br>
 
+</main><!-- container -->
 
+<footer>
+    <div class="container-lg">
 
-   <br><br><br><br><br><br><br><br><br>
-
-    </main><!-- container -->
-
-    <footer>
-      <div class="container-lg">
-
-     
-      
-      
-           
-          <?php
+        <?php
               //Read the tag to search for in other posts
               $relatedPostsTag = get_post_custom_values( "related-posts-tag", $post->ID );
               $querySearchTag = "NULL";
@@ -31,7 +24,7 @@
           
               //Display cards of related posts with featured image and post title at the bottom
               if ($query->have_posts()) :
-                echo ('<h4 style="padding-top:50px !important;">À voir également</h4>');
+                echo ('<h4 style="padding-top:50px;">À voir également</h4>');
                 while ($query->have_posts()) :
                   
                   $post = get_post($query->the_post()); 
@@ -49,31 +42,30 @@
                     $cardCtnt .= '<a href="' . get_page_link( $post->ID ) . '" class="card-link">' . $post->post_title . '</a></div>';
                   }
                   
-                  
                   echo $cardCtnt;
-                  
-                  
-                ?>
-                
-         
-              <?php endwhile; else: ?>
-              <?php endif; wp_reset_query(); ?>
-      </div>
+               
+               ?>
+        <?php endwhile; else: ?>
+        <?php endif; wp_reset_query(); ?>
+    </div>
 
-      <br><br><br><br><br><br><br><br><br>
-    </footer>
+    <br><br><br><br><br><br><br><br><br>
+</footer>
 
 
+<!-- Inclusions bootstrap -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+</script>
 
 
-  <!-- Inclusions bootstrap -->
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> 	
-  
+<?php wp_footer(); ?>
+</body>
 
-	<?php wp_footer(); ?>
-  </body>
 </html>
-
-

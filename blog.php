@@ -19,20 +19,20 @@ get_header(); ?>
 
 
 
-    <h1><?php the_title(); ?></h1> 
-   
-   
-   
-    <?php the_content(); ?>
+<h1><?php the_title(); ?></h1>
 
 
-  <!--Main Section-->
-    <div class='row'>
 
-      <div class='col-lg-12'>
+<?php the_content(); ?>
 
 
-          <?php
+<!--Main Section-->
+<div class='row'>
+
+    <div class='col-lg-12'>
+
+
+        <?php
           $pages = get_pages(array( 'sort_order' => 'post_date', 'sort_column' => 'menu_order' ));
           echo '<div class="row">';
    
@@ -61,13 +61,12 @@ get_header(); ?>
           
                     } 
            ?>
-        
-      </div><!--col-->
-    </div><!--row-->
+
+    </div>
+    <!--col-->
+</div>
+<!--row-->
 
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
-
-
-

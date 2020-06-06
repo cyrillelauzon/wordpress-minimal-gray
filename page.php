@@ -13,19 +13,14 @@
 
 get_header(); ?>
 
-
 <?php the_post(); ?>
 
+<!--<h1><?php the_title(); ?></h1>  -->
 
-
-<!--     <h1><?php the_title(); ?></h1>  -->
-
-   <br/>
-   
-   
-    <?php the_content(); ?>
-    <?php edit_post_link(); ?>
-    <?php wp_link_pages(); ?>
+<br />
+<?php the_content(); ?>
+<?php edit_post_link(); ?>
+<?php wp_link_pages(); ?>
 
 
 <?php get_footer(); ?>

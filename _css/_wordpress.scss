@@ -37,41 +37,36 @@
 
 @mixin makeBlock($width, $height, $widthMobile, $heightMobile) {
     @include setSize($width, $height);
+    flex-grow: 0;
     box-sizing: content-box;
     padding-right: 10px;
-    flex-grow: 0;
-
+    
     @media (max-width: $sm) {
         @include setSize($widthMobile, $heightMobile);
-        flex-direction: column;
         margin-left: auto;
         margin-right: auto;
         padding-bottom: 10px;
+        flex-direction: column;
         flex: none;
     }
 
     figure,
     img {
         @include setSize($width, $height);
-        opacity: 1;
-        transition: 0.3s ease-in-out;
+        @include opacityFadeOnHover(0.8);
 
         @media (max-width: $sm) {
             @include setSize($widthMobile, $heightMobile);
-            flex-direction: column;
             padding-bottom: 10px;
+            flex-direction: column;
             flex: none;
         }
     }
 
-    figure {
-        @include quickFadeOnHover;
-    }
 }
 
 #css-overrides .blocks-gallery-item {
     @include makeBlock($wpBlockGalleryWidth, $wpBlockGalleryHeight, $wpBlockGallerySizeMobile, 150px);
-
 }
 
 #css-overrides .small-boxes {
@@ -82,8 +77,8 @@
 
 
 
-//TODO rewrite/verifier si pertinent
 
+//TODO rewrite/verifier si pertinent
 // Affichage des captions de galerie en mode mobile seulement:
 #css-overrides .wp-block-gallery .blocks-gallery-item figcaption {
     @media only screen and (max-width: $sm) {

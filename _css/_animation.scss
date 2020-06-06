@@ -1,8 +1,11 @@
 /******************************************************************************/
 /******************************* Animations   ******************************/
 /******************************************************************************/
-/*Animations*/
-$shortSpeed : '0.9s';
+
+
+//variables
+$shortSpeed : 0.3s;
+
 
 @keyframes fadeInAnimation {
     0% {
@@ -14,18 +17,30 @@ $shortSpeed : '0.9s';
     }
 }
 
-@mixin fastEaseIn {
-    transition: ease 0.3s;
+@mixin quickFadeInAnimation {
+    animation: fadeInAnimation ease $shortSpeed ;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
-@mixin fasterEaseIn {
-    transition: ease 0.2s;
-}
 
+//Formule générique pour animer une transition sur propriété donnée
+@mixin animateTransition($property, $src, $dest) {
+    #{$property}: $dest;
+    transition: #{$property} $shortSpeed ease-in-out;
 
-@mixin quickFadeOnHover {
     &:hover {
-        opacity: 0.6;
-        transition: 0.3s ease-in-out;
+        #{$property}: $src;
+        transition: #{$property} $shortSpeed ease-in-out;
     }
 }
+
+//Raccourci pour uniformiser les fade-in fade-out d'éléments à travers le site
+@mixin opacityFadeOnHover($opacity) {
+   @include animateTransition(opacity, $opacity, 1);
+}
+
+//uniformisation des changements de couleur sur Hover
+@mixin colorChangeOnHover($src, $dest) {
+    @include animateTransition(color, $dest, $src);  //src et dest inversés pour respecter logique de animateTransition
+ }

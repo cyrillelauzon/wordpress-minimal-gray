@@ -28,7 +28,7 @@
 #css-overrides .dropdown-menu {
     top: 45px;
     background-color: $siteDarkAccentColor;
-    animation: fadeInAnimation ease-in-out 0.3s;
+    @include quickFadeInAnimation;
 
     @media (max-width: $sm) {
         background-color: $siteBackgroundColor;
@@ -94,4 +94,20 @@
     #css-overrides .container-lg {
         width: $mainContainerWidth;
     }
+}
+
+
+
+/******************************************************************************/
+/******************************* Galerie de thumbnails voir util.php
+/******************************************************************************/
+
+.card-img {
+    max-width: $indexGaleryBlockSize;
+    max-height: $indexGaleryBlockSize;
+    height: auto;
+    margin-right: 5px;
+    padding-bottom: 5px;
+    border-radius: 0px;
+    @include opacityFadeOnHover(0.3);
 }

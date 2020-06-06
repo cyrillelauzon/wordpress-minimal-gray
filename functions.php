@@ -33,75 +33,14 @@
 	'primary' => __( 'Primary Menu', 'mimimal' ),
 ) );
 
+
 add_theme_support( 'dark-editor-style' );
 add_theme_support( 'wp-block-styles' );
 add_theme_support( 'responsive-embeds' );
 
-
-function displayPagesThumbs(){
-   // $i = "<div class='row'><div class='col-lg-12'>";
-    $pages = get_pages(array( 'sort_order' => 'post_date', 'sort_column' => 'menu_order' ));
-   // $i .= '<div class="row">';
-
-    $i = "";
-
-      foreach ( $pages as $page ) {
-
-       $post = get_post($page->ID);          
-        
-                              
-                    //echo '<div class="col-lg-4">';
-                    //echo '<div class="card bg-light text-dark rounded-0">';
-         
-                    $cardCtnt = "";
-                    $featured_img_url = get_the_post_thumbnail_url($post->ID, 'full'); 
-                    if($featured_img_url){
-                     // $cardCtnt = '<img class="card-img" src="' . $featured_img_url . '"/>';
-                      $cardCtnt = '<a href="' . get_page_link( $page->ID ) . '" class=".card-link"><img class="card-img" src="' . $featured_img_url . '" /></a>';
-                      //$cardCtnt .= '<div class="card-body"><a href="' . get_page_link( $page->ID ) . '" class="card-link">' . $page->post_title . '</a></div>';
-                    }
-                    
-                    
-                    $i .= $cardCtnt;
-              //  echo '</div>'; /*lg-4*/  
-                 //echo '</div></div>'; /*lg-4+card*/
-
-    
-              } 
-           //   $i .= "</div></div>";
-    return $i;
-}
-
-
-
-
-//Shortcode pour retour facile vers cyrillelauzon.blog à partir d'un article
-//Si jamais le site migre vers une nouvelle adresse, aucun changement ne sera nessaire
-function return_link_to_blog_function(){
-    $i = '<a class="backlink" href="' . get_site_url() . '/blog">Retour</a>';
-    return $i;
-}
-
-
-
-
-function register_shortcodes(){
-    add_shortcode('retour', 'return_link_to_blog_function');
-    add_shortcode('thumbs', 'displayPagesThumbs');
-}
-register_shortcodes();
-
-//Enregistrement du menu principal
-/* function register_my_menu() {
-   register_nav_menu( 'primary', 'Primary Menu' );
-  update_option('image_default_link_type','none');
-}
-
-#add_action( 'init', 'register_my_menu' );
-add_action('after_setup_theme', 'register_my_menu'); */
-
 add_theme_support('post-thumbnails');
 set_post_thumbnail_size(190, 150);
+
 
 
 //Enregistrement du style pour Editeur Gutemberg
@@ -124,10 +63,5 @@ function filter_media_comment_status( $open, $post_id ) {
     return $open;
 }
 add_filter( 'comments_open', 'filter_media_comment_status', 10 , 2 );
-
-
-
-
-
 
 ?>
