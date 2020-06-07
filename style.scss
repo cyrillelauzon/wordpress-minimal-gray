@@ -145,7 +145,7 @@ h3 a {
 
 //Lien bannière en bas de page vers post relié au post courant
 #css-overrides .related-post-banner {
-    padding-bottom: 50px;
+    margin-bottom: 50px;
     width: 50%;
     @include opacityFadeOnHover(0.7);
 }

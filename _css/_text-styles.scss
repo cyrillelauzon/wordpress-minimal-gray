@@ -1,7 +1,7 @@
 /*****************************************************************************
 text-styles.scss
 
-Définition de styles de textes génériques qui sont ensuites appliqués
+Définition de styles de textes modulaires qui sont ensuites appliqués
 à des mixins correspondants à h1, h2, p etc
 
 But: réutilisation du code dans style.scss et style-editor.scss afin de styler
@@ -11,7 +11,7 @@ But: réutilisation du code dans style.scss et style-editor.scss afin de styler
 
 
 /******************************************************************************/
-/******************************* styles génériques
+/******************************* styles modulaires
 /******************************************************************************/
 @mixin styleTitle {
     font-family: $mainTitleFont;
@@ -23,8 +23,6 @@ But: réutilisation du code dans style.scss et style-editor.scss afin de styler
     font-family: $mainSubTitleFont;
     font-size: $mainSubTitleSize;
     color: $mainSubTitleColor;
-
-    margin-bottom: $smallTextMargin;
     font-weight: normal;
 }
 
@@ -51,10 +49,13 @@ But: réutilisation du code dans style.scss et style-editor.scss afin de styler
 /************ Style spécifiques pour réutilisation dans gutenberg
 /******************************************************************************/
 
+/******************************************************************************/
+/************ Styles de titres
+/******************************************************************************/
+
 //Main page title
 @mixin styleH1 {
     @include styleSubTitle;
-    margin-top: -10px;
 }
 
 @mixin styleH2 {
@@ -71,32 +72,31 @@ But: réutilisation du code dans style.scss et style-editor.scss afin de styler
 @mixin styleH3 {
     @include styleSubTitle;
     color: $mainTitleColor;
-    padding-top: $interSectionMargin;
-
-    padding-bottom: 30px;
+    
+    margin-top: $interSectionMargin;
+    margin-bottom: $mainTextMargin;
 }
+
+/******************************************************************************/
+/************ Style de textes
+/*****************************************************************************/
 
 //page section title
 @mixin styleH4 {
     @include styleMainText;
     font-weight: bold;
-
-    padding: 0px;
-    margin: 10px 0px 25px 0px;
+    margin: $smallTextMargin 0px;
 }
 
 //page section title
 @mixin styleH5 {
     @include styleMainText;
     color: $mainTitleColor;
-
-    padding: 0px;
-    margin: 15px 0px 10px 0px;
+    margin: $smallTextMargin 0px;
 }
 
 @mixin styleA {
     @include styleMainText;
-    opacity: 1;
     text-decoration: none;
     @include colorChangeOnHover($mainColor, $mainTitleHighlight);
     
@@ -116,14 +116,14 @@ But: réutilisation du code dans style.scss et style-editor.scss afin de styler
     display: table;
     color: $mainColor;
     width: auto;
-    max-width: 600px;
+    max-width: calc( #{$mainContainerWidth} / 2);
     border-left: 1px solid $mainColor;
-    padding-left: 10px;
+    padding-left: $smallTextMargin;
 
 
     p {
         @include styleEmphasisText;
-        padding-left: 10px;
+        padding-left: $smallTextMargin;
         font-style: italic;
         width: 100%;
         text-align: left;
@@ -132,7 +132,7 @@ But: réutilisation du code dans style.scss et style-editor.scss afin de styler
     cite,
     cite a {
         @include styleEmphasisText;
-        padding-left: 10px;
+        padding-left: $smallTextMargin;
         font-style: normal;
         text-align: left;
         text-decoration: none;
@@ -142,6 +142,7 @@ But: réutilisation du code dans style.scss et style-editor.scss afin de styler
 @mixin styleHr {
     width: 100%;
     max-width: 100%;
+
     margin-top: 0px;
     margin-bottom: $smallTextMargin;
     border-bottom: 1px solid $mainColor;

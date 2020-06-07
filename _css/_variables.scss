@@ -17,12 +17,8 @@ $mainTextSize: 15px;
 $emphasisTextSize: 16px;
 $smallTextSize: 13px;
 
-$interSectionMargin: 100px;
-$mainTextMargin: 15px;
-$smallTextMargin: 10px;
-
-$mainTitleColor : #C6C6C6;
-$mainTitleHighlight : rgb(235, 235, 235);
+$mainTitleColor : rgb(209, 209, 209);
+$mainTitleHighlight : rgb(238, 238, 238);
 $mainSubTitleColor : rgb(236, 87, 37);
 $mainColor :rgb(160, 160, 160);
 
@@ -31,6 +27,10 @@ $siteBackgroundColor : #303030;
 $siteHighlightBGColor : #505050;
 $siteDarkAccentColor : rgb(43, 43, 43);
 $colorBlack : rgba(0, 0, 0, 0.9);
+
+$interSectionMargin: 100px;
+$mainTextMargin: 15px;
+$smallTextMargin: 10px;
 
 /******************************************************************************/
 /******************************* Gallery blocks  ******************************/
@@ -43,7 +43,7 @@ $indexGaleryBlockSize : 164px;
 
 
 /******************************************************************************/
-/******************************* media breakpoints*****************************/
+/******************************* Media breakpoints*****************************/
 /******************************************************************************/
 
 //naming convention and sizes from bootstrap

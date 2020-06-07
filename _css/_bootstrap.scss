@@ -21,7 +21,6 @@
     line-height: 38px;
 
     text-decoration: none;
-    padding: 0px, 0px, 10px, 16px;
 }
 
 
@@ -45,7 +44,7 @@
         line-height: 38px;
 
         background-color: $siteDarkAccentColor;
-        opacity: 1;
+        
 
         @media (max-width: $sm) {
             background-color: $siteBackgroundColor;
@@ -54,7 +53,6 @@
 
         &:hover {
             background-color: $siteBackgroundColor;
-            opacity: 1;
         }
     }
 }
@@ -102,7 +100,7 @@
 /******************************* Galerie de thumbnails voir util.php
 /******************************************************************************/
 
-.card-img {
+#css-overrides .card-img {
     max-width: $indexGaleryBlockSize;
     max-height: $indexGaleryBlockSize;
     height: auto;
