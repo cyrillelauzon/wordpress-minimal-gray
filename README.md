@@ -4,8 +4,8 @@
 Thème Wordpress responsif employant une mise en page centrée au milieu de l'écran. Le thème s'adapte à tous formats d'écrans.
 
 ## Sites web utilisant ce thème
-http://suzanvachon.org/
-http://www.cyrillelauzon.com/
+- http://suzanvachon.org/
+- http://www.cyrillelauzon.com/
 
 ## Fonctions Wordpress
 - Intégration et modification de la galerie Jetpack 
