@@ -8,15 +8,15 @@ Thème Wordpress responsif construit autour d'une mise en page centrée dans l'�
 - [cyrillelauzon.com](http://www.cyrillelauzon.com/)
 
 ## Fonctions vedettes
-- Affichage des pages Wordpress en une grille de vignettes
-- Support d'une barre de menu responsive en haut de l'écran gérant 1 niveau de sous-menu
+- Page d'accueil avec affichage des pages Wordpress en une grille de vignettes
+- Barre de menu responsive en haut de l'écran (gestion de 1 niveau de sous-menu)
 - Gestion d'une section nouvelles avec pagination
 - Affichage d'articles reliés en fin de page par l'utilisation de champs wordpress personnalisés
 
 ## Personnalisations Wordpress
 - Compatible Gutenberg: prévisualisation du thème dans l'éditeur visuel
-- Personnalisation de la galerie d'images Jetpack 
-- Modification du bloc galerie d'image afin de le rendre responsif et permettre l'affichage d'une grille de vignettes en format carré
+- Bloc galerie d'image responsif et affichage de la grille de vignettes en format carré
+- Galerie d'images Jetpack (Simplification de l'affichage, disposition des éléments)
 
 ## Technologies employées
 - Bootstrap 4
