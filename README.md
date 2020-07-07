@@ -12,6 +12,7 @@ Thème Wordpress responsif construit autour d'une mise en page centrée dans l'�
 - Barre de menu responsive en haut de l'écran (gestion de 1 niveau de sous-menu)
 - Gestion d'une section nouvelles avec pagination
 - Affichage d'articles reliés en fin de page par l'utilisation de champs wordpress personnalisés
+- Gestion de l'apparence du thème centralisée par variables et mixins Sass
 
 ## Personnalisations Wordpress
 - Compatible Gutenberg: prévisualisation du thème dans l'éditeur visuel
