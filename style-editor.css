@@ -13,23 +13,49 @@
 /******************************* Gallery blocks  ******************************/
 /******************************************************************************/
 /******************************************************************************/
-/******************************* media breakpoints*****************************/
+/******************************* Media breakpoints*****************************/
 /******************************************************************************/
 /*****************************************************************************
 text-styles.scss
 
-Définition de styles de textes génériques qui sont ensuites appliqués
+Définition de styles de textes modulaires qui sont ensuites appliqués
 à des mixins correspondants à h1, h2, p etc
 
 But: réutilisation du code dans style.scss et style-editor.scss afin de styler
 à la fois l'éditeur gutenberg et le thème
 /******************************************************************************/
 /******************************************************************************/
-/******************************* styles génériques
+/******************************* styles modulaires
 /******************************************************************************/
 /******************************************************************************/
 /************ Style spécifiques pour réutilisation dans gutenberg
 /******************************************************************************/
+/******************************************************************************/
+/************ Styles de titres
+/******************************************************************************/
+/******************************************************************************/
+/************ Style de textes
+/*****************************************************************************/
+/******************************************************************************/
+/******************************* Animations   ******************************/
+/******************************************************************************/
+@-webkit-keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /******************************************************************************/
 /***Titles 
 /******************************************************************************/
@@ -60,7 +86,6 @@ body {
   font-family: "Roboto";
   font-size: 19px;
   color: #ec5725;
-  margin-bottom: 10px;
   font-weight: normal;
 }
 
@@ -96,25 +121,20 @@ p.rich-text,
   font-family: "Roboto";
   font-size: 19px;
   color: #ec5725;
-  margin-bottom: 10px;
   font-weight: normal;
-  margin-top: -10px;
 }
 
 h1 {
   font-family: "Roboto";
   font-size: 19px;
   color: #ec5725;
-  margin-bottom: 10px;
   font-weight: normal;
-  margin-top: -10px;
 }
 
 h2 {
   font-family: "Roboto";
   font-size: 19px;
   color: #ec5725;
-  margin-bottom: 10px;
   font-weight: normal;
 }
 
@@ -122,11 +142,10 @@ h3 {
   font-family: "Roboto";
   font-size: 19px;
   color: #ec5725;
-  margin-bottom: 10px;
   font-weight: normal;
-  color: #C6C6C6;
-  padding-top: 100px;
-  padding-bottom: 30px;
+  color: #d1d1d1;
+  margin-top: 100px;
+  margin-bottom: 15px;
 }
 
 h4 {
@@ -134,17 +153,15 @@ h4 {
   color: #a0a0a0;
   font-weight: normal;
   font-weight: bold;
-  padding: 0px;
-  margin: 10px 0px 25px 0px;
+  margin: 10px 0px;
 }
 
 h5 {
   font-size: 15px;
   color: #a0a0a0;
   font-weight: normal;
-  color: #C6C6C6;
-  padding: 0px;
-  margin: 15px 0px 10px 0px;
+  color: #d1d1d1;
+  margin: 10px 0px;
 }
 
 /******************************************************************************/
@@ -165,29 +182,30 @@ h5 {
   font-size: 15px;
   color: #a0a0a0;
   font-weight: normal;
-  opacity: 1;
-  -webkit-transition: color 0.3s ease;
-  transition: color 0.3s ease;
+  text-decoration: none;
+  color: #a0a0a0;
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
 .editor-writing-flow .wp-block a:hover {
-  color: #ebebeb;
-  -webkit-transition: color 0.3s ease;
-  transition: color 0.3s ease;
+  color: #eeeeee;
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
 .wp-block blockquote {
   display: table;
   color: #a0a0a0;
   width: auto;
-  max-width: 600px;
+  max-width: calc( 900px / 2);
   border-left: 1px solid #a0a0a0;
   padding-left: 10px;
 }
 
 .wp-block blockquote p {
   font-size: 16px;
-  color: #C6C6C6;
+  color: #d1d1d1;
   font-weight: normal;
   padding-left: 10px;
   font-style: italic;
@@ -198,7 +216,7 @@ h5 {
 .wp-block blockquote cite,
 .wp-block blockquote cite a {
   font-size: 16px;
-  color: #C6C6C6;
+  color: #d1d1d1;
   font-weight: normal;
   padding-left: 10px;
   font-style: normal;

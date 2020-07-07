@@ -1,4 +1,4 @@
-<br><br><br><br><br><br><br><br><br>
+<br><br><br><br>
 
 </main><!-- container -->
 
@@ -47,9 +47,9 @@
                ?>
         <?php endwhile; else: ?>
         <?php endif; wp_reset_query(); ?>
-    </div>
+        <p class="legende-sous-titre">Copyright © Suzan Vachon </p>
 
-    <br><br><br><br><br><br><br><br><br>
+
 </footer>
 
 
