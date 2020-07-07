@@ -14,7 +14,7 @@ Thème Wordpress responsif employant une mise en page centrée au milieu de l'é
 - Affichage d'articles reliés par l'utilisation de variables de page
 
 
-## Technologies employées:
+## Technologies employées
 - Bootstrap
 - Sass 
 - Animations CSS
