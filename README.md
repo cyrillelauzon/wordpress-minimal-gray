@@ -1,14 +1,14 @@
 # Minimal-gray
 
 ## Description
-Thème Wordpress responsif employant une mise en page centrée au milieu de l'écran. Le thème s'adapte à tous formats d'écrans.
+Thème Wordpress responsif construit autour d'une mise en page centrée dans l'écran. Le thème s'adapte à tout appareil. 
 
 ## Sites web utilisant ce thème
 - http://suzanvachon.org/
 - http://www.cyrillelauzon.com/
 
 ## Fonctions Wordpress
-- Intégration et modification de la galerie Jetpack 
+- Intégration et modification de la galerie d'images Jetpack 
 - Modification du bloc galerie d'image afin de le rendre responsif et permettre l'affichage d'une grille de vignettes en format carré
 - Compatible Gutenberg: prévisualisation du thème dans l'éditeur visuel
 
@@ -21,6 +21,6 @@ Thème Wordpress responsif employant une mise en page centrée au milieu de l'é
 - Bootstrap
 - Sass 
 - Animations CSS
-- classe WP-Navwalker
+- [Bootstrap navwalker](https://github.com/wp-bootstrap/wp-bootstrap-navwalker)
 
 
