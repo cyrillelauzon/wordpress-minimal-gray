@@ -1,5 +1,7 @@
-/******************************************************************************/
-/******************************* Animations   ******************************/
+/*****************************************************************************
+animations.scss
+
+Helpers gestion des animations CSS
 /******************************************************************************/
 
 
@@ -40,7 +42,7 @@ $shortSpeed : 0.3s;
    @include animateTransition(opacity, $opacity, 1);
 }
 
-//uniformisation des changements de couleur sur Hover
+//Uniformisation des changements de couleur sur Hover
 @mixin colorChangeOnHover($src, $dest) {
     @include animateTransition(color, $dest, $src);  //src et dest inversés pour respecter logique de animateTransition
  }

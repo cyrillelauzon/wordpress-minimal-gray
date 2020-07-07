@@ -1,5 +1,6 @@
 <?php
 /**
+ * header.php
  * Section Principale du theme
  * Cyrille Lauzon
  *
@@ -53,7 +54,7 @@
             } 
         ?>
 
-        <!-- Barre Navigation -->
+        <!-- Barre de Navigation -->
         <nav class="navbar navbar-expand-md navbar-light" data-toggle="affix">
             <div class="d-sm-flex d-block flex-sm-nowrap">
 
@@ -77,4 +78,4 @@
                           'walker'			=> new WP_Bootstrap_Navwalker()
                         ) );?>
             </div>
-        </nav><!-- Barre Navigation -->
+        </nav><!-- Barre de Navigation -->

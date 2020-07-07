@@ -22,7 +22,7 @@
               $query = new WP_Query($args);
           
           
-              //Display cards of related posts with featured image and post title at the bottom
+              //Affichage de cartes de post/pages reliées en bas de la page à l'aide de l'image à la une Wordpress
               if ($query->have_posts()) :
                 echo ('<h4 style="padding-top:50px;">À voir également</h4>');
                 while ($query->have_posts()) :
@@ -31,7 +31,8 @@
                   $cardCtnt = "";
                   $featured_img_url = get_the_post_thumbnail_url($post->ID, 'full'); 
                   if($featured_img_url){
-                    //TEMP code pour afficher des cartes bootstrap au lieu de bannières
+                    
+                    //TEMP code pour afficher des cartes bootstrap plain à la place de mini-bannières
                     /* $cardCtnt = '<div class="col-lg-12">';
                     $cardCtnt .= "<div class='card'>";
                     $cardCtnt .= '<a href="' . get_page_link( $post->ID ) . '" class=".card-link"><img class="card-img-top" src="' . $featured_img_url . '" /></a>';

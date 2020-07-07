@@ -6,6 +6,9 @@ Définition de styles de textes modulaires qui sont ensuites appliqués
 
 But: réutilisation du code dans style.scss et style-editor.scss afin de styler
 à la fois l'éditeur gutenberg et le thème
+
+Ps: inspiré des styles de charactères et de paragraphes dans IndDesign où un style 
+    peut-être emboité dans l'autre.
 /******************************************************************************/
 
 
@@ -67,8 +70,8 @@ But: réutilisation du code dans style.scss et style-editor.scss afin de styler
     @include styleSmallText;
 }
 
-//Main subtitle in gray
-//Ample top margin so H3 can be used to separate sections in text
+//Sous-titre principal en gris
+//H3 avec ample marge du haut afin de séparer sections de page
 @mixin styleH3 {
     @include styleSubTitle;
     color: $mainTitleColor;

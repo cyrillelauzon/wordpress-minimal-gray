@@ -14,10 +14,9 @@
 
 
 /******************************************************************************/
-/***Titles 
+/***Titres
 /******************************************************************************/
 
-/* Approximate the theme width, except for full-width images. */
 .wp-block {
   max-width: 900px;
 
@@ -79,7 +78,7 @@ p.rich-text,
   @include styleH1;
 }
 
-//Ample top margin so H3 can be used to separate sections in text
+
 h1 {
   @include styleH1;
 
@@ -107,7 +106,7 @@ h5 {
 }
 
 /******************************************************************************/
-/******************************* Main text elements************************/
+/******************************* Éléments de texte principaux******************/
 /******************************************************************************/
 
 
@@ -125,12 +124,12 @@ h5 {
   @include styleBlockquote;
 }
 
-//Captions under images
+//Légendes sous images
 .wp-block figcaption {
   @include styleSmallText;
 }
 
-//To use inside gutenberg for caption-like text
+//paragraphes employés comme légendes
 .p-caption {
   @include styleSmallText;
 }

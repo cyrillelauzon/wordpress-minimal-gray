@@ -1,9 +1,8 @@
 <?php
 /**
  * Single.php
- * Affichage d'un article avec option d'utiliser la variable de page wordpress
- * hide_navigation afin d'afficher une page en plein écran.
- *
+ * TODO implémenter pour suzanvachon.org
+ * Code fonctionnel de cyrillelauzon.com
  *
  * @link http://codex.wordpress.org/Template_Hierarchy
  *
