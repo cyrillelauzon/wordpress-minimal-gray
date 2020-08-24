@@ -30,10 +30,11 @@
 }
 
 body {
-  padding-top: 10px;
-  overflow-y: scroll;
+ // padding-top: 10px;
+  //overflow-y: scroll;
   color: $mainColor !important;
   background-color: $siteBackgroundColor !important;
+
 }
 
 
@@ -104,7 +105,7 @@ h5 {
   @include styleH5;
 
 }
-
+ 
 /******************************************************************************/
 /******************************* Éléments de texte principaux******************/
 /******************************************************************************/
@@ -133,7 +134,7 @@ h5 {
 .p-caption {
   @include styleSmallText;
 }
-
+ 
 
 /******************************************************************************/
 /******************************* Autres éléments typographie     **************/
@@ -148,8 +149,8 @@ hr.wp-block-separator {
 /******************************* Typographie  -- Titres
 /******************************************************************************/
 
-.editor-post-title__input {
-  /*font-family: "'Times New Roman', Times, serif'";*/
+ .editor-post-title__input {
+//  font-family: "'Times New Roman', Times, serif'";
   font-family: $mainFont !important;
   color: $colorBlack;
   font-size: 20px;
@@ -192,8 +193,7 @@ hr.wp-block-separator {
   }
 
 }
-
-
+ 
 /******************************************************************************/
 /******************************* Typographie  -- Texte
 /******************************************************************************/

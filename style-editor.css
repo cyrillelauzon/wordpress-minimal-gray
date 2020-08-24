@@ -6,6 +6,11 @@
 @import url("https://fonts.googleapis.com/css?family=Quicksand");
 @import url("https://fonts.googleapis.com/css?family=Lato");
 @import url("https://fonts.googleapis.com/css?family=Raleway");
+/*****************************************************************************
+Variables.scss
+
+Variables permettant de centraliser l'aspect général du thème
+/******************************************************************************/
 /******************************************************************************/
 /******************************* Variables Sass    ******************************/
 /******************************************************************************/
@@ -23,6 +28,9 @@ Définition de styles de textes modulaires qui sont ensuites appliqués
 
 But: réutilisation du code dans style.scss et style-editor.scss afin de styler
 à la fois l'éditeur gutenberg et le thème
+
+Ps: inspiré des styles de charactères et de paragraphes dans IndDesign où un style 
+    peut-être emboité dans l'autre.
 /******************************************************************************/
 /******************************************************************************/
 /******************************* styles modulaires
@@ -36,8 +44,10 @@ But: réutilisation du code dans style.scss et style-editor.scss afin de styler
 /******************************************************************************/
 /************ Style de textes
 /*****************************************************************************/
-/******************************************************************************/
-/******************************* Animations   ******************************/
+/*****************************************************************************
+animations.scss
+
+Helpers gestion des animations CSS
 /******************************************************************************/
 @-webkit-keyframes fadeInAnimation {
   0% {
@@ -57,9 +67,8 @@ But: réutilisation du code dans style.scss et style-editor.scss afin de styler
 }
 
 /******************************************************************************/
-/***Titles 
+/***Titres
 /******************************************************************************/
-/* Approximate the theme width, except for full-width images. */
 .wp-block {
   max-width: 900px;
 }
@@ -73,8 +82,6 @@ But: réutilisation du code dans style.scss et style-editor.scss afin de styler
 }
 
 body {
-  padding-top: 10px;
-  overflow-y: scroll;
   color: #a0a0a0 !important;
   background-color: #303030 !important;
 }
@@ -165,7 +172,7 @@ h5 {
 }
 
 /******************************************************************************/
-/******************************* Main text elements************************/
+/******************************* Éléments de texte principaux******************/
 /******************************************************************************/
 .editor-writing-flow .wp-block ul {
   padding-left: 0px;
@@ -253,7 +260,6 @@ hr.wp-block-separator {
 /******************************* Typographie  -- Titres
 /******************************************************************************/
 .editor-post-title__input {
-  /*font-family: "'Times New Roman', Times, serif'";*/
   font-family: "" !important;
   color: rgba(0, 0, 0, 0.9);
   font-size: 20px;

@@ -6,6 +6,11 @@
 @import url("https://fonts.googleapis.com/css?family=Quicksand");
 @import url("https://fonts.googleapis.com/css?family=Lato");
 @import url("https://fonts.googleapis.com/css?family=Roboto");
+/*****************************************************************************
+Variables.scss
+
+Variables permettant de centraliser l'aspect général du thème
+/******************************************************************************/
 /******************************************************************************/
 /******************************* Variables Sass    ******************************/
 /******************************************************************************/
@@ -23,6 +28,9 @@ Définition de styles de textes modulaires qui sont ensuites appliqués
 
 But: réutilisation du code dans style.scss et style-editor.scss afin de styler
 à la fois l'éditeur gutenberg et le thème
+
+Ps: inspiré des styles de charactères et de paragraphes dans IndDesign où un style 
+    peut-être emboité dans l'autre.
 /******************************************************************************/
 /******************************************************************************/
 /******************************* styles modulaires
@@ -36,8 +44,10 @@ But: réutilisation du code dans style.scss et style-editor.scss afin de styler
 /******************************************************************************/
 /************ Style de textes
 /*****************************************************************************/
-/******************************************************************************/
-/******************************* Animations   ******************************/
+/*****************************************************************************
+animations.scss
+
+Helpers gestion des animations CSS
 /******************************************************************************/
 @-webkit-keyframes fadeInAnimation {
   0% {
@@ -56,6 +66,11 @@ But: réutilisation du code dans style.scss et style-editor.scss afin de styler
   }
 }
 
+/*****************************************************************************
+wordpress.scss
+
+Surcharge des styles spécifiques à Wordpress
+/******************************************************************************/
 /******************************************************************************/
 /******************************* Misc Wordpress
 /******************************************************************************/
@@ -321,6 +336,11 @@ div#jp-carousel-comments-loading span,
   border: 1px solid #a0a0a0;
 }
 
+/*****************************************************************************
+bootstrap.scss
+
+Surcharge des styles spécifiques à Bootstrap
+/******************************************************************************/
 /******************************************************************************/
 /*******************************  Bootstrap Navbar
 /******************************************************************************/
@@ -336,6 +356,10 @@ div#jp-carousel-comments-loading span,
   color: #d1d1d1;
   padding-bottom: 0px;
   text-decoration: none;
+}
+
+#css-overrides .navbar-nav {
+  margin-top: 10px;
 }
 
 #css-overrides .nav-link {
@@ -462,7 +486,7 @@ div#jp-carousel-comments-loading span,
 }
 
 /******************************************************************************/
-/***Titles 
+/***Titres
 /******************************************************************************/
 #css-overrides h1 {
   font-family: "Roboto";
@@ -520,7 +544,7 @@ h3 a {
 }
 
 /******************************************************************************/
-/******************************* Main text elements************************/
+/******************************* Éléments textes principaux********************/
 /******************************************************************************/
 #css-overrides p,
 #css-overrides ol {

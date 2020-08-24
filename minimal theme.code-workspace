@@ -4,5 +4,7 @@
       "path": "."
     }
   ],
-  "settings": {}
+  "settings": {
+    "explorer.openEditors.visible": 5
+  }
 }

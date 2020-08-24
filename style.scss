@@ -20,7 +20,8 @@
 
 
 //Appliqué à body
-//ID Permet d'éviter l'utilisation générale de !important pour supplanter Bootstrap
+//ID #css-overrides permet d'éviter l'utilisation générale de !important 
+//afin de surclasser un style défini dans Bootstrap
 #css-overrides {
     padding-top: 30px;
 

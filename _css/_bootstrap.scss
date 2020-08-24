@@ -22,6 +22,12 @@ Surcharge des styles spécifiques à Bootstrap
     text-decoration: none;
 }
 
+//Pour que la navigation soit alignée au même baseline que le titre
+#css-overrides .navbar-nav {
+    margin-top:10px;
+}
+
+
 #css-overrides .nav-link {
     @include styleTitle;
     font-size: $menuTextSize;
