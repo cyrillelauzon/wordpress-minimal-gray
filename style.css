@@ -266,8 +266,8 @@ figure.wp-block-embed.is-type-video iframe {
 /******************************* WP-Jetpack Carousel/
 /******************************************************************************/
 .jp-carousel-info p {
-  font-size: 15px;
-  color: #a0a0a0;
+  font-size: 16px;
+  color: #aaa9a9;
   font-weight: normal;
   text-align: center;
 }
@@ -357,8 +357,8 @@ div#jp-carousel-comments-loading span,
 /******************************************************************************/
 #css-overrides .meow-contact-form__group-label,
 #css-overrides .meow-contact-form-message {
-  font-size: 15px;
-  color: #a0a0a0;
+  font-size: 16px;
+  color: #aaa9a9;
   font-weight: normal;
   color: #d1d1d1;
   margin: 10px 0px;
@@ -369,8 +369,8 @@ div#jp-carousel-comments-loading span,
 #css-overrides .meow-contact-form__group-input,
 #css-overrides .meow-contact-form__group-textarea {
   background-color: #303030;
-  color: #a0a0a0;
-  border: 1px solid #a0a0a0;
+  color: #aaa9a9;
+  border: 1px solid #aaa9a9;
 }
 
 /*****************************************************************************
@@ -564,7 +564,7 @@ Surcharge des styles spécifiques à Bootstrap
 }
 
 main {
-  padding-bottom: 50px;
+  padding-bottom: 75px;
 }
 
 #css-overrides img {
@@ -598,8 +598,8 @@ h3 a {
 }
 
 #css-overrides .legende-sous-titre {
-  font-size: 13px;
-  color: #a0a0a0;
+  font-size: 14px;
+  color: #aaa9a9;
   font-weight: normal;
   text-align: left;
 }
@@ -609,15 +609,15 @@ h3 a {
   font-size: 19px;
   color: #ec5725;
   font-weight: normal;
-  font-size: 16px !important;
+  font-size: 17px !important;
   color: #d1d1d1;
   margin-top: 75px;
   margin-bottom: 15px;
 }
 
 #css-overrides h4 {
-  font-size: 15px;
-  color: #a0a0a0;
+  font-size: 16px;
+  color: #aaa9a9;
   font-weight: normal;
   font-weight: bold;
   margin: 10px 0px;
@@ -625,8 +625,8 @@ h3 a {
 
 #css-overrides h5,
 #css-overrides h6 {
-  font-size: 15px;
-  color: #a0a0a0;
+  font-size: 16px;
+  color: #aaa9a9;
   font-weight: normal;
   color: #d1d1d1;
   margin: 10px 0px;
@@ -637,8 +637,8 @@ h3 a {
 /******************************************************************************/
 #css-overrides p,
 #css-overrides ol {
-  font-size: 15px;
-  color: #a0a0a0;
+  font-size: 16px;
+  color: #aaa9a9;
   font-weight: normal;
 }
 
@@ -647,19 +647,19 @@ h3 a {
 }
 
 #css-overrides ul li {
-  font-size: 15px;
-  color: #a0a0a0;
+  font-size: 16px;
+  color: #aaa9a9;
   font-weight: normal;
   list-style-type: none;
 }
 
 #css-overrides a {
   outline: none;
-  font-size: 15px;
-  color: #a0a0a0;
+  font-size: 16px;
+  color: #aaa9a9;
   font-weight: normal;
   text-decoration: none;
-  color: #a0a0a0;
+  color: #aaa9a9;
   -webkit-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
 }
@@ -678,15 +678,15 @@ h3 a {
 
 #css-overrides blockquote {
   display: table;
-  color: #a0a0a0;
+  color: #aaa9a9;
   width: auto;
   max-width: calc( 900px / 2);
-  border-left: 1px solid #a0a0a0;
+  border-left: 1px solid #aaa9a9;
   padding-left: 10px;
 }
 
 #css-overrides blockquote p {
-  font-size: 16px;
+  font-size: 17px;
   color: #d1d1d1;
   font-weight: normal;
   padding-left: 10px;
@@ -697,7 +697,7 @@ h3 a {
 
 #css-overrides blockquote cite,
 #css-overrides blockquote cite a {
-  font-size: 16px;
+  font-size: 17px;
   color: #d1d1d1;
   font-weight: normal;
   padding-left: 10px;
@@ -708,21 +708,22 @@ h3 a {
 
 .muted-quote p,
 .muted-quote cite {
-  color: #a0a0a0 !important;
+  color: #aaa9a9 !important;
+  font-size: 16px !important;
 }
 
 #css-overrides figcaption,
 #css-overrides .cite {
-  font-size: 13px;
-  color: #a0a0a0;
+  font-size: 14px;
+  color: #aaa9a9;
   font-weight: normal;
   text-align: left;
   text-align: right;
 }
 
 #css-overrides .cite-center {
-  font-size: 13px;
-  color: #a0a0a0;
+  font-size: 14px;
+  color: #aaa9a9;
   font-weight: normal;
   text-align: left;
   text-align: right;
@@ -758,6 +759,13 @@ h3 a {
   padding-bottom: 10px;
   background-color: #2b2b2b;
   min-height: 200px;
+}
+
+#css-overrides .footer-title {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: #aaa9a9 !important;
+  text-decoration: none !important;
 }
 
 #css-overrides .related-post-banner {

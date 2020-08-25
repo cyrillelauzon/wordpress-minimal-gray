@@ -74,7 +74,7 @@ Ps: inspiré des styles de charactères et de paragraphes dans IndDesign où un 
 //H3 avec ample marge du haut afin de séparer sections de page
 @mixin styleH3 {
     @include styleSubTitle;
-    font-size: 16px !important;
+    font-size: $emphasisTextSize !important;
     color: $mainTitleColor;
     
     margin-top: $interSectionMargin;
@@ -95,6 +95,8 @@ Ps: inspiré des styles de charactères et de paragraphes dans IndDesign où un 
 //page section title
 @mixin styleH5 {
     @include styleMainText;
+
+   // text-decoration: underline;
     color: $mainTitleColor;
     margin: $smallTextMargin 0px;
 }

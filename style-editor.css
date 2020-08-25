@@ -82,7 +82,7 @@ Helpers gestion des animations CSS
 }
 
 body {
-  color: #a0a0a0 !important;
+  color: #aaa9a9 !important;
   background-color: #303030 !important;
 }
 
@@ -112,14 +112,14 @@ p.rich-text,
 .wp-block-quote__citation,
 .editor-block-list__layout .editor-block-list__block,
 .editor-block-list__layout .editor-block-list__block p {
-  font-size: 15px;
-  color: #a0a0a0;
+  font-size: 16px;
+  color: #aaa9a9;
   font-weight: normal;
 }
 
 .legende-sous-titre {
-  font-size: 13px;
-  color: #a0a0a0;
+  font-size: 14px;
+  color: #aaa9a9;
   font-weight: normal;
   text-align: left;
 }
@@ -150,23 +150,23 @@ h3 {
   font-size: 19px;
   color: #ec5725;
   font-weight: normal;
-  font-size: 16px !important;
+  font-size: 17px !important;
   color: #d1d1d1;
   margin-top: 75px;
   margin-bottom: 15px;
 }
 
 h4 {
-  font-size: 15px;
-  color: #a0a0a0;
+  font-size: 16px;
+  color: #aaa9a9;
   font-weight: normal;
   font-weight: bold;
   margin: 10px 0px;
 }
 
 h5 {
-  font-size: 15px;
-  color: #a0a0a0;
+  font-size: 16px;
+  color: #aaa9a9;
   font-weight: normal;
   color: #d1d1d1;
   margin: 10px 0px;
@@ -180,18 +180,18 @@ h5 {
 }
 
 .editor-writing-flow .wp-block ul li {
-  font-size: 15px;
-  color: #a0a0a0;
+  font-size: 16px;
+  color: #aaa9a9;
   font-weight: normal;
   list-style-type: none;
 }
 
 .editor-writing-flow .wp-block a {
-  font-size: 15px;
-  color: #a0a0a0;
+  font-size: 16px;
+  color: #aaa9a9;
   font-weight: normal;
   text-decoration: none;
-  color: #a0a0a0;
+  color: #aaa9a9;
   -webkit-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
 }
@@ -204,15 +204,15 @@ h5 {
 
 .wp-block blockquote {
   display: table;
-  color: #a0a0a0;
+  color: #aaa9a9;
   width: auto;
   max-width: calc( 900px / 2);
-  border-left: 1px solid #a0a0a0;
+  border-left: 1px solid #aaa9a9;
   padding-left: 10px;
 }
 
 .wp-block blockquote p {
-  font-size: 16px;
+  font-size: 17px;
   color: #d1d1d1;
   font-weight: normal;
   padding-left: 10px;
@@ -223,7 +223,7 @@ h5 {
 
 .wp-block blockquote cite,
 .wp-block blockquote cite a {
-  font-size: 16px;
+  font-size: 17px;
   color: #d1d1d1;
   font-weight: normal;
   padding-left: 10px;
@@ -233,15 +233,15 @@ h5 {
 }
 
 .wp-block figcaption {
-  font-size: 13px;
-  color: #a0a0a0;
+  font-size: 14px;
+  color: #aaa9a9;
   font-weight: normal;
   text-align: left;
 }
 
 .p-caption {
-  font-size: 13px;
-  color: #a0a0a0;
+  font-size: 14px;
+  color: #aaa9a9;
   font-weight: normal;
   text-align: left;
 }

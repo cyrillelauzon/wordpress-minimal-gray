@@ -33,7 +33,7 @@
 }
 
 main {
-    padding-bottom: 50px;
+    padding-bottom: 75px;
 }
 
 #css-overrides img {
@@ -110,8 +110,9 @@ h3 a {
 }
 
 .muted-quote p,
-.muted-quote cite, {
+.muted-quote cite {
     color: $mainColor !important;
+    font-size: $mainTextSize !important;
 }
 
 //Captions under images
@@ -159,8 +160,16 @@ h3 a {
     padding-bottom:10px;
     background-color: $siteDarkAccentColor;
     min-height: 200px; 
+
+
 }
 
+#css-overrides .footer-title{
+    margin-top:10px;
+    margin-bottom:20px;
+    color: $mainColor !important;
+    text-decoration: none !important;
+}
 //Lien bannière en bas de page vers post relié au post courant
 #css-overrides .related-post-banner {
     margin-bottom: 30px;
