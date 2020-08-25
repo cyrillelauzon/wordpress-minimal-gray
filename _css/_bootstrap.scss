@@ -16,38 +16,43 @@ Surcharge des styles spécifiques à Bootstrap
     background-color: $siteBackgroundColor;
 }
 
+//Titre du site
 #css-overrides .navbar-brand {
     @include styleTitle;
     padding-bottom: 0px;
     text-decoration: none;
 }
 
-//Pour que la navigation soit alignée au même baseline que le titre
+
+//Hack pour que la navigation soit alignée au même baseline que le titre
 #css-overrides .navbar-nav {
-    margin-top:10px;
+    margin-top: 10px;
 }
 
-
+//Liens principaux de sections dans la barre de navigation
 #css-overrides .nav-link {
     @include styleTitle;
     font-size: $menuTextSize;
     line-height: 38px;
-
     text-decoration: none;
+    
+    @media (max-width: $lg) {
+        text-align: center;        
+    }
+
 }
 
-
+//Menu déroulant pour chacune des sections
 #css-overrides .dropdown-menu {
     top: 45px;
     background-color: $siteDarkAccentColor;
     @include quickFadeInAnimation;
 
-    @media (max-width: $sm) {
+    @media (max-width: $lg) {
         background-color: $siteBackgroundColor;
         border: none;
-        max-width: 95%;
+        max-width: 100%;
     }
-
 
     a {
         @include styleTitle;
@@ -55,13 +60,17 @@ Surcharge des styles spécifiques à Bootstrap
         padding-top: 0px;
         padding-bottom: 0px;
         line-height: 38px;
-
         background-color: $siteDarkAccentColor;
-        
+        z-index: 2;
 
-        @media (max-width: $sm) {
+
+        @media (max-width: $lg) {
             background-color: $siteBackgroundColor;
             padding-left: 5px;
+            white-space: normal;
+            border-bottom: 1px solid $siteHighlightBGColor;
+            text-align: center;
+            padding-right: 0px;
         }
 
         &:hover {
@@ -70,8 +79,52 @@ Surcharge des styles spécifiques à Bootstrap
     }
 }
 
+/******************************************************************************/
+/*******************************  overlay mobile menu
+/******************************************************************************/
+
+
+
 #css-overrides .navbar-toggler {
+    margin-top: 15px;
     margin-bottom: 8px;
+    border: none;
+}
+
+
+/******************************************************************************/
+/******************************* Boite de dialogue modale
+/******************************************************************************/
+
+.nav-title-wrapper-mobile{
+
+}
+
+//Surchage de l'affichage de l'icone de menu hamburger pour qu'il soit en blanc
+#toggler-button {
+    background-image: url('data:image/svg+xml;utf8,<svg width="1em" height="1em" color="%23eeeeee" viewBox="0 0 16 16" class="bi bi-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/></svg>') !important;
+}
+
+//Lorsque la boite modale est affiché et que le bouton affiche un X
+#close-button {
+    position: absolute;
+    right: 20px;
+    top: 40px;
+    background-image: url('data:image/svg+xml;utf8,<svg width="1em" height="1em" color="%23eeeeee" viewBox="0 0 16 16" class="bi bi-x" fill="currentColor" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" d="M11.854 4.146a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708-.708l7-7a.5.5 0 0 1 .708 0z"/> <path fill-rule="evenodd" d="M4.146 4.146a.5.5 0 0 0 0 .708l7 7a.5.5 0 0 0 .708-.708l-7-7a.5.5 0 0 0-.708 0z"/></svg>') !important;
+}
+
+
+#mainNav{
+    @include quickFadeInAnimation;
+    background-color: $siteBackgroundColor;
+    opacity: 1;
+}
+
+//appliqué seulement sur titre dans boite de dialogue modale
+.navbar-brand-mobile {
+    text-align:center;
+    width: 100%;
+    margin-top: 30px;      
 }
 
 /******************************************************************************/

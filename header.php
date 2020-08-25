@@ -55,26 +55,59 @@
         ?>
 
         <!-- Barre de Navigation -->
-        <nav class="navbar navbar-expand-md navbar-light" data-toggle="affix">
-
+        <nav class="navbar navbar-expand-lg navbar-light" data-toggle="affix">
+     
                 <!-- Titre du blogue -->
                 <a class="navbar-brand align-baseline" href="<?php echo home_url(); ?>"><?php bloginfo('name');?></a>
 
                 <!-- Menu de Navigation -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav"
+                <button class="navbar-toggler" type="button" data-toggle="modal" data-target="#mainNav"
                     aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span id="toggler-button" class="navbar-toggler-icon"></span>
                 </button>
+               
+                
+                <!-- Menu sur desktop -->
                 <?php 
-                      wp_nav_menu( array(
-                          'theme_location'	=> 'primary',
-                          'depth'				=> 2, 
-                          'container'			=> 'div',
-                          'container_class'	=> 'collapse navbar-collapse',
-                          'container_id'		=> 'mainNav',
-                          'menu_class'		=> 'navbar-nav',
-                          'fallback_cb'		=> 'WP_Bootstrap_Navwalker::fallback',
-                          'walker'			=> new WP_Bootstrap_Navwalker()
+                    wp_nav_menu( array(
+                        'theme_location'	=> 'primary',
+                        'depth'				=> 2, 
+                        'container'			=> 'div',
+                        'container_class'	=> 'collapse navbar-collapse',
+                        'container_id'		=> 'mainNavMenuItemsDesktop',
+                        'menu_class'		=> 'navbar-nav',
+                        'fallback_cb'		=> 'WP_Bootstrap_Navwalker::fallback',
+                        'walker'			=> new WP_Bootstrap_Navwalker()
                         ) );?>
 
+
+                <!-- Boite de dialogue Modale sur mobile -->
+                <div id="mainNav" class="modal">
+                    
+                    <div class="nav-title-wrapper-mobile">                    
+                        <!-- Titre du blogue -->
+                        <a class="navbar-brand navbar-brand-mobile align-baseline" href="<?php echo home_url(); ?>"><?php bloginfo('name');?></a> 
+                        
+                        <!-- Boutton fermer -->
+                        <button class="navbar-toggler" type="button" data-toggle="modal" data-target="#mainNav"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span id="close-button" class="navbar-toggler-icon"></span>
+                        </button> <hr/>
+                    </div>
+                   
+
+                    <?php 
+                        wp_nav_menu( array(
+                            'theme_location'	=> 'primary',
+                            'depth'				=> 2, 
+                            'container'			=> 'div',
+                            'container_class'	=> '',
+                            'container_id'		=> 'mainNavMenuItemsMobile',
+                            'menu_class'		=> 'navbar-nav',
+                            'fallback_cb'		=> 'WP_Bootstrap_Navwalker::fallback',
+                            'walker'			=> new WP_Bootstrap_Navwalker()
+                            ) );?>
+                </div>
+        
         </nav><!-- Barre de Navigation -->
+        <hr/>

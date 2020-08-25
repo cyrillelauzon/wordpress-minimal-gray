@@ -20,7 +20,7 @@ $shortSpeed : 0.3s;
 }
 
 @mixin quickFadeInAnimation {
-    animation: fadeInAnimation ease $shortSpeed ;
+    animation: fadeInAnimation ease-in-out $shortSpeed ;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }

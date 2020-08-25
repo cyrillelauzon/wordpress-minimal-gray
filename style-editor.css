@@ -151,7 +151,7 @@ h3 {
   color: #ec5725;
   font-weight: normal;
   color: #d1d1d1;
-  margin-top: 100px;
+  margin-top: 75px;
   margin-bottom: 15px;
 }
 
@@ -253,7 +253,7 @@ hr.wp-block-separator {
   max-width: 100%;
   margin-top: 0px;
   margin-bottom: 10px;
-  border-bottom: 1px solid #a0a0a0;
+  border-bottom: 1px solid #4b4b4b;
 }
 
 /******************************************************************************/
@@ -289,8 +289,8 @@ hr.wp-block-separator {
 @media (max-width: 640px) {
   .blocks-gallery-item figure,
   .blocks-gallery-item img {
-    width: 95% !important;
-    height: 95% !important;
+    width: 100% !important;
+    height: 100% !important;
     -webkit-box-orient: vertical !important;
     -webkit-box-direction: normal !important;
         -ms-flex-direction: column !important;
@@ -300,8 +300,8 @@ hr.wp-block-separator {
 
 @media (max-width: 640px) {
   .blocks-gallery-item {
-    width: 95% !important;
-    height: 95% !important;
+    width: 100% !important;
+    height: 100% !important;
     -webkit-box-orient: vertical !important;
     -webkit-box-direction: normal !important;
         -ms-flex-direction: column !important;

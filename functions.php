@@ -48,4 +48,12 @@ function filter_media_comment_status( $open, $post_id ) {
 }
 add_filter( 'comments_open', 'filter_media_comment_status', 10 , 2 );
 
+add_action('wp_enqueue_scripts', 'qg_enqueue');
+function qg_enqueue() {
+    wp_enqueue_script(
+        'qgjs',
+        get_template_directory_uri().'/js/mainscripts.js'
+    );
+}
+
 ?>

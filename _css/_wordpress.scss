@@ -29,7 +29,14 @@ Surcharge des styles spécifiques à Wordpress
     cursor: default;
 }
 
+#css-overrides iframe {
+    width: 100% !important;
+    height:650px !important;
 
+    @media (max-width: $sm) {
+        height:300px !important;
+    }
+}
 
 
 /******************************************************************************/
@@ -168,11 +175,25 @@ div.jp-carousel-buttons a.jp-carousel-commentlink,
 
 #css-overrides .jp-carousel-overlay {
     background-color: $siteBackgroundColor;
+    transition: none;
+    animation: none;
 }
 
 #css-overrides .jp-carousel-fadeaway {
     display: none;
 }
+
+
+#css-overrides .jp-carousel-left-column-wrapper {
+    transition: none;
+    animation: none;
+}
+
+#css-overrides .jp-carousel-photo-info {
+    transition: none;
+    animation: none;
+}
+
 
 /* Hide comment form header. */
 /* Center the metabox. */
@@ -188,9 +209,13 @@ div#jp-carousel-comments-loading span,
     padding-top: 0px;
     margin-top: 0px;
     width: 100%;
+    transition: none;
+    animation: none;
 
     p{
         text-align: center;
+        transition: none;
+        animation: none;
     }
 }
 
