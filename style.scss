@@ -109,6 +109,11 @@ h3 a {
     @include styleBlockquote;
 }
 
+.muted-quote p,
+.muted-quote cite, {
+    color: $mainColor !important;
+}
+
 //Captions under images
 #css-overrides figcaption,
 #css-overrides .cite {

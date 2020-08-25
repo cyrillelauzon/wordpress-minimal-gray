@@ -22,9 +22,9 @@ get_header(); ?>
         <div class="blog-post">
 
             <!-- <hr/> -->
-            <h2><?php the_title(); ?></h2>
+            <h2 style="color:rgb(209, 209, 209);"><?php the_title(); ?></h2>
             <p><?php the_date(); ?></p>
-
+            <hr/>
 
             <!-- <?php if ( function_exists( 'add_theme_support' ) ) the_post_thumbnail(); ?> -->
 

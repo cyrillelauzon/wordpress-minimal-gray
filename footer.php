@@ -24,7 +24,7 @@
           
               //Affichage de cartes de post/pages reliées en bas de la page à l'aide de l'image à la une Wordpress
               if ($query->have_posts()) :
-                echo ('<h4 style="margin-top:0px;margin-bottom:20px">À voir également</h4>');
+                echo ('<h3 style="margin-top:10px;margin-bottom:20px">À voir également</h3>');
                 while ($query->have_posts()) :
                   
                   $post = get_post($query->the_post()); 
