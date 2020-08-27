@@ -247,19 +247,23 @@ On utilise plutôt l'encart description dans l'image et affiche dans le carousel
 /******************************************************************************/
 /******************************* Wordpress embed video Blocks/
 /******************************************************************************/
-figure.wp-block-embed.is-type-video {
-  position: relative;
-  width: 100%;
-  height: 0;
-  padding-bottom: 56.25%;
+/*  figure.wp-block-embed.is-type-video {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
 }
 
 figure.wp-block-embed.is-type-video iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+*/
+video {
   width: 100%;
-  height: 100%;
 }
 
 /******************************************************************************/

@@ -27,3 +27,16 @@ function afficherOverlay(){
     toggleClass(toggleMenu, "toggler-button-on");
 
 }
+
+
+
+/**
+ * @description RetourHautPage retour animé vers haut de la page
+ * NB nécessite JQuery
+ */
+function RetourHautPage(){
+    event.preventDefault();
+    $('html, body').animate({
+        scrollTop: "0px"
+    }, 800);
+}

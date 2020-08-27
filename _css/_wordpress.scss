@@ -123,10 +123,13 @@ figcaption.blocks-gallery-item__caption {
 /******************************* Wordpress embed video Blocks/
 /******************************************************************************/
 
+//**N'est plus nécessaire, car j'embarque directement les videos dans la
+//page à l'aide d'un bloc html
+
 //TODO #18 Corriger affichage de vidéo en ration 4/3
 //Embed video-width to 100% width fix as per this thread (towards end of page:)
 //https://github.com/WordPress/gutenberg/issues/8383
- figure.wp-block-embed.is-type-video {
+/*  figure.wp-block-embed.is-type-video {
     position: relative;
     width: 100%;
     height: 0;
@@ -140,8 +143,14 @@ figure.wp-block-embed.is-type-video iframe {
     width: 100%;
     height: 100%;
 }
+*/
 
+//Blocs videos hébergé par site wordpress
+video {
+  width:100%;  
+}
 
+ 
 
 
 /******************************************************************************/
