@@ -46,7 +46,7 @@ Surcharge des styles spécifiques à Bootstrap
 #css-overrides .dropdown-menu {
     top: 45px;
     background-color: $siteDarkAccentColor;
-    @include quickFadeInAnimation;
+    
 
     @media (max-width: $lg) {
         background-color: $siteBackgroundColor;
@@ -114,8 +114,7 @@ Surcharge des styles spécifiques à Bootstrap
 }
 
 
-#mainNav{
-    @include quickFadeInAnimation;
+#modalMenu{
     background-color: $siteBackgroundColor;
     opacity: 1;
 }

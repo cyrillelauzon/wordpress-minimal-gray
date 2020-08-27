@@ -40,3 +40,36 @@ function RetourHautPage(){
         scrollTop: "0px"
     }, 800);
 }
+
+
+function InitWindow(){
+    var modalMenu = document.querySelector("#modalMenu");
+        
+    modalMenu.addEventListener("animationend", function(){
+
+        if(modalMenu.classList.contains("quickSlideInAnimation")){
+            modalMenu.classList.remove("quickSlideInAnimation");
+            //modalMenu.classList.add("quickSlideInAnimation");
+
+        }
+        else if (modalMenu.classList.contains("quickSlideOutAnimation")){
+            modalMenu.classList.remove("quickSlideOutAnimation");
+            $('#modalMenu').modal('hide');
+        }
+
+    },false);
+}
+
+function PlaySlideIn(){
+    var modalMenu = document.querySelector("#modalMenu");
+    modalMenu.classList.add("quickSlideInAnimation");
+    $('#modalMenu').modal('show');
+}
+
+
+function PlaySlideOut(){
+   
+
+    modalMenu.classList.add("quickSlideOutAnimation");
+    
+}

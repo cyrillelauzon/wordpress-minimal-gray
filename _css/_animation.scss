@@ -7,8 +7,10 @@ Helpers gestion des animations CSS
 
 //variables
 $shortSpeed : 0.3s;
+$shortSlide : 0.5s;
 
 
+//Transition: FadeIn
 @keyframes fadeInAnimation {
     0% {
         opacity: 0;
@@ -24,6 +26,40 @@ $shortSpeed : 0.3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
+
+
+//Transition: SlideIn
+@keyframes SlideInAnimation {
+    0% {
+        transform: translate(100%, 0);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+//Transition: SlideIn
+@keyframes SlideOutAnimation {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(100%, 0);
+    }
+}
+
+
+.quickSlideInAnimation {
+    animation: SlideInAnimation ease-in $shortSlide ;
+}
+
+.quickSlideOutAnimation {
+    animation: SlideOutAnimation ease-in-out $shortSlide ;
+}
+
+
 
 
 //Formule générique pour animer une transition sur propriété donnée
