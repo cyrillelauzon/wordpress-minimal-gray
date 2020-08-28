@@ -55,7 +55,7 @@
         ?>
 
         <!-- Barre de Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-light" data-toggle="affix">
+        <nav id="navBarContainer" class="navbar navbar-light navbar-expand-lg" data-toggle="affix">
      
                 <!-- Titre du blogue -->
                 <a class="navbar-brand align-baseline" href="<?php echo home_url(); ?>"><?php bloginfo('name');?></a>
@@ -82,8 +82,7 @@
 
 
                 <!-- Boite de dialogue Modale sur mobile -->
-                <div id="modalMenu" class="modal">
-                    
+                <div id="modalMenu" class="modal"  data-backdrop="static">
                     <div class="nav-title-wrapper-mobile">                    
                         <!-- Titre du blogue -->
                         <a class="navbar-brand navbar-brand-mobile align-baseline" href="<?php echo home_url(); ?>"><?php bloginfo('name');?></a> 

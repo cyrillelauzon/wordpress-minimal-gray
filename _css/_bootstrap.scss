@@ -36,23 +36,12 @@ Surcharge des styles spécifiques à Bootstrap
     line-height: 38px;
     text-decoration: none;
     
-    @media (max-width: $lg) {
-        text-align: center;        
-    }
-
 }
 
 //Menu déroulant pour chacune des sections
 #css-overrides .dropdown-menu {
     top: 45px;
     background-color: $siteDarkAccentColor;
-    
-
-    @media (max-width: $lg) {
-        background-color: $siteBackgroundColor;
-        border: none;
-        max-width: 100%;
-    }
 
     a {
         @include styleTitle;
@@ -64,18 +53,31 @@ Surcharge des styles spécifiques à Bootstrap
         z-index: 2;
 
 
-        @media (max-width: $lg) {
-            background-color: $siteBackgroundColor;
-            padding-left: 5px;
-            white-space: normal;
-            border-bottom: 1px solid $siteHighlightBGColor;
-            text-align: center;
-            padding-right: 0px;
-        }
-
         &:hover {
             background-color: $siteBackgroundColor;
         }
+    }
+}
+
+
+//Menu déroulant comportements spécifiques au menu mobile
+#modalMenu .nav-link {
+    text-align: center;  
+}
+
+
+#modalMenu .dropdown-menu {
+    background-color: $siteBackgroundColor;
+    border: none;
+    max-width: 100%;
+
+    a {
+        background-color: $siteBackgroundColor;
+        padding-left: 5px;
+        white-space: normal;
+        border-bottom: 1px solid $siteHighlightBGColor;
+        text-align: center;
+        padding-right: 0px;
     }
 }
 
@@ -115,6 +117,7 @@ Surcharge des styles spécifiques à Bootstrap
 
 
 #modalMenu{
+    //@include quickFadeInAnimation;
     background-color: $siteBackgroundColor;
     opacity: 1;
 }

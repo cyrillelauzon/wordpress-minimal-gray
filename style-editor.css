@@ -68,10 +68,12 @@ Helpers gestion des animations CSS
 
 @-webkit-keyframes SlideInAnimation {
   0% {
+    opacity: 0;
     -webkit-transform: translate(100%, 0);
             transform: translate(100%, 0);
   }
   100% {
+    opacity: 1;
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
   }
@@ -79,10 +81,12 @@ Helpers gestion des animations CSS
 
 @keyframes SlideInAnimation {
   0% {
+    opacity: 0;
     -webkit-transform: translate(100%, 0);
             transform: translate(100%, 0);
   }
   100% {
+    opacity: 1;
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
   }
@@ -90,10 +94,12 @@ Helpers gestion des animations CSS
 
 @-webkit-keyframes SlideOutAnimation {
   0% {
+    opacity: 1;
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
   }
   100% {
+    opacity: 0;
     -webkit-transform: translate(100%, 0);
             transform: translate(100%, 0);
   }
@@ -101,10 +107,12 @@ Helpers gestion des animations CSS
 
 @keyframes SlideOutAnimation {
   0% {
+    opacity: 1;
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
   }
   100% {
+    opacity: 0;
     -webkit-transform: translate(100%, 0);
             transform: translate(100%, 0);
   }

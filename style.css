@@ -68,10 +68,12 @@ Helpers gestion des animations CSS
 
 @-webkit-keyframes SlideInAnimation {
   0% {
+    opacity: 0;
     -webkit-transform: translate(100%, 0);
             transform: translate(100%, 0);
   }
   100% {
+    opacity: 1;
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
   }
@@ -79,10 +81,12 @@ Helpers gestion des animations CSS
 
 @keyframes SlideInAnimation {
   0% {
+    opacity: 0;
     -webkit-transform: translate(100%, 0);
             transform: translate(100%, 0);
   }
   100% {
+    opacity: 1;
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
   }
@@ -90,10 +94,12 @@ Helpers gestion des animations CSS
 
 @-webkit-keyframes SlideOutAnimation {
   0% {
+    opacity: 1;
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
   }
   100% {
+    opacity: 0;
     -webkit-transform: translate(100%, 0);
             transform: translate(100%, 0);
   }
@@ -101,10 +107,12 @@ Helpers gestion des animations CSS
 
 @keyframes SlideOutAnimation {
   0% {
+    opacity: 1;
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
   }
   100% {
+    opacity: 0;
     -webkit-transform: translate(100%, 0);
             transform: translate(100%, 0);
   }
@@ -466,23 +474,9 @@ Surcharge des styles spécifiques à Bootstrap
   text-decoration: none;
 }
 
-@media (max-width: 992px) {
-  #css-overrides .nav-link {
-    text-align: center;
-  }
-}
-
 #css-overrides .dropdown-menu {
   top: 45px;
   background-color: #2b2b2b;
-}
-
-@media (max-width: 992px) {
-  #css-overrides .dropdown-menu {
-    background-color: #303030;
-    border: none;
-    max-width: 100%;
-  }
 }
 
 #css-overrides .dropdown-menu a {
@@ -497,19 +491,27 @@ Surcharge des styles spécifiques à Bootstrap
   z-index: 2;
 }
 
-@media (max-width: 992px) {
-  #css-overrides .dropdown-menu a {
-    background-color: #303030;
-    padding-left: 5px;
-    white-space: normal;
-    border-bottom: 1px solid #505050;
-    text-align: center;
-    padding-right: 0px;
-  }
-}
-
 #css-overrides .dropdown-menu a:hover {
   background-color: #303030;
+}
+
+#modalMenu .nav-link {
+  text-align: center;
+}
+
+#modalMenu .dropdown-menu {
+  background-color: #303030;
+  border: none;
+  max-width: 100%;
+}
+
+#modalMenu .dropdown-menu a {
+  background-color: #303030;
+  padding-left: 5px;
+  white-space: normal;
+  border-bottom: 1px solid #505050;
+  text-align: center;
+  padding-right: 0px;
 }
 
 /******************************************************************************/
@@ -601,8 +603,8 @@ Surcharge des styles spécifiques à Bootstrap
   padding-top: 30px;
   overflow-y: scroll;
   background-color: #303030 !important;
-  -webkit-animation: fadeInAnimation ease-in-out 0.3s;
-          animation: fadeInAnimation ease-in-out 0.3s;
+  -webkit-animation: fadeInAnimation ease-in-out 0.5s;
+          animation: fadeInAnimation ease-in-out 0.5s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
   -webkit-animation-fill-mode: forwards;
