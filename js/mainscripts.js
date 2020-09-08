@@ -40,3 +40,56 @@ function RetourHautPage(){
         scrollTop: "0px"
     }, 800);
 }
+
+/**
+ * @description Intialisation des fonctions de gestion d'affichage des animations slide du menu mobile
+ */
+function InitWindow(){
+    var modalMenu = document.querySelector("#modalMenu");
+        
+    modalMenu.addEventListener("animationend", function(){
+
+        if(modalMenu.classList.contains("quickSlideInAnimation")){
+            modalMenu.classList.remove("quickSlideInAnimation");
+            //modalMenu.classList.add("quickSlideInAnimation");
+
+        }
+        else if (modalMenu.classList.contains("quickSlideOutAnimation")){
+            modalMenu.classList.remove("quickSlideOutAnimation");
+            $('#modalMenu').modal('hide');
+        }
+
+    },false);
+}
+
+
+/**
+ * @description Handler Lorsque le bouton hamburger est appuyé sur menu mobile
+ */
+function PlaySlideIn(){
+
+    //Afin de conserver la mise en page mobile de la fenetre de menu modal si la fenêtre est redimensionnée au dela de LG
+    var navBarContainer = document.querySelector("#navBarContainer");
+    navBarContainer.classList.remove("navbar-expand-lg");
+    
+    //Play slide-in
+    var modalMenu = document.querySelector("#modalMenu");
+    modalMenu.classList.add("quickSlideInAnimation");
+    $('#modalMenu').modal('show');
+}
+
+
+/**
+ * @description Handler Lorsque le bouton X est appuyé sur menu mobile
+ */
+function PlaySlideOut(){
+
+    //Afin de restaurer la mise en page appropriée de la barre de menu 
+    var navBarContainer = document.querySelector("#navBarContainer");
+    navBarContainer.classList.add("navbar-expand-lg");
+
+    //Jouer animation slide-out   
+    var modalMenu = document.querySelector("#modalMenu");
+    modalMenu.classList.add("quickSlideOutAnimation");
+    
+}

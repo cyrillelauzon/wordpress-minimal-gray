@@ -36,10 +36,6 @@ Surcharge des styles spécifiques à Bootstrap
     line-height: 38px;
     text-decoration: none;
     
-    @media (max-width: $lg) {
-        text-align: center;        
-    }
-
 }
 
 //Menu déroulant pour chacune des sections
@@ -47,13 +43,6 @@ Surcharge des styles spécifiques à Bootstrap
     top: 45px;
     background-color: $siteDarkAccentColor;
     @include quickFadeInAnimation;
-
-    @media (max-width: $lg) {
-        background-color: $siteBackgroundColor;
-        border: none;
-        max-width: 100%;
-    }
-
     a {
         @include styleTitle;
         font-size: $menuTextSize;
@@ -64,15 +53,6 @@ Surcharge des styles spécifiques à Bootstrap
         z-index: 2;
 
 
-        @media (max-width: $lg) {
-            background-color: $siteBackgroundColor;
-            padding-left: 5px;
-            white-space: normal;
-            border-bottom: 1px solid $siteHighlightBGColor;
-            text-align: center;
-            padding-right: 0px;
-        }
-
         &:hover {
             background-color: $siteBackgroundColor;
         }
@@ -80,10 +60,29 @@ Surcharge des styles spécifiques à Bootstrap
 }
 
 /******************************************************************************/
-/*******************************  overlay mobile menu
+/*******************************  Bootstrap navbar Mobile
 /******************************************************************************/
 
+//Menu déroulant comportements spécifiques au menu mobile
+#modalMenu .nav-link {
+    text-align: center;  
+}
 
+
+#modalMenu .dropdown-menu {
+    background-color: $siteBackgroundColor;
+    border: none;
+    max-width: 100%;
+
+    a {
+        background-color: $siteBackgroundColor;
+        padding-left: 5px;
+        white-space: normal;
+        border-bottom: 1px solid $siteHighlightBGColor;
+        text-align: center;
+        padding-right: 0px;
+    }
+}
 
 #css-overrides .navbar-toggler {
     margin-top: 15px;
@@ -113,9 +112,7 @@ Surcharge des styles spécifiques à Bootstrap
     background-image: url('data:image/svg+xml;utf8,<svg width="1em" height="1em" color="%23eeeeee" viewBox="0 0 16 16" class="bi bi-x" fill="currentColor" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" d="M11.854 4.146a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708-.708l7-7a.5.5 0 0 1 .708 0z"/> <path fill-rule="evenodd" d="M4.146 4.146a.5.5 0 0 0 0 .708l7 7a.5.5 0 0 0 .708-.708l-7-7a.5.5 0 0 0-.708 0z"/></svg>') !important;
 }
 
-
-#mainNav{
-    @include quickFadeInAnimation;
+#modalMenu{
     background-color: $siteBackgroundColor;
     opacity: 1;
 }

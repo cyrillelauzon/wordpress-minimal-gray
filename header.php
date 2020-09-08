@@ -55,14 +55,14 @@
         ?>
 
         <!-- Barre de Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-light" data-toggle="affix">
+        <nav id="navBarContainer" class="navbar navbar-light navbar-expand-lg" data-toggle="affix">
      
                 <!-- Titre du blogue -->
                 <a class="navbar-brand align-baseline" href="<?php echo home_url(); ?>"><?php bloginfo('name');?></a>
 
                 <!-- Menu de Navigation -->
-                <button class="navbar-toggler" type="button" data-toggle="modal" data-target="#mainNav"
-                    aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="modal" 
+                    aria-expanded="false" aria-label="Toggle navigation" onclick="PlaySlideIn();">
                     <span id="toggler-button" class="navbar-toggler-icon"></span>
                 </button>
                
@@ -82,15 +82,14 @@
 
 
                 <!-- Boite de dialogue Modale sur mobile -->
-                <div id="mainNav" class="modal">
-                    
+                <div id="modalMenu" class="modal"  data-backdrop="static">
                     <div class="nav-title-wrapper-mobile">                    
                         <!-- Titre du blogue -->
                         <a class="navbar-brand navbar-brand-mobile align-baseline" href="<?php echo home_url(); ?>"><?php bloginfo('name');?></a> 
                         
                         <!-- Boutton fermer -->
-                        <button class="navbar-toggler" type="button" data-toggle="modal" data-target="#mainNav"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                        <button class="navbar-toggler" type="button" data-toggle="modal" 
+                        aria-expanded="false" aria-label="Toggle navigation" onclick="PlaySlideOut();" >
                         <span id="close-button" class="navbar-toggler-icon"></span>
                         </button> <hr/>
                     </div>

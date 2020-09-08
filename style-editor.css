@@ -66,6 +66,60 @@ Helpers gestion des animations CSS
   }
 }
 
+@-webkit-keyframes SlideInAnimation {
+  0% {
+    -webkit-transform: translate(100%, 0);
+            transform: translate(100%, 0);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+@keyframes SlideInAnimation {
+  0% {
+    -webkit-transform: translate(100%, 0);
+            transform: translate(100%, 0);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+@-webkit-keyframes SlideOutAnimation {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(100%, 0);
+            transform: translate(100%, 0);
+  }
+}
+
+@keyframes SlideOutAnimation {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(100%, 0);
+            transform: translate(100%, 0);
+  }
+}
+
+.quickSlideInAnimation {
+  -webkit-animation: SlideInAnimation ease-in 0.5s;
+          animation: SlideInAnimation ease-in 0.5s;
+}
+
+.quickSlideOutAnimation {
+  -webkit-animation: SlideOutAnimation ease-in-out 0.5s;
+          animation: SlideOutAnimation ease-in-out 0.5s;
+}
+
 /******************************************************************************/
 /***Titres
 /******************************************************************************/

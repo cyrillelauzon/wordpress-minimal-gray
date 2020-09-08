@@ -66,6 +66,60 @@ Helpers gestion des animations CSS
   }
 }
 
+@-webkit-keyframes SlideInAnimation {
+  0% {
+    -webkit-transform: translate(100%, 0);
+            transform: translate(100%, 0);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+@keyframes SlideInAnimation {
+  0% {
+    -webkit-transform: translate(100%, 0);
+            transform: translate(100%, 0);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+@-webkit-keyframes SlideOutAnimation {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(100%, 0);
+            transform: translate(100%, 0);
+  }
+}
+
+@keyframes SlideOutAnimation {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(100%, 0);
+            transform: translate(100%, 0);
+  }
+}
+
+.quickSlideInAnimation {
+  -webkit-animation: SlideInAnimation ease-in 0.5s;
+          animation: SlideInAnimation ease-in 0.5s;
+}
+
+.quickSlideOutAnimation {
+  -webkit-animation: SlideOutAnimation ease-in-out 0.5s;
+          animation: SlideOutAnimation ease-in-out 0.5s;
+}
+
 /*****************************************************************************
 wordpress.scss
 
@@ -412,12 +466,6 @@ Surcharge des styles spécifiques à Bootstrap
   text-decoration: none;
 }
 
-@media (max-width: 992px) {
-  #css-overrides .nav-link {
-    text-align: center;
-  }
-}
-
 #css-overrides .dropdown-menu {
   top: 45px;
   background-color: #2b2b2b;
@@ -427,14 +475,6 @@ Surcharge des styles spécifiques à Bootstrap
           animation-iteration-count: 1;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-}
-
-@media (max-width: 992px) {
-  #css-overrides .dropdown-menu {
-    background-color: #303030;
-    border: none;
-    max-width: 100%;
-  }
 }
 
 #css-overrides .dropdown-menu a {
@@ -449,24 +489,32 @@ Surcharge des styles spécifiques à Bootstrap
   z-index: 2;
 }
 
-@media (max-width: 992px) {
-  #css-overrides .dropdown-menu a {
-    background-color: #303030;
-    padding-left: 5px;
-    white-space: normal;
-    border-bottom: 1px solid #505050;
-    text-align: center;
-    padding-right: 0px;
-  }
-}
-
 #css-overrides .dropdown-menu a:hover {
   background-color: #303030;
 }
 
 /******************************************************************************/
-/*******************************  overlay mobile menu
+/*******************************  Bootstrap navbar Mobile
 /******************************************************************************/
+#modalMenu .nav-link {
+  text-align: center;
+}
+
+#modalMenu .dropdown-menu {
+  background-color: #303030;
+  border: none;
+  max-width: 100%;
+}
+
+#modalMenu .dropdown-menu a {
+  background-color: #303030;
+  padding-left: 5px;
+  white-space: normal;
+  border-bottom: 1px solid #505050;
+  text-align: center;
+  padding-right: 0px;
+}
+
 #css-overrides .navbar-toggler {
   margin-top: 15px;
   margin-bottom: 8px;
@@ -487,13 +535,7 @@ Surcharge des styles spécifiques à Bootstrap
   background-image: url('data:image/svg+xml;utf8,<svg width="1em" height="1em" color="%23eeeeee" viewBox="0 0 16 16" class="bi bi-x" fill="currentColor" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" d="M11.854 4.146a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708-.708l7-7a.5.5 0 0 1 .708 0z"/> <path fill-rule="evenodd" d="M4.146 4.146a.5.5 0 0 0 0 .708l7 7a.5.5 0 0 0 .708-.708l-7-7a.5.5 0 0 0-.708 0z"/></svg>') !important;
 }
 
-#mainNav {
-  -webkit-animation: fadeInAnimation ease-in-out 0.3s;
-          animation: fadeInAnimation ease-in-out 0.3s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+#modalMenu {
   background-color: #303030;
   opacity: 1;
 }
