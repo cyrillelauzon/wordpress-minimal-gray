@@ -22,7 +22,7 @@ $shortSlide : 0.5s;
 }
 
 @mixin quickFadeInAnimation {
-    animation: fadeInAnimation ease-in-out $shortSlide ;
+    animation: fadeInAnimation ease-in-out $shortSpeed ;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
@@ -31,25 +31,25 @@ $shortSlide : 0.5s;
 //Transition: SlideIn
 @keyframes SlideInAnimation {
     0% {
-        opacity: 0;
+        //opacity: 0;
         transform: translate(100%, 0);
     }
 
     100% {
-        opacity: 1;
+        //opacity: 1;
         transform: translate(0, 0);
     }
 }
 
-//Transition: SlideIn
+//Transition: SlideOut
 @keyframes SlideOutAnimation {
     0% {
-        opacity: 1;
+        //opacity: 1;
         transform: translate(0, 0);
     }
 
     100% {
-        opacity: 0;
+        //opacity: 0;
         transform: translate(100%, 0);
     }
 }

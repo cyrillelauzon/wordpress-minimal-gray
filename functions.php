@@ -52,8 +52,10 @@ add_action('wp_enqueue_scripts', 'qg_enqueue');
 function qg_enqueue() {
     wp_enqueue_script(
         'qgjs',
-        get_template_directory_uri().'/js/mainscripts.js'
+        get_template_directory_uri().'/js/mainscripts.js',
+        1.3
     );
+    
 }
 
 ?>
