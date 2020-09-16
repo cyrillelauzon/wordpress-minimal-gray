@@ -46,7 +46,6 @@ function RetourHautPage(){
  */
 function InitWindow(){
     var modalMenu = document.querySelector("#modalMenu");
-        
     modalMenu.addEventListener("animationend", function(){
 
         if(modalMenu.classList.contains("quickSlideInAnimation")){
